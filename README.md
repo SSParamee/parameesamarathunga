@@ -43,7 +43,7 @@ Built for **Paramee Samarathunga**, with 7+ years experience turning enterprise 
 ✔️ Selected Work: tabbed case studies with scope, approach, outcome, and proof  
 ✔️ Contact: links, availability, location
  
-View the live **[portfolio](https://ssparamee.github.io/parameesamarathunga/)**
+View the live **[portfolio](https://ssparamee.github.io/parameesamarathunga/)**.
  
 ---
  
