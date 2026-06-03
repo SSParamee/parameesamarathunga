@@ -409,7 +409,7 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
     <div class="hero-prev">
       <span class="prev-label">Previously at</span>
       <span class="prev-sep"></span>
-      <span class="prev-names">IFS &nbsp;·&nbsp; WSO2 &nbsp;·&nbsp; Creately &nbsp;·&nbsp; Assette</span>
+      <span class="prev-names">IFS &nbsp;·&nbsp; Creately &nbsp;·&nbsp; WSO2</span>
     </div>
 
     <!-- 2. Display headline — verb/noun two-tone -->
@@ -425,13 +425,13 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
     <div class="hero-rule"></div>
 
     <!-- 5. Value proposition — one clear anchor statement -->
-    <p class="hero-value">7+ years turning enterprise complexity into clear documentation, strategic content, and scalable learning systems — for IFS, WSO2, Creately, and beyond.</p>
+    <p class="hero-value">7+ years turning enterprise complexity into clear documentation, strategic content, and scalable learning systems for IFS, WSO2, Creately, and beyond.</p>
 
     <!-- 6. Proof numbers — inline strip -->
     <div class="hero-stats-strip">
       <div class="stat-inline">
         <span class="si-num">7+</span>
-        <span class="si-lbl">Years Senior<br>Experience</span>
+        <span class="si-lbl">Years <br>Experience</span>
       </div>
       <div class="stat-inline">
         <span class="si-num">150K+</span>
@@ -460,7 +460,7 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
   <!-- RIGHT: photo only — maximum visual weight -->
   <div class="hero-right">
     <div class="hero-photo-wrap">
-      <img src="profile.jpg" class="hero-photo" alt="Paramee Samarathunga" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <img src="assets/profile_pic.png" class="hero-photo" alt="Paramee Samarathunga" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="hero-photo-placeholder" style="display:none">P</div>
     </div>
     <div class="hero-pillars">
@@ -481,7 +481,7 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
         </div>
       </div>
       <div class="pillar-group pg-purple">
-        <span class="pillar-label">Optimization &amp; Ops</span>
+        <span class="pillar-label">AI &amp; Content Optimization</span>
         <div class="pillar-pills">
           <span class="role-pill">SEO</span>
           <span class="role-pill">GEO</span>
@@ -1480,7 +1480,7 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
   text.split('').forEach((ch, i) => {
     const s = document.createElement('span')
     s.className = 'logo-char'
-    s.textContent = ch
+    s.textContent = ch === ' ' ? '\u00A0' : ch
     s.style.animationDelay = (i * 0.045) + 's'
     el.appendChild(s)
   })
