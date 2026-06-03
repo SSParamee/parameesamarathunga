@@ -178,9 +178,30 @@ section{padding:6rem 4rem}
 /* FOUR DISCIPLINES */
 #disciplines{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:5rem 4rem}
 @media(max-width:768px){#disciplines{padding:3.5rem 1.5rem}}
-/* FOUR DISCIPLINES GRID */
-.disc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
-@media(max-width:720px){.disc-grid{grid-template-columns:1fr}}
+/* Section header font override — sans so it doesn't compete with card serif titles */
+#disciplines .section-title{font-family:var(--body);font-weight:700;font-size:clamp(28px,3.2vw,42px);letter-spacing:-.025em;line-height:1.1}
+#disciplines .section-title em{font-style:normal;font-weight:300;color:var(--gold)}
+/* PAGINATED 2-UP GRID */
+.disc-pg-wrap{margin-top:3rem}
+.disc-pg-outer{overflow:hidden}
+.disc-grid{display:flex;gap:1.5rem;transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.disc-card{flex:0 0 calc(50% - 0.75rem)}
+/* Pagination footer */
+.disc-pg-footer{display:flex;justify-content:center;align-items:center;gap:1.25rem;margin-top:1.25rem}
+.disc-pg-arrow{width:36px;height:36px;border-radius:50%;background:var(--bg3);border:1px solid var(--line2);color:var(--ink2);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .22s;flex-shrink:0}
+.disc-pg-arrow:hover:not(:disabled){border-color:var(--gold);color:var(--gold);background:rgba(212,168,67,.06)}
+.disc-pg-arrow:disabled{opacity:.3;cursor:default}
+.disc-pg-arrow svg{width:16px;height:16px}
+.disc-pg-dots{display:flex;gap:8px;align-items:center}
+.disc-pg-dot{width:8px;height:8px;border-radius:50%;background:var(--line3);border:none;cursor:pointer;padding:0;transition:all .25s}
+.disc-pg-dot.active{background:var(--gold);width:24px;border-radius:4px}
+/* Mobile: stack all cards, hide nav */
+@media(max-width:720px){
+  .disc-pg-outer{overflow:visible}
+  .disc-grid{flex-direction:column;transform:none !important}
+  .disc-card{flex:0 0 auto}
+  .disc-pg-footer{display:none}
+}
 /* Card base */
 .disc-card{border:1px solid var(--line);border-radius:var(--r2);padding:2rem;position:relative;overflow:hidden;transition:border-color .3s,transform .3s;display:flex;flex-direction:column}
 .disc-card:hover{transform:translateY(-4px)}
@@ -514,7 +535,9 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
     <h2 class="section-title">Four disciplines.<br><em>One strategic mind.</em></h2>
     <p class="section-sub" style="margin-left:auto;margin-right:auto">Each role I target is distinct but they share a common foundation: rigorous research, structural clarity, and measurable outcomes. Here is what senior looks like across each.</p>
   </div>
-  <div class="disc-grid reveal">
+  <div class="disc-pg-wrap reveal">
+  <div class="disc-pg-outer" id="disc-pg-outer">
+  <div class="disc-grid" id="disc-grid">
 
     <div class="disc-card tw">
       <div class="disc-hd">
@@ -584,6 +607,20 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
       </div>
     </div>
 
+  </div>
+  </div>
+  <div class="disc-pg-footer">
+    <button class="disc-pg-arrow" id="disc-pg-prev" disabled aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="disc-pg-dots">
+      <button class="disc-pg-dot active" data-page="0"></button>
+      <button class="disc-pg-dot" data-page="1"></button>
+    </div>
+    <button class="disc-pg-arrow" id="disc-pg-next" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
   </div>
 </section>
 
@@ -1587,6 +1624,30 @@ function toggleProof(btn) {
   btn.style.color = open ? 'var(--teal)' : '';
   btn.style.borderColor = open ? 'rgba(78,186,170,.3)' : '';
 }
+
+// Disciplines 2-up pagination
+(function(){
+  const outer = document.getElementById('disc-pg-outer')
+  const grid = document.getElementById('disc-grid')
+  const dots = document.querySelectorAll('.disc-pg-dot')
+  const prev = document.getElementById('disc-pg-prev')
+  const next = document.getElementById('disc-pg-next')
+  let page = 0
+
+  function goTo(p) {
+    page = p
+    const offset = p === 0 ? 0 : -(outer.offsetWidth + 24)
+    grid.style.transform = page === 0 ? '' : `translateX(${offset}px)`
+    dots.forEach((d,i) => d.classList.toggle('active', i === page))
+    prev.disabled = page === 0
+    next.disabled = page === 1
+  }
+
+  prev.addEventListener('click', () => goTo(0))
+  next.addEventListener('click', () => goTo(1))
+  dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.page)))
+  window.addEventListener('resize', () => goTo(page))
+})()
 
 // Reveal on scroll
 const obs=new IntersectionObserver(entries=>{
