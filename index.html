@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paramee Samarathunga — Senior Technical Writer · Content Strategist · L&D Specialist</title>
+<meta name="description" content="Senior Technical Writer, Content Strategist, Content Writer, and L&D Specialist with 7+ years across enterprise ERP, SaaS, open banking, and regulated industries. Available for remote and hybrid senior roles globally.">
+<meta name="keywords" content="Technical Writer, Content Strategist, L&D Specialist, Instructional Designer, Content Writer, SEO, Knowledge Architecture, IFS, WSO2, Creately, Sri Lanka">
+<meta name="author" content="Paramee Samarathunga">
+
+<!-- Open Graph (LinkedIn, Slack, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Paramee Samarathunga — Senior Technical Writer & Content Strategist">
+<meta property="og:description" content="7+ years designing documentation ecosystems, learning programmes, and editorial strategies for enterprise software, SaaS, and regulated industries.">
+<meta property="og:url" content="https://ssparamee.github.io">
+<meta property="og:image" content="https://ssparamee.github.io/og-cover.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Paramee Samarathunga — Senior Technical Writer & Content Strategist">
+<meta name="twitter:description" content="7+ years across IFS, WSO2, Creately. Documentation, L&D, content strategy, and AI-enabled content ops.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  /* Surfaces */
+  --bg:#0D0D0F;
+  --bg2:#111116;
+  --bg3:#18181E;
+  --bg4:#1F1F28;
+  /* Borders */
+  --line:#22222C;
+  --line2:#2C2C38;
+  --line3:#3A3A48;
+  /* Text */
+  --ink:#F2EFE9;
+  --ink2:#C4C0BA;
+  --ink3:#7E7A84;
+  /* Accent */
+  --gold:#D4A843;
+  --gold2:#EFC76A;
+  --teal:#4EBAAA;
+  --teal2:#72D1C2;
+  /* Fonts */
+  --display:'DM Serif Display',Georgia,serif;
+  --body:'Inter',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  /* Radius */
+  --r:6px;
+  --r2:12px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.65;overflow-x:hidden}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--line3);border-radius:2px}
+
+/* NOISE OVERLAY */
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:999;opacity:.5}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:56px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:all .3s}
+nav.scrolled{background:rgba(13,13,15,.94);backdrop-filter:blur(16px);border-color:var(--line)}
+.nav-logo{font-family:var(--display);font-size:18px;font-weight:400;color:var(--ink);letter-spacing:.01em;text-decoration:none;white-space:nowrap}
+/* LOGO LETTER ANIMATION */
+.logo-char{display:inline-block;color:var(--ink);opacity:0;animation:logoReveal .04s forwards}
+.logo-dot{display:inline-block;color:var(--gold);opacity:0;animation:logoReveal .04s forwards}
+@keyframes logoReveal{to{opacity:1}}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{font-size:11px;color:var(--ink3);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;transition:color .2s;position:relative;padding-bottom:2px;font-family:var(--body);font-weight:500}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width .25s}
+.nav-links a:hover{color:var(--ink2)}
+.nav-links a.active{color:var(--gold)}
+.nav-links a.active::after{width:100%}
+.nav-cta{font-family:var(--body);font-size:11px;font-weight:600;color:var(--gold);border:1px solid rgba(212,168,67,.4);padding:7px 18px;text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:all .2s;border-radius:var(--r)}
+.nav-cta:hover{background:var(--gold);color:var(--bg)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{width:22px;height:1px;background:var(--ink2);transition:all .3s;display:block}
+.hamburger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* MOBILE NAV OVERLAY */
+.mobile-nav{display:none;position:fixed;inset:0;top:56px;background:rgba(13,13,15,.97);backdrop-filter:blur(20px);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+.mobile-nav.open{display:flex}
+.mobile-nav a{font-size:18px;color:var(--ink2);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;transition:color .2s}
+.mobile-nav a:hover{color:var(--gold)}
+.mobile-nav .mobile-cta{margin-top:1rem;font-size:14px;color:var(--gold);border:1px solid var(--gold);padding:12px 32px;text-decoration:none;letter-spacing:.08em;border-radius:var(--r)}
+
+@media(max-width:768px){.nav-links,.nav-cta{display:none}.hamburger{display:flex}}
+
+/* HERO */
+#hero{min-height:100vh;display:grid;grid-template-columns:1.15fr 0.85fr;align-items:stretch;padding:0 4rem 0 4rem;gap:4rem;position:relative;overflow:hidden}
+#hero::after{content:'';position:absolute;right:-100px;top:40%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(212,168,67,.04) 0%,transparent 70%);pointer-events:none}
+/* LEFT COLUMN */
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:80px 0 60px}
+/* 1. Pedigree line */
+.hero-prev{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;opacity:0;animation:fadeUp .6s .1s forwards}
+.prev-label{font-family:var(--body);font-size:10px;font-weight:500;color:var(--ink3);letter-spacing:.14em;text-transform:uppercase}
+.prev-sep{width:1px;height:14px;background:var(--line3);flex-shrink:0}
+.prev-names{font-family:var(--body);font-size:13px;font-weight:600;color:var(--ink2);letter-spacing:.04em}
+/* 2. Display headline */
+.hero-h1{font-family:var(--display);font-size:clamp(52px,5.8vw,84px);font-weight:400;line-height:1.02;letter-spacing:-.01em;margin-bottom:1rem;opacity:0;animation:fadeUp .7s .2s forwards}
+.hero-h1 em{font-style:italic;color:var(--gold)}
+.hero-h1 .h1-verb{color:var(--ink)}
+/* 3. Title/credential line */
+.hero-title{font-family:var(--body);font-size:12px;font-weight:600;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;margin-bottom:1.5rem;opacity:.85;opacity:0;animation:fadeUp .7s .32s forwards}
+/* 4. Divider */
+.hero-rule{width:48px;height:1px;background:var(--gold);opacity:.35;margin-bottom:1.5rem;opacity:0;animation:fadeIn .6s .44s forwards}
+/* 5. Value proposition */
+.hero-value{font-family:var(--body);font-size:15px;font-weight:400;color:var(--ink2);line-height:1.75;max-width:460px;margin-bottom:1.75rem;opacity:0;animation:fadeUp .7s .5s forwards}
+/* 6. Inline stats strip */
+.hero-stats-strip{display:flex;gap:0;margin-bottom:1.75rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:.875rem 0;opacity:0;animation:fadeUp .7s .6s forwards}
+.stat-inline{flex:1;display:flex;flex-direction:column;gap:3px;padding-right:1rem;border-right:1px solid var(--line)}
+.stat-inline:last-child{border-right:none;padding-right:0;padding-left:1rem}
+.stat-inline:not(:first-child):not(:last-child){padding-left:1rem}
+.si-num{font-family:var(--display);font-size:24px;color:var(--gold);line-height:1;font-weight:400}
+.si-lbl{font-family:var(--body);font-size:10px;color:var(--ink3);letter-spacing:.03em;line-height:1.4}
+/* 7. Skill tags */
+.hero-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:2rem;opacity:0;animation:fadeUp .7s .7s forwards}
+/* SKILL PILLARS */
+.hero-pillars{display:flex;flex-direction:column;gap:.6rem;width:100%;opacity:0;animation:fadeUp .7s .7s forwards}
+.pillar-group{display:flex;flex-direction:column;gap:.45rem;padding:.65rem .85rem;border-radius:8px;background:var(--bg3);border-left:3px solid transparent}
+.pillar-group.pg-gold{border-left-color:#D4A843;background:rgba(212,168,67,.04)}
+.pillar-group.pg-teal{border-left-color:#4EBAAA;background:rgba(78,186,170,.04)}
+.pillar-group.pg-purple{border-left-color:#A99ADB;background:rgba(169,154,219,.04)}
+.pillar-label{font-family:var(--body);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;line-height:1.5;margin-bottom:3px}
+.pg-gold .pillar-label{color:#D4A843}
+.pg-teal .pillar-label{color:#4EBAAA}
+.pg-purple .pillar-label{color:#A99ADB}
+.pillar-pills{display:flex;flex-wrap:wrap;gap:5px}
+.pg-gold .role-pill:hover{border-color:#D4A843;color:#D4A843}
+.pg-teal .role-pill:hover{border-color:#4EBAAA;color:#4EBAAA}
+.pg-purple .role-pill:hover{border-color:#A99ADB;color:#A99ADB}
+.role-pill{font-family:var(--body);font-size:10px;font-weight:500;padding:4px 12px;border:1px solid var(--line2);color:var(--ink2);border-radius:20px;letter-spacing:.04em;transition:all .22s}
+
+/* 8. CTAs */
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .82s forwards}
+/* RIGHT COLUMN — photo only, full height */
+.hero-right{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:44px 0 40px;gap:1.5rem;opacity:0;animation:fadeIn .9s .6s forwards}
+.btn-primary{background:var(--gold);color:var(--bg);padding:13px 32px;font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:var(--r);border:none;transition:all .22s;box-shadow:0 0 24px rgba(212,168,67,.18)}
+.btn-primary:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 4px 32px rgba(212,168,67,.28)}
+.btn-ghost{border:1px solid var(--line3);color:var(--ink2);background:transparent;padding:13px 32px;font-family:var(--body);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:var(--r);transition:all .22s}
+.btn-ghost:hover{border-color:var(--ink2);color:var(--ink);background:rgba(255,255,255,.03)}
+.btn-outline-gold{border:1px solid rgba(212,168,67,.35);color:var(--gold);padding:13px 24px;font-family:var(--body);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:var(--r);transition:all .22s;display:inline-flex;align-items:center;gap:7px}
+.btn-outline-gold:hover{border-color:var(--gold);background:rgba(212,168,67,.06)}
+.hero-right{display:flex;flex-direction:column;gap:1rem;padding-top:56px;opacity:0;animation:fadeIn 1s .9s forwards;justify-content:center}
+/* PROFILE PHOTO — fills full right column */
+.hero-photo-wrap{width:72%;max-width:300px;aspect-ratio:1/1;position:relative;border-radius:50%;overflow:hidden;background:#000;box-shadow:0 0 60px rgba(212,168,67,.1),0 20px 50px rgba(0,0,0,.5)}
+.hero-photo-wrap::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at bottom,rgba(13,13,15,.35) 0%,transparent 65%);pointer-events:none;z-index:1}
+.hero-photo-wrap::before{content:'';position:absolute;inset:0;box-shadow:inset 0 0 0 2px rgba(212,168,67,.2);z-index:2;pointer-events:none;border-radius:50%}
+.hero-photo-ring{display:none}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:brightness(.97) contrast(1.03) saturate(.85)}
+.hero-photo-placeholder{position:absolute;inset:0;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:80px;color:var(--gold);opacity:.2}
+/* Stat cards kept for any future use */
+.hero-stats{display:none}
+.stat-card{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r);padding:.875rem 1rem;transition:border-color .2s}
+.stat-card:hover{border-color:var(--line2)}
+.stat-num{font-family:var(--display);font-size:32px;font-weight:400;color:var(--gold);line-height:1}
+.stat-label{font-family:var(--body);font-size:10px;font-weight:600;color:var(--ink2);margin-top:4px;letter-spacing:.04em;text-transform:uppercase}
+.stat-desc{font-family:var(--body);font-size:11px;color:var(--ink3);margin-top:4px;line-height:1.5}
+@media(max-width:960px){#hero{grid-template-columns:1fr;align-items:start;padding:5rem 2rem 3rem;gap:0}.hero-right{min-height:60vw;margin:0 -2rem;border-radius:0}.hero-photo-wrap{border-radius:0;min-height:60vw}.hero-left{padding:5rem 0 2.5rem}.hero-stats-strip{gap:0}}
+@media(max-width:480px){#hero{padding:4.5rem 1.25rem 2rem}.hero-h1{font-size:clamp(42px,11vw,64px)}.hero-stats-strip{flex-wrap:wrap}.stat-inline{min-width:40%;flex:none;padding:.5rem 0;border-right:none !important;border-bottom:1px solid var(--line)}.stat-inline:last-child{border-bottom:none}}
+
+/* SECTIONS */
+section{padding:6rem 4rem}
+@media(max-width:768px){section{padding:4rem 1.5rem}}
+.section-eyebrow{font-family:var(--body);font-size:10px;font-weight:600;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:.85rem;opacity:.85}
+.section-title{font-family:var(--display);font-size:clamp(34px,4vw,52px);font-weight:400;line-height:1.08;margin-bottom:.6rem;letter-spacing:-.01em}
+.section-title em{font-style:italic;color:var(--ink3)}
+.section-sub{font-family:var(--body);font-size:14px;font-weight:400;color:var(--ink2);max-width:560px;line-height:1.7;margin-bottom:3rem}
+
+/* FOUR DISCIPLINES */
+#disciplines{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:5rem 4rem}
+@media(max-width:768px){#disciplines{padding:3.5rem 1.5rem}}
+.disc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem}
+@media(max-width:1000px){.disc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.disc-grid{grid-template-columns:1fr}}
+.disc-card{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r2);padding:1.75rem 1.5rem;position:relative;overflow:hidden;transition:border-color .25s,transform .25s}
+.disc-card:hover{border-color:var(--line2);transform:translateY(-3px)}
+.disc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;transition:opacity .3s;opacity:0}
+.disc-card:hover::before{opacity:1}
+.disc-card.tw::before{background:linear-gradient(to right,var(--gold),transparent)}
+.disc-card.cs::before{background:linear-gradient(to right,var(--teal),transparent)}
+.disc-card.cw::before{background:linear-gradient(to right,#9b8bcc,transparent)}
+.disc-card.ld::before{background:linear-gradient(to right,#cc8b8b,transparent)}
+.disc-number{font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:.12em;margin-bottom:1.25rem}
+.disc-icon{font-size:28px;margin-bottom:1rem;opacity:.85}
+.disc-title{font-family:var(--display);font-size:22px;font-weight:400;color:var(--ink);margin-bottom:.75rem;line-height:1.2}
+.disc-desc{font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:1.25rem}
+.disc-tags{display:flex;flex-wrap:wrap;gap:5px}
+.disc-tag{font-family:var(--mono);font-size:10px;padding:3px 9px;border:1px solid var(--line2);color:var(--ink3);border-radius:3px}
+.disc-card.tw .disc-title{color:var(--gold)}
+.disc-card.cs .disc-title{color:var(--teal)}
+.disc-card.cw .disc-title{color:#b0a0e0}
+.disc-card.ld .disc-title{color:#d4a0a0}
+
+/* ABOUT */
+#about{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:2fr 1.2fr;gap:4rem;align-items:start}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
+.about-bio p{font-family:var(--body);font-size:15px;color:var(--ink2);line-height:1.8;margin-bottom:1.25rem}
+.about-bio p:first-child{font-family:var(--display);font-size:21px;font-weight:400;color:var(--ink);line-height:1.65;margin-bottom:1.5rem}
+.edu-block{margin-bottom:2rem}
+.edu-item{border-left:2px solid var(--line2);padding-left:1.25rem;margin-bottom:1.5rem}
+.edu-degree{font-size:14px;font-weight:700;color:var(--ink);letter-spacing:.02em}
+.edu-school{font-size:13px;color:var(--gold);margin-top:2px}
+.edu-year{font-family:var(--mono);font-size:11px;color:var(--ink3);margin-top:4px}
+.skills-cloud{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2rem}
+.skill-tag{font-size:12px;padding:5px 12px;background:var(--bg4);border:1px solid var(--line);color:var(--ink2);border-radius:4px;transition:all .2s}
+.skill-tag:hover{border-color:var(--gold);color:var(--gold)}
+.tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.tool-item{font-family:var(--mono);font-size:11px;color:var(--ink3);padding:5px 10px;background:var(--bg4);border-radius:4px;border:1px solid var(--line)}
+
+/* TIMELINE */
+#experience{position:relative}
+.timeline-wrap{position:relative;padding-left:2rem}
+.timeline-wrap::before{content:'';position:absolute;left:0;top:8px;bottom:0;width:1px;background:linear-gradient(to bottom,var(--gold),var(--line),transparent)}
+.tl-item{position:relative;margin-bottom:3rem;padding-left:2rem}
+.tl-item::before{content:'';position:absolute;left:-2rem;top:8px;width:8px;height:8px;border-radius:50%;background:var(--bg3);border:1px solid var(--line3);transition:all .3s}
+.tl-item:first-child::before{background:var(--gold);border-color:var(--gold)}
+.tl-item:hover::before{border-color:var(--gold)}
+.tl-header{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:.75rem}
+.tl-role{font-family:var(--display);font-size:22px;font-weight:400;color:var(--ink);letter-spacing:-.01em}
+.tl-company{font-family:var(--body);font-size:12px;color:var(--gold);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
+.tl-period{font-family:var(--mono);font-size:11px;color:var(--ink3);white-space:nowrap;padding:4px 10px;border:1px solid var(--line);border-radius:20px;flex-shrink:0;margin-top:4px}
+.tl-type{font-family:var(--mono);font-size:10px;color:var(--ink3);padding:3px 8px;border:1px solid var(--line2);border-radius:3px;margin-left:8px}
+.tl-body{font-family:var(--body);font-size:14px;color:var(--ink2);line-height:1.75}
+.tl-body ul{padding-left:1.25rem;margin-top:.5rem}
+.tl-body ul li{margin-bottom:.4rem}
+.tl-achievements{display:flex;flex-wrap:wrap;gap:8px;margin-top:1rem}
+.tl-ach{font-family:var(--mono);font-size:10px;padding:4px 10px;background:rgba(201,169,110,.08);border:1px solid rgba(201,169,110,.2);color:var(--gold);border-radius:4px}
+
+/* PROJECTS */
+#projects{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proj-tabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin-bottom:2.5rem;overflow-x:auto}
+.proj-tab{background:none;border:none;border-bottom:2px solid transparent;padding:10px 20px;font-family:var(--body);font-size:11px;font-weight:500;color:var(--ink3);cursor:pointer;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;transition:all .2s;margin-bottom:-1px}
+.proj-tab:hover{color:var(--ink2)}
+.proj-tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.proj-panel{display:none}
+.proj-panel.active{display:block}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.25rem}
+@media(max-width:480px){.proj-grid{grid-template-columns:1fr}}
+.proj-card{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r2);padding:1.5rem;transition:all .25s;position:relative;overflow:hidden}
+.proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--gold),transparent);opacity:0;transition:opacity .3s}
+.proj-card:hover{border-color:var(--line2);transform:translateY(-2px)}
+.proj-card:hover::before{opacity:1}
+.pc-client{font-family:var(--mono);font-size:10px;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.pc-title{font-family:var(--display);font-size:20px;font-weight:400;margin-bottom:8px;line-height:1.2}
+.pc-badge{display:inline-block;font-family:var(--mono);font-size:9px;padding:3px 8px;border:1px solid var(--line2);color:var(--ink3);border-radius:3px;margin-bottom:10px}
+.pc-desc{font-family:var(--body);font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:1rem}
+.pc-section{margin-bottom:.75rem}
+.pc-label{font-family:var(--mono);font-size:10px;color:var(--ink3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+.pc-text{font-size:12px;color:var(--ink2);line-height:1.6}
+.pc-metrics{display:flex;gap:10px;margin-top:1rem;flex-wrap:wrap}
+.pc-metric{background:var(--bg4);border-radius:6px;padding:8px 12px;text-align:center;flex:1;min-width:72px;border:1px solid var(--line)}
+.pc-metric-val{font-family:var(--display);font-size:20px;color:var(--gold);font-weight:300;display:block;line-height:1.1}
+.pc-metric-lbl{font-size:10px;color:var(--ink3);display:block;margin-top:2px;font-family:var(--mono)}
+.pc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:1rem}
+.pc-tag{font-size:10px;padding:3px 8px;border:1px solid var(--line);color:var(--ink3);border-radius:3px;font-family:var(--mono)}
+.pc-proof{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--teal);margin-top:.75rem;text-decoration:none;letter-spacing:.04em;transition:color .2s;border-bottom:1px solid transparent}
+.pc-proof:hover{color:var(--teal2);border-color:var(--teal2)}
+
+/* FULL WIDTH PROJECT CARDS */
+.proj-full{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r2);padding:1.75rem;margin-bottom:1.25rem;transition:border-color .2s;position:relative;overflow:hidden}
+.proj-full::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(to bottom,var(--gold),transparent);opacity:0;transition:opacity .3s}
+.proj-full:hover{border-color:var(--line2)}
+.proj-full:hover::before{opacity:1}
+.pf-header{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1.25rem;flex-wrap:wrap}
+.pf-left{}
+.pf-client{font-family:var(--mono);font-size:10px;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px}
+.pf-title{font-family:var(--display);font-size:24px;font-weight:400;line-height:1.2}
+.pf-badge{font-family:var(--mono);font-size:10px;padding:4px 10px;border:1px solid var(--line2);color:var(--ink3);border-radius:3px;flex-shrink:0;margin-top:6px}
+.pf-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media(max-width:640px){.pf-grid{grid-template-columns:1fr}}
+.pf-col-label{font-family:var(--mono);font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;padding-bottom:4px;border-bottom:1px solid var(--line)}
+.pf-col-body{font-family:var(--body);font-size:13px;color:var(--ink2);line-height:1.75}
+.pf-col-body ul{padding-left:1.1rem}
+.pf-col-body ul li{margin-bottom:.35rem}
+.pf-divider{border:none;border-top:1px solid var(--line);margin:1.25rem 0}
+.pf-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:10px}
+.pf-metric{background:var(--bg4);border:1px solid var(--line);border-radius:6px;padding:10px 12px;text-align:center}
+.pf-metric-val{font-family:var(--display);font-size:22px;color:var(--gold);font-weight:300;display:block}
+.pf-metric-lbl{font-family:var(--mono);font-size:9px;color:var(--ink3);display:block;margin-top:3px;letter-spacing:.06em}
+.pf-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:1rem}
+.pf-tag{font-size:10px;padding:3px 8px;border:1px solid var(--line);color:var(--ink3);border-radius:3px;font-family:var(--mono)}
+.proof-link{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--teal);margin-top:.75rem;text-decoration:none;border-bottom:1px dotted var(--teal);transition:color .2s}
+.proof-link:hover{color:var(--teal2)}
+
+/* WEB CLIENTS GRID */
+.web-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.web-card{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.25rem;transition:all .2s}
+.web-card:hover{border-color:var(--line2);transform:translateY(-1px)}
+.wc-name{font-size:14px;font-weight:700;color:var(--ink);letter-spacing:.02em;margin-bottom:2px}
+.wc-sector{font-family:var(--mono);font-size:9px;color:var(--teal);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+.wc-desc{font-size:12px;color:var(--ink2);line-height:1.5}
+
+/* PROOF AVAILABLE CALLOUT */
+.proof-callout{background:rgba(90,181,160,.06);border:1px solid rgba(90,181,160,.2);border-radius:var(--r);padding:.75rem 1rem;margin-top:1rem;font-size:12px;color:var(--teal2);font-family:var(--mono);display:flex;align-items:flex-start;gap:.5rem}
+.proof-callout::before{content:'◆';font-size:10px;flex-shrink:0;margin-top:1px}
+.sample-note{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;color:var(--ink3);margin-top:.75rem;padding:5px 10px;background:var(--bg4);border-radius:4px;border:1px solid var(--line)}
+.sample-note::before{content:'◇';font-size:9px;color:var(--ink3)}
+
+/* CONTACT */
+#contact{text-align:center;padding:6rem 2rem;position:relative;overflow:hidden}
+#contact::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,.04) 0%,transparent 70%);pointer-events:none}
+.availability-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--teal2);border:1px solid rgba(90,181,160,.3);background:rgba(90,181,160,.06);padding:6px 16px;border-radius:20px;margin-bottom:2rem;letter-spacing:.06em}
+.availability-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.85)}}
+.contact-title{font-family:var(--display);font-size:clamp(38px,5vw,64px);font-weight:400;margin-bottom:1rem;letter-spacing:-.01em}
+.contact-sub{font-family:var(--body);font-size:15px;color:var(--ink2);max-width:520px;margin:0 auto 2.5rem;line-height:1.7}
+.contact-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.contact-link{display:flex;align-items:center;gap:8px;font-family:var(--body);font-size:12px;font-weight:500;color:var(--ink2);text-decoration:none;padding:10px 20px;border:1px solid var(--line2);border-radius:var(--r);transition:all .2s;letter-spacing:.02em}
+.contact-link:hover{border-color:var(--gold);color:var(--gold)}
+.contact-link svg{width:16px;height:16px;flex-shrink:0}
+
+/* FOOTER */
+footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+@media(max-width:768px){footer{padding:1.5rem;flex-direction:column;text-align:center}}
+.footer-name{font-family:var(--display);font-size:16px;font-weight:300;color:var(--ink2)}
+.footer-tagline{font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:.1em}
+
+/* DIVIDER */
+.section-divider{height:1px;background:linear-gradient(to right,transparent,var(--line2),transparent);margin:0 4rem}
+@media(max-width:768px){.section-divider{margin:0 1.5rem}}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* INLINE ICON SVG */
+.ico{display:inline-block;width:14px;height:14px;vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-right:4px}
+
+/* ═══ FLIP CARD SYSTEM ═══ */
+.flip-wrap{position:relative;perspective:1400px;margin-bottom:1.25rem}
+.flip-inner{position:relative;width:100%;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.flip-wrap.is-flipped .flip-inner{transform:rotateY(180deg)}
+.flip-front{width:100%;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.flip-front .proj-full{margin-bottom:0}
+.flip-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg);background:var(--bg3);border:1px solid var(--line2);border-radius:var(--r2);overflow:auto;padding:1.75rem;display:flex;flex-direction:column;gap:1rem}
+/* Proof button on card front */
+.flip-btn{display:inline-flex;align-items:center;gap:6px;font-family:var(--body);font-size:11px;font-weight:600;color:var(--teal);cursor:pointer;background:none;border:1px solid rgba(78,186,170,.25);border-radius:var(--r);padding:5px 12px;margin-top:.75rem;letter-spacing:.04em;transition:all .22s}
+.flip-btn:hover{color:var(--teal2);border-color:var(--teal2);background:rgba(78,186,170,.05)}
+.flip-btn svg{width:13px;height:13px;flex-shrink:0;transition:transform .3s}
+.flip-wrap.is-flipped .flip-btn svg{transform:rotate(180deg)}
+/* Proof back panel */
+.proof-back-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:.75rem}
+.proof-back-title{font-family:var(--display);font-size:22px;color:var(--ink);line-height:1.1}
+.proof-back-badge{font-family:var(--mono);font-size:10px;color:var(--teal);border:1px solid rgba(78,186,170,.3);padding:4px 10px;border-radius:4px;letter-spacing:.06em}
+.proof-back-sub{font-family:var(--body);font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:.25rem}
+.proof-img-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+@media(max-width:600px){.proof-img-grid{grid-template-columns:1fr}}
+.proof-img-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--line2);background:var(--bg4);cursor:zoom-in}
+.proof-img-card img{width:100%;display:block;transition:transform .35s;object-fit:cover}
+.proof-img-card:hover img{transform:scale(1.03)}
+.proof-img-cap{font-family:var(--mono);font-size:9px;color:var(--ink3);padding:6px 8px;border-top:1px solid var(--line);letter-spacing:.05em;text-transform:uppercase}
+.proof-back-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:1rem;border-top:1px solid var(--line);flex-wrap:wrap;gap:.75rem}
+.proof-back-link{font-family:var(--body);font-size:12px;color:var(--teal);text-decoration:none;border-bottom:1px dotted rgba(78,186,170,.4);transition:color .2s}
+.proof-back-link:hover{color:var(--teal2)}
+.back-btn{display:inline-flex;align-items:center;gap:5px;font-family:var(--body);font-size:11px;font-weight:600;color:var(--ink3);cursor:pointer;background:none;border:1px solid var(--line3);border-radius:var(--r);padding:5px 12px;letter-spacing:.04em;transition:all .22s}
+.back-btn:hover{color:var(--ink);border-color:var(--line2)}
+/* Generic proof toggle for non-WSO2 cards */
+.proof-toggle-btn{display:inline-flex;align-items:center;gap:5px;font-family:var(--body);font-size:11px;font-weight:500;color:var(--ink3);cursor:pointer;background:none;border:1px solid var(--line);border-radius:var(--r);padding:5px 12px;letter-spacing:.04em;transition:all .22s;margin-top:.75rem}
+.proof-toggle-btn:hover{color:var(--teal);border-color:rgba(78,186,170,.3)}
+.proof-toggle-panel{display:none;margin-top:.75rem;padding:.85rem 1rem;background:rgba(78,186,170,.04);border:1px solid rgba(78,186,170,.15);border-radius:var(--r);font-family:var(--mono);font-size:11px;color:var(--teal2);line-height:1.6}
+.proof-toggle-panel.open{display:block}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo" id="nav-logo-text" style="opacity:0">Paramee Samarathunga<span class="logo-dot" style="animation-delay:1.4s">.</span></a>
+  <div class="nav-links">
+    <a href="#about" data-section="about">About</a>
+    <a href="#experience" data-section="experience">Experience</a>
+    <a href="#projects" data-section="projects">Work</a>
+    <a href="#contact" data-section="contact">Contact</a>
+  </div>
+  <a href="mailto:parameesamarathunga@gmail.com" class="nav-cta">Get in touch</a>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobile-nav">
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+  <a href="#projects" onclick="closeMobileMenu()">Work</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  <a href="mailto:parameesamarathunga@gmail.com" class="mobile-cta" onclick="closeMobileMenu()">Get in touch</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+
+  <!-- LEFT: identity, value, proof, action -->
+  <div class="hero-left">
+
+    <!-- 1. Pedigree line -->
+    <div class="hero-prev">
+      <span class="prev-label">Previously at</span>
+      <span class="prev-sep"></span>
+      <span class="prev-names">IFS &nbsp;·&nbsp; WSO2 &nbsp;·&nbsp; Creately &nbsp;·&nbsp; Assette</span>
+    </div>
+
+    <!-- 2. Display headline — verb/noun two-tone -->
+    <h1 class="hero-h1">
+      <span class="h1-verb">Designing</span> <em>Knowledge.</em><br>
+      <span class="h1-verb">Driving</span> <em>Impact.</em>
+    </h1>
+
+    <!-- 3. Credential line -->
+    <p class="hero-title">Technical Writer &nbsp;·&nbsp; Content Strategist &nbsp;·&nbsp; L&amp;D Specialist</p>
+
+    <!-- 4. Divider -->
+    <div class="hero-rule"></div>
+
+    <!-- 5. Value proposition — one clear anchor statement -->
+    <p class="hero-value">7+ years turning enterprise complexity into clear documentation, strategic content, and scalable learning systems — for IFS, WSO2, Creately, and beyond.</p>
+
+    <!-- 6. Proof numbers — inline strip -->
+    <div class="hero-stats-strip">
+      <div class="stat-inline">
+        <span class="si-num">7+</span>
+        <span class="si-lbl">Years Senior<br>Experience</span>
+      </div>
+      <div class="stat-inline">
+        <span class="si-num">150K+</span>
+        <span class="si-lbl">Monthly<br>Organic Visits</span>
+      </div>
+      <div class="stat-inline">
+        <span class="si-num">75%</span>
+        <span class="si-lbl">AHT<br>Reduction</span>
+      </div>
+      <div class="stat-inline">
+        <span class="si-num">50%</span>
+        <span class="si-lbl">Faster AI-Driven<br>Workflows</span>
+      </div>
+    </div>
+
+
+
+    <!-- 8<!-- 8. CTAs -->
+    <div class="hero-ctas">
+      <a href="#projects" class="btn-primary">Explore My Work</a>
+      <a href="#contact" class="btn-ghost">Collaborate</a>
+    </div>
+
+  </div>
+
+  <!-- RIGHT: photo only — maximum visual weight -->
+  <div class="hero-right">
+    <div class="hero-photo-wrap">
+      <img src="profile.jpg" class="hero-photo" alt="Paramee Samarathunga" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="hero-photo-placeholder" style="display:none">P</div>
+    </div>
+    <div class="hero-pillars">
+      <div class="pillar-group pg-gold">
+        <span class="pillar-label">Content &amp; Writing</span>
+        <div class="pillar-pills">
+          <span class="role-pill">Technical Writing</span>
+          <span class="role-pill">UX Writing</span>
+          <span class="role-pill">Content Strategy</span>
+        </div>
+      </div>
+      <div class="pillar-group pg-teal">
+        <span class="pillar-label">Learning &amp; Enablement</span>
+        <div class="pillar-pills">
+          <span class="role-pill">Instructional Design</span>
+          <span class="role-pill">L&amp;D Programs</span>
+          <span class="role-pill">Knowledge Architecture</span>
+        </div>
+      </div>
+      <div class="pillar-group pg-purple">
+        <span class="pillar-label">Optimization &amp; Ops</span>
+        <div class="pillar-pills">
+          <span class="role-pill">SEO</span>
+          <span class="role-pill">GEO</span>
+          <span class="role-pill">AEO</span>
+          <span class="role-pill">AI Content Ops</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- FOUR DISCIPLINES -->
+<section id="disciplines">
+  <div class="reveal">
+    <p class="section-eyebrow">What I bring</p>
+    <h2 class="section-title">Four disciplines.<br><em>One strategic mind.</em></h2>
+    <p class="section-sub">Each role I target is distinct — but they share a common foundation: rigorous research, structural clarity, and measurable outcomes. Here is what senior looks like across each.</p>
+  </div>
+  <div class="disc-grid reveal">
+
+    <div class="disc-card tw">
+      <div class="disc-number">01 — Technical Writing</div>
+      <div class="disc-icon">⌨</div>
+      <div class="disc-title">Documentation that works in production</div>
+      <div class="disc-desc">API references, open banking standards (UK OB, PSD2, CDR), release notes, end-user guides, and knowledge bases — structured around what practitioners actually need to accomplish, not how the system is built.</div>
+      <div class="disc-tags">
+        <span class="disc-tag">Docs-as-code</span>
+        <span class="disc-tag">API / SDK docs</span>
+        <span class="disc-tag">Confluence</span>
+        <span class="disc-tag">Markdown / XML</span>
+        <span class="disc-tag">DITA principles</span>
+      </div>
+    </div>
+
+    <div class="disc-card cs">
+      <div class="disc-number">02 — Content Strategy</div>
+      <div class="disc-icon">◎</div>
+      <div class="disc-title">Frameworks that outlive the brief</div>
+      <div class="disc-desc">I build editorial systems — category repositioning campaigns, GEO/AEO architectures, dual-sector frameworks — that deliver measurable ROI and keep working after I hand them over. 50K+ organic visits and a 10-month sustained calendar are the evidence.</div>
+      <div class="disc-tags">
+        <span class="disc-tag">Editorial frameworks</span>
+        <span class="disc-tag">GEO / AEO</span>
+        <span class="disc-tag">Content governance</span>
+        <span class="disc-tag">Knowledge architecture</span>
+        <span class="disc-tag">AI content ops</span>
+      </div>
+    </div>
+
+    <div class="disc-card cw">
+      <div class="disc-number">03 — Content Writing</div>
+      <div class="disc-icon">✦</div>
+      <div class="disc-title">Research-led writing with genuine depth</div>
+      <div class="disc-desc">Long-form, authority-building editorial across SaaS, fintech, healthcare, and travel — with 6–11 minute average read times as evidence of engagement, not just traffic. Regulated-sector writing (CIW, PSD2) that most generalist writers cannot execute.</div>
+      <div class="disc-tags">
+        <span class="disc-tag">Long-form editorial</span>
+        <span class="disc-tag">Regulated industries</span>
+        <span class="disc-tag">SEO + GEO</span>
+        <span class="disc-tag">Brand voice</span>
+        <span class="disc-tag">Thought leadership</span>
+      </div>
+    </div>
+
+    <div class="disc-card ld">
+      <div class="disc-number">04 — L&amp;D Specialist</div>
+      <div class="disc-icon">◈</div>
+      <div class="disc-title">Learning ecosystems that enable at scale</div>
+      <div class="disc-desc">From WSO2 open banking self-paced LMS courses to IFS Cloud ESM training to AI-assisted learning workflows — I design programmes that serve mixed audiences, survive release cycles, and produce measurable capability uplift.</div>
+      <div class="disc-tags">
+        <span class="disc-tag">Instructional design</span>
+        <span class="disc-tag">ClickLearn / Thinkific</span>
+        <span class="disc-tag">LX design</span>
+        <span class="disc-tag">Release readiness</span>
+        <span class="disc-tag">AI-assisted learning</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="reveal">
+    <p class="section-eyebrow">01 — About</p>
+    <h2 class="section-title">The person behind<br><em>the work</em></h2>
+  </div>
+  <div class="about-grid reveal">
+    <div class="about-bio">
+      <p>Senior Learning &amp; Development professional with 7+ years designing and scaling technical learning ecosystems, documentation architectures, and editorial systems for enterprise SaaS, open-source middleware, and regulated industries. I operate at the intersection of strategy and execution — and I ship without compromising quality.</p>
+      <p>I bring the curiosity of a researcher, the structure of an information architect, and the commercial instincts of an MBA. Proven across learning strategy, instructional design, product enablement, documentation governance, release readiness, and editorial frameworks — with stakeholder management experience from IFS, WSO2, and Creately.</p>
+      <p>Strong background in cloud platforms, enterprise ERP, docs-as-code, LMS platforms, and AI-assisted content workflows — with measurable outcomes across every engagement. Not a generalist who writes well — a specialist who understands how content, learning, and documentation create business outcomes.</p>
+      <p>Based in Sri Lanka. MBA from University of West London. BSc Computer Security from Plymouth University.</p>
+
+      <div style="margin-top:2rem">
+        <p class="section-eyebrow" style="margin-bottom:1rem">Core skills</p>
+        <div class="skills-cloud">
+          <span class="skill-tag">Learning Strategy</span>
+          <span class="skill-tag">Instructional Design</span>
+          <span class="skill-tag">Technical Enablement</span>
+          <span class="skill-tag">LX Design</span>
+          <span class="skill-tag">Knowledge Management</span>
+          <span class="skill-tag">Release Readiness</span>
+          <span class="skill-tag">Stakeholder Management</span>
+          <span class="skill-tag">Performance Enablement</span>
+          <span class="skill-tag">Docs-as-Code</span>
+          <span class="skill-tag">SEO / GEO / AEO</span>
+          <span class="skill-tag">Knowledge Architecture</span>
+          <span class="skill-tag">AI Content Operations</span>
+          <span class="skill-tag">Editorial Strategy</span>
+          <span class="skill-tag">Content Governance</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="section-eyebrow" style="margin-bottom:1rem">Education</p>
+      <div class="edu-block">
+        <div class="edu-item">
+          <div class="edu-degree">MBA, Business Administration</div>
+          <div class="edu-school">University of West London, UK</div>
+          <div class="edu-year">2024</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">BSc, Computer Security</div>
+          <div class="edu-school">Plymouth University, UK</div>
+          <div class="edu-year">2019</div>
+        </div>
+      </div>
+
+      <p class="section-eyebrow" style="margin-bottom:1rem">Tools &amp; platforms</p>
+      <div class="tools-grid">
+        <span class="tool-item">Confluence</span>
+        <span class="tool-item">Bitbucket / GitHub</span>
+        <span class="tool-item">Markdown / HTML / CSS</span>
+        <span class="tool-item">Jira / ClickUp</span>
+        <span class="tool-item">Thinkific</span>
+        <span class="tool-item">ClickLearn</span>
+        <span class="tool-item">MS Copilot / ChatGPT</span>
+        <span class="tool-item">Camtasia / Figma</span>
+        <span class="tool-item">Swagger / Postman</span>
+        <span class="tool-item">Canva</span>
+        <span class="tool-item">XML / YAML / TOML</span>
+        <span class="tool-item">MySQL (basic)</span>
+      </div>
+
+      <div style="margin-top:1.5rem">
+        <p class="section-eyebrow" style="margin-bottom:1rem">Profiles</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a href="https://github.com/SSParamee" target="_blank" class="proof-link">GitHub: SSParamee ↗</a>
+          <a href="https://www.linkedin.com/in/paramee-samarathunga" target="_blank" class="proof-link">LinkedIn Profile ↗</a>
+          <a href="https://parameesamarathunga.medium.com" target="_blank" class="proof-link">Medium Blog ↗</a>
+          <a href="https://creately.com/guides/author/Paramee-Samarathunga/" target="_blank" class="proof-link">Creately Published Articles ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="reveal">
+    <p class="section-eyebrow">02 — Experience</p>
+    <h2 class="section-title">Career<br><em>timeline</em></h2>
+    <p class="section-sub">Seven years across enterprise software, SaaS, open banking, and regulated industries — each role building depth in a different dimension of content and learning.</p>
+  </div>
+
+  <div class="timeline-wrap reveal">
+
+    <div class="tl-item">
+      <div class="tl-header">
+        <div>
+          <div class="tl-role">Senior L&amp;D Specialist <span class="tl-type">Hybrid · Sri Lanka</span></div>
+          <div class="tl-company">IFS</div>
+        </div>
+        <span class="tl-period">Apr 2024 – Jan 2026</span>
+      </div>
+      <div class="tl-body">
+        <p>Global ERP leader serving 10,000+ customers worldwide. Acquired in-depth knowledge of IFS Cloud, IFS Enterprise Solution Architecture, and IFS Service &amp; Asset Management to design, develop, and maintain high-quality user education materials for diverse target audiences.</p>
+        <ul>
+          <li>Onboarded and assumed ownership of IFS Cloud Documentation — aligning information architecture, documentation structures, and process models for accuracy, consistency, and scalability</li>
+          <li>Produced and maintained comprehensive end-user education assets including cloud and technical documentation, UI content, process models, and customer/partner-facing training videos</li>
+          <li>Led documentation quality improvement initiatives — reviewed existing strategies, identified gaps, and proposed structured enhancements to leadership</li>
+          <li>Designed and deployed the SU-Doc Request Assistant — an M365 Copilot AI agent for cloud documentation change workflows (CCR, SCR, SU routing), active in operations</li>
+          <li>Planned and delivered KT sessions supporting onboarding, continuous learning, and complex documentation/release activities</li>
+          <li>Served as ClickLearn and IFS Cloud Documentation administrator</li>
+        </ul>
+      </div>
+      <div class="tl-achievements">
+        <span class="tl-ach">75% AHT reduction</span>
+        <span class="tl-ach">50% turnaround reduction (AI agent)</span>
+        <span class="tl-ach">AI agent in production</span>
+        <span class="tl-ach">188+ wiki article views</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-header">
+        <div>
+          <div class="tl-role">Content Strategist &amp; SEO Writer <span class="tl-type">Remote · Freelance</span></div>
+          <div class="tl-company">Enliven Designers</div>
+        </div>
+        <span class="tl-period">Feb 2024 – Present</span>
+      </div>
+      <div class="tl-body">
+        <p>Digital agency serving healthcare and travel clients. Leading editorial strategy across two regulated, research-intensive sectors simultaneously.</p>
+        <ul>
+          <li>Create SEO-optimised blog content improving search visibility, organic traffic, and brand authority</li>
+          <li>Develop conversion-focused UI website content aligning messaging with UX and brand voice</li>
+          <li>Conduct SEO audits, keyword research, and competitor analysis</li>
+          <li>Prepare and structure business proposals aligned with client objectives</li>
+          <li>Delivered CIW-compliant healthcare content for Headlands Nursing Home</li>
+          <li>Sustained 10-month editorial calendar for Dipuravana travel brand</li>
+        </ul>
+      </div>
+      <div class="tl-achievements">
+        <span class="tl-ach">100K+ travel site visits</span>
+        <span class="tl-ach">50+ monthly inquiries</span>
+        <span class="tl-ach">CIW compliant</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-header">
+        <div>
+          <div class="tl-role">L&amp;D Specialist <span class="tl-type">Remote · Contract</span></div>
+          <div class="tl-company">Assette</div>
+        </div>
+        <span class="tl-period">May 2022 – Dec 2022</span>
+      </div>
+      <div class="tl-body">
+        <p>Global asset management platform. Supported enablement initiatives working across US time zones.</p>
+        <ul>
+          <li>Translated complex domain knowledge into structured learning and documentation assets for internal teams and end users</li>
+          <li>Improved documentation workflows to support smoother knowledge transfer and delivery readiness</li>
+        </ul>
+      </div>
+      <div class="tl-achievements">
+        <span class="tl-ach">Global asset management</span>
+        <span class="tl-ach">US time zones</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-header">
+        <div>
+          <div class="tl-role">Technical Writer &amp; Content Strategist <span class="tl-type">Hybrid · Sri Lanka</span></div>
+          <div class="tl-company">Creately</div>
+        </div>
+        <span class="tl-period">Jul 2021 – Dec 2023</span>
+      </div>
+      <div class="tl-body">
+        <p>SaaS platform for visual collaboration used by 10 million+ users globally. Developed user-centric content supporting product documentation, marketing, and release communications.</p>
+        <ul>
+          <li>Authored and maintained product documentation, help content, and release notes across multiple release cycles</li>
+          <li>Developed 10+ long-form SEO/GEO blog articles (950–2,500 words) for market repositioning campaign — drove 50K+ monthly organic visits</li>
+          <li>Collaborated cross-functionally with Product, Design, Support, and Marketing teams</li>
+          <li>Created marketing content including blog posts, social media assets, and ad campaign materials</li>
+          <li>Supported content migration initiatives to new platforms</li>
+        </ul>
+      </div>
+      <div class="tl-achievements">
+        <span class="tl-ach">10M+ user platform</span>
+        <span class="tl-ach">50K+ organic visits/mo</span>
+        <span class="tl-ach">6–11 min avg read time</span>
+        <span class="tl-ach">10+ articles published</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-header">
+        <div>
+          <div class="tl-role">Technical Writer &amp; Documentation Specialist <span class="tl-type">Hybrid · Sri Lanka</span></div>
+          <div class="tl-company">WSO2</div>
+        </div>
+        <span class="tl-period">Jan 2019 – Jun 2021</span>
+      </div>
+      <div class="tl-body">
+        <p>Global open-source middleware company. Developed and maintained documentation and training materials for WSO2 Enterprise Integrator and Open Banking platforms across multiple major releases (versions 1.3 through 3.0).</p>
+        <ul>
+          <li>Documented complex open banking standards: UK Open Banking, Berlin Group NextGen PSD2, Australian Consumer Data Standards, API Management, IAM, Consent Management, API Security</li>
+          <li>Authored release notes, consent authorization guides, DCR tutorials, and data publishing documentation — contributed directly to wso2/docs-open-banking public GitHub repository</li>
+          <li>Owned documentation and training deliverables during team transition — addressed critical gaps and onboarded new technical writer</li>
+          <li>Planned, created, and executed training materials including external training slides, self-learning resources, and LMS-hosted courses</li>
+          <li>Revamped documentation structure improving readability and onboarding</li>
+        </ul>
+      </div>
+      <div class="tl-achievements">
+        <span class="tl-ach">5 major releases documented</span>
+        <span class="tl-ach">GitHub PR merged</span>
+        <span class="tl-ach">74 lines published</span>
+        <span class="tl-ach">WSO2 partner verified</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="reveal">
+    <p class="section-eyebrow">03 — Selected Work</p>
+    <h2 class="section-title">Projects &amp;<br><em>case studies</em></h2>
+    <p class="section-sub">Work organised by discipline. Every project includes scope, approach, outcome, and proof of delivery.</p>
+  </div>
+
+  <div class="proj-tabs">
+    <button class="proj-tab active" onclick="switchTab('tw',this)">Technical Writing</button>
+    <button class="proj-tab" onclick="switchTab('ld',this)">L&amp;D &amp; Training</button>
+    <button class="proj-tab" onclick="switchTab('cw',this)">Content Writing</button>
+    <button class="proj-tab" onclick="switchTab('cs',this)">Content Strategy</button>
+    <button class="proj-tab" onclick="switchTab('web',this)">Web &amp; SEO</button>
+  </div>
+
+  <!-- TECHNICAL WRITING -->
+  <div id="panel-tw" class="proj-panel active">
+
+    <div class="flip-wrap" style="height:auto">
+      <div class="flip-inner">
+        <div class="flip-front">
+    <div class="proj-full">
+      <div class="pf-header">
+        <div class="pf-left">
+          <div class="pf-client">WSO2 · Open Banking Accelerator</div>
+          <div class="pf-title">Release Notes — About This Release</div>
+        </div>
+        <span class="pf-badge">Public GitHub · PR Merged · 2020</span>
+      </div>
+      <div class="pf-grid">
+        <div>
+          <div class="pf-col-label">Scope</div>
+          <div class="pf-col-body">
+            <p>Authored the public-facing "About This Release" page for WSO2 Open Banking Accelerator 3.0 covering three modules: Identity Server Accelerator, API Manager Accelerator, and Business Intelligence Accelerator. Submitted as a pull request to the public wso2/docs-open-banking GitHub repository under commit handle SSParamee.</p>
+          </div>
+          <div class="pf-col-label" style="margin-top:1rem">Challenges</div>
+          <div class="pf-col-body">
+            <ul>
+              <li>Translating multi-module specs across OAuth2/OIDC, Siddhi applications, and consent management into authoritative, accessible prose on deadline</li>
+              <li>Consolidating fragmented stakeholder inputs across engineering, product, and compliance teams</li>
+              <li>Maintaining precision across OSS contribution guidelines</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="pf-col-label">Approach</div>
+          <div class="pf-col-body">
+            <p>Applied GTA (Goal–Task–Action) methodology to impose structure on late-breaking inputs. Developed a "What's New / What's Changed" framework mapping cleanly across all three modules. Structured for multi-channel distribution: developer blog, summit presentations, and partner documentation.</p>
+          </div>
+          <div class="pf-col-label" style="margin-top:1rem">Outcome</div>
+          <div class="pf-col-body">
+            <p>PR merged to the public wso2/docs-open-banking repository. 74 lines of markdown published and validated by WSO2 engineers and external partners. Distributed across blogs, summit presentations, and partner docs.</p>
+          </div>
+          <a href="https://github.com/SSParamee" target="_blank" class="proof-link">View GitHub contributions ↗</a>
+        </div>
+      </div>
+      <hr class="pf-divider">
+      <div class="pf-metrics">
+        <div class="pf-metric"><span class="pf-metric-val">74</span><span class="pf-metric-lbl">lines of markdown</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">PR ✓</span><span class="pf-metric-lbl">merged to public repo</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">3</span><span class="pf-metric-lbl">modules covered</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">✓</span><span class="pf-metric-lbl">partner verified</span></div>
+      </div>
+      <div class="pf-tags">
+        <span class="pf-tag">Open Banking</span><span class="pf-tag">API docs</span><span class="pf-tag">GitHub / Markdown</span><span class="pf-tag">Compliance writing</span><span class="pf-tag">Multi-channel</span><span class="pf-tag">GTA methodology</span>
+      </div>
+      <button class="flip-btn" onclick="flipCard(this,'back')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+        View Proof
+      </button>
+    </div>
+        </div>
+    <div class="flip-back">
+      <div class="proof-back-hdr">
+        <div>
+          <div class="proof-back-title">Proof of Delivery</div>
+          <div class="proof-back-sub">WSO2 Open Banking Accelerator 3.0 · Release Notes · 2020</div>
+        </div>
+        <span class="proof-back-badge">PR MERGED · PUBLIC REPO</span>
+      </div>
+      <div class="proof-img-grid">
+        <div class="proof-img-card">
+          <img src="proof/wso2-github.jpg" alt="GitHub commit — SSParamee adding about-this-release.md, 74 lines, wso2/docs-open-banking" loading="lazy">
+          <div class="proof-img-cap">GitHub · Commit by SSParamee · 74 lines · 8bef0a3</div>
+        </div>
+        <div class="proof-img-card">
+          <img src="proof/wso2-docs.jpg" alt="WSO2 Open Banking Accelerator Documentation — About This Release page rendered live on ob-docs.wso2.com" loading="lazy">
+          <div class="proof-img-cap">Live page · ob-docs.wso2.com · OB Accelerator 3.0</div>
+        </div>
+      </div>
+      <div class="proof-back-footer">
+        <a href="https://github.com/wso2/docs-open-banking/commits?author=SSParamee" target="_blank" class="proof-back-link">View commits on GitHub ↗</a>
+        <button class="back-btn" onclick="flipCard(this,'front')">← Back to project</button>
+      </div>
+    </div>
+      </div>
+    </div>
+
+    <div class="proj-full">
+      <div class="pf-header">
+        <div class="pf-left">
+          <div class="pf-client">WSO2 · Open Banking Accelerator</div>
+          <div class="pf-title">Technical Overviews — Consent Authorization &amp; DCR Tryout</div>
+        </div>
+        <span class="pf-badge">Public docs · ob-docs.wso2.com</span>
+      </div>
+      <div class="pf-grid">
+        <div>
+          <div class="pf-col-label">Scope</div>
+          <div class="pf-col-body">
+            <p>Authored technical overview documentation for two core open banking workflows: Consent Authorization (covering authorization endpoints, PAR, identifier-first auth) and Dynamic Client Registration Tryout (454-line step-by-step deployment guide with cURL examples, configuration tables, and environment setup).</p>
+          </div>
+          <div class="pf-col-label" style="margin-top:1rem">Challenges</div>
+          <div class="pf-col-body">
+            <ul>
+              <li>Documenting branching authorization flows (redirect vs PAR) without fragmenting the narrative</li>
+              <li>Ensuring step-by-step instructions were reproducible across Identity Server, API Manager, and Streaming Integrator environments</li>
+              <li>Embedded collapsible config blocks to reduce cognitive load without hiding depth</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="pf-col-label">Approach</div>
+          <div class="pf-col-body">
+            <p>Structured each article around user task flows rather than system architecture. Applied layered disclosure — overview first, detailed configuration steps second. Used collapsible "Click to see" sections strategically for verbose configuration blocks.</p>
+          </div>
+          <div class="pf-col-label" style="margin-top:1rem">Outcome</div>
+          <div class="pf-col-body">
+            <p>Published on ob-docs.wso2.com. Referenced across partner deployments. Commit history visible under SSParamee on the public GitHub repository. DCR tryout guide: 454 lines documenting the full API consumer registration flow.</p>
+          </div>
+          <span class="sample-note">Published page screenshots available upon request</span>
+        </div>
+      </div>
+      <div class="pf-tags">
+        <span class="pf-tag">OAuth2 / OIDC</span><span class="pf-tag">API flows</span><span class="pf-tag">Step-by-step guides</span><span class="pf-tag">Layered disclosure</span><span class="pf-tag">cURL / Postman</span>
+      </div>
+    </div>
+
+    <div class="proj-full">
+      <div class="pf-header">
+        <div class="pf-left">
+          <div class="pf-client">IFS · User Education Team</div>
+          <div class="pf-title">IFS Cloud Documentation Wiki</div>
+        </div>
+        <span class="pf-badge">Confluence · Internal + partner-facing · 2024–2025</span>
+      </div>
+      <div class="pf-grid">
+        <div>
+          <div class="pf-col-label">Scope</div>
+          <div class="pf-col-body">
+            <p>Authored two published articles for the IFS Education Confluence space: <em>"Adding Cloud Documentation Updates"</em> (9-step Git/Sourcetree workflow, 6 min read, 188+ views) and <em>"Linking Technical Documentation Pages to IFS Cloud"</em> (JavaScript f1docnavigation.js mapping guide with governance warnings for past-track risks).</p>
+          </div>
+          <div class="pf-col-label" style="margin-top:1rem">Challenges</div>
+          <div class="pf-col-body">
+            <ul>
+              <li>Documenting two distinct branch creation methods (manual + Jira-originated) without confusing a mixed-expertise audience</li>
+              <li>Embedding CCR freeze deadline governance warnings prominently without disrupting instructional flow</li>
+              <li>Structuring JS mapping link check exclusion guidance so it surfaced proactively, not as troubleshooting afterthought</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="pf-col-label">Approach</div>
+          <div class="pf-col-body">
+            <p>Structured content around user task goals rather than system architecture. Applied GEO-optimized content architecture for AI and traditional search surfaces simultaneously. Established editorial governance standards subsequently adopted by the wider User Education team.</p>
+          </div>
+          <div class="pf-col-label" style="margin-top:1rem">Outcome</div>
+          <div class="pf-col-body">
+            <p>188+ article views. 75% reduction in AHT for documentation-related support queries. Both articles embedded in the core IFS Cloud documentation onboarding path for new User Education Specialists.</p>
+          </div>
+          <span class="sample-note">Confluence page screenshots available upon request</span>
+        </div>
+      </div>
+      <hr class="pf-divider">
+      <div class="pf-metrics">
+        <div class="pf-metric"><span class="pf-metric-val">188+</span><span class="pf-metric-lbl">article views</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">75%</span><span class="pf-metric-lbl">AHT reduction</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">2</span><span class="pf-metric-lbl">articles published</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">9</span><span class="pf-metric-lbl">Git steps documented</span></div>
+      </div>
+      <div class="pf-tags">
+        <span class="pf-tag">Enterprise ERP</span><span class="pf-tag">Confluence</span><span class="pf-tag">Git / Sourcetree</span><span class="pf-tag">GEO architecture</span><span class="pf-tag">Governance docs</span><span class="pf-tag">JS mapping</span>
+      </div>
+            <button class="proof-toggle-btn" onclick="toggleProof(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg> View Proof</button>
+      <div class="proof-toggle-panel">Proof: Confluence pages with view counts and author attribution available — samples provided upon request.</div>
+    </div>
+
+    <div class="proj-full">
+      <div class="pf-header">
+        <div class="pf-left">
+          <div class="pf-client">Creately · Private GitHub Repository</div>
+          <div class="pf-title">SaaS Release Notes — 2022–2023</div>
+        </div>
+        <span class="pf-badge">Private repo · Screenshots available</span>
+      </div>
+      <div class="pf-grid">
+        <div>
+          <div class="pf-col-label">Scope</div>
+          <div class="pf-col-body"><p>Authored and maintained release notes for Creately's SaaS platform across multiple release cycles. Managed in a private GitHub repository; final published output verifiable via product page screenshots. Covered new features, enhancements, bug fixes, and deprecations across rapid release cadences.</p></div>
+          <div class="pf-col-label" style="margin-top:1rem">Challenges</div>
+          <div class="pf-col-body">
+            <ul>
+              <li>Translating engineering changelogs into user-facing language without losing technical precision</li>
+              <li>Maintaining consistent voice and structure across rapid release cadences on a 10M+ user platform</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="pf-col-label">Approach</div>
+          <div class="pf-col-body"><p>Applied a "What changed / Why it matters / How to use it" framework for each release item — balancing developer accuracy with user comprehension. Established a structured identification process for features, enhancements, fixes, and deprecations ensuring nothing was missed at release.</p></div>
+          <div class="pf-col-label" style="margin-top:1rem">Outcome</div>
+          <div class="pf-col-body"><p>Consistent, on-brand release communication across multiple cycles on a 10M+ user platform. Published product page screenshots available on request.</p></div>
+          <span class="sample-note">Published release page screenshots available upon request</span>
+        </div>
+      </div>
+      <div class="pf-tags">
+        <span class="pf-tag">SaaS release notes</span><span class="pf-tag">GitHub markdown</span><span class="pf-tag">Version management</span><span class="pf-tag">10M+ user platform</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- L&D -->
+  <div id="panel-ld" class="proj-panel">
+
+    <div class="proj-full">
+      <div class="pf-header">
+        <div class="pf-left">
+          <div class="pf-client">IFS · User Education Team</div>
+          <div class="pf-title">SU-Doc Request Assistant — M365 Copilot AI Agent</div>
+        </div>
+        <span class="pf-badge">Active in operations · 2024–2025</span>
+      </div>
+      <div class="pf-grid">
+        <div>
+          <div class="pf-col-label">Scope</div>
+          <div class="pf-col-body"><p>Designed and deployed an M365 Copilot AI agent to automate decision-making for IFS cloud documentation change workflows — routing correctly between CCR, SCR, and SU processes. Built the knowledge architecture from scratch, connecting five knowledge sources across Confluence and Jira, and validating across 4 real-world documentation scenarios. One of 8 agents in the IFS User Education Copilot suite.</p></div>
+          <div class="pf-col-label" style="margin-top:1rem">Challenges</div>
+          <div class="pf-col-body">
+            <ul>
+              <li>Encoding branching conditional decision logic into retrievable formats an LLM could navigate reliably</li>
+              <li>Curating accurate datasets across non-native platforms (Jira Cloud, Confluence Cloud) with incomplete TechDoc ownership data</li>
+              <li>Zero-error tolerance — documentation routing errors carry operational consequences across release tracks</li>
+              <li>Designing for an audience that needed both guided workflow support and self-service capability</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="pf-col-label">Approach</div>
+          <div class="pf-col-body"><p>Built a decision intelligence framework mapping all documentation change scenarios to their correct routing outcome. Connected five knowledge sources (Confluence change control pages, Jira CCR/SCR/SU boards, ROB release calendar). Designed UPZGEN issue templates for documentation-only changes. Validated agent responses across all 4 critical scenario types before go-live. Applied responsible AI adoption principles throughout.</p></div>
+          <div class="pf-col-label" style="margin-top:1rem">Outcome</div>
+          <div class="pf-col-body"><p>Agent deployed and active in IFS operations. 50% reduction in documentation change request turnaround time. Validated across 4 scenario types. Part of the broader IFS User Education AI enablement programme presented to leadership.</p></div>
+          <span class="sample-note">Agent UI screenshots and design documentation available upon request</span>
+        </div>
+      </div>
+      <hr class="pf-divider">
+      <div class="pf-metrics">
+        <div class="pf-metric"><span class="pf-metric-val">50%</span><span class="pf-metric-lbl">turnaround reduction</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">4</span><span class="pf-metric-lbl">scenarios validated</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">5</span><span class="pf-metric-lbl">knowledge sources</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">Active</span><span class="pf-metric-lbl">in operations</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">8</span><span class="pf-metric-lbl">agents in suite</span></div>
+      </div>
+      <div class="pf-tags">
+        <span class="pf-tag">AI agent design</span><span class="pf-tag">Knowledge architecture</span><span class="pf-tag">M365 Copilot</span><span class="pf-tag">Decision intelligence</span><span class="pf-tag">Jira · Confluence</span><span class="pf-tag">Responsible AI</span>
+      </div>
+            <button class="proof-toggle-btn" onclick="toggleProof(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg> View Proof</button>
+      <div class="proof-toggle-panel">Proof: UI screenshots, design plan, and implementation documentation — available upon request.</div>
+    </div>
+
+    <div class="proj-full">
+      <div class="pf-header">
+        <div class="pf-left">
+          <div class="pf-client">IFS · User Education Team</div>
+          <div class="pf-title">IFS Enterprise Service Management — LMS Course Materials</div>
+        </div>
+        <span class="pf-badge">Internal LMS · ClickLearn · 2024–2025</span>
+      </div>
+      <div class="pf-grid">
+        <div>
+          <div class="pf-col-label">Scope</div>
+          <div class="pf-col-body"><p>Developed LMS course materials for IFS Enterprise Service Management (ESM) covering end-to-end service management workflows within IFS Cloud ERP. Designed for practitioner onboarding and role-specific upskilling across global IFS customer and partner organisations. Delivered via ClickLearn and the IFS LMS infrastructure.</p></div>
+          <div class="pf-col-label" style="margin-top:1rem">Challenges</div>
+          <div class="pf-col-body">
+            <ul>
+              <li>Synthesizing complex ERP workflows into learner-appropriate modules without oversimplifying for practitioner audiences</li>
+              <li>Aligning learning objectives to IFS Cloud release cycles — materials needed to stay current across documentation track updates</li>
+              <li>Designing for diverse learner contexts: self-paced individual study, facilitated use, and post-training reference</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="pf-col-label">Approach</div>
+          <div class="pf-col-body"><p>Applied the IFS User Education content framework to ensure consistency with the broader IFS knowledge ecosystem. Built modular content units assembled into role-based learning paths without duplication. Embedded governance checkpoints aligned to IFS release calendar and change control protocols. Supported release readiness by working with Service Management User Education Specialists.</p></div>
+          <div class="pf-col-label" style="margin-top:1rem">Outcome</div>
+          <div class="pf-col-body"><p>ESM course materials deployed across customer onboarding and partner enablement programmes. Materials used in conjunction with IFS AI Copilot assistant to support self-service learner queries.</p></div>
+          <span class="sample-note">Course structure and sample modules available upon request</span>
+        </div>
+      </div>
+      <div class="pf-tags">
+        <span class="pf-tag">Enterprise ERP</span><span class="pf-tag">ClickLearn / LMS</span><span class="pf-tag">Modular design</span><span class="pf-tag">Service management</span><span class="pf-tag">Partner enablement</span><span class="pf-tag">IFS Cloud</span>
+      </div>
+    </div>
+
+    <div class="proj-full">
+      <div class="pf-header">
+        <div class="pf-left">
+          <div class="pf-client">WSO2</div>
+          <div class="pf-title">WSO2 Open Banking Self-Paced Training Course</div>
+        </div>
+        <span class="pf-badge">Thinkific LMS · wso2.com/training · 2020–2021</span>
+      </div>
+      <div class="pf-grid">
+        <div>
+          <div class="pf-col-label">Scope</div>
+          <div class="pf-col-body"><p>Planned, created, and executed training materials for WSO2's self-paced open banking training course covering regulatory compliance (UK Open Banking Standard, NextGenPSD2, Australian CDR), product architecture, and implementation guidance for developer and compliance practitioner audiences globally.</p></div>
+          <div class="pf-col-label" style="margin-top:1rem">Challenges</div>
+          <div class="pf-col-body">
+            <ul>
+              <li>Bridging the knowledge gap between regulatory frameworks (PSD2, CDR, UK OB) and technical implementation within a single learner journey</li>
+              <li>Structuring self-paced content to function without a facilitator — including clear progression logic and self-assessment checkpoints</li>
+              <li>Serving a dual audience: compliance professionals needing regulatory grounding and developers needing implementation pathways</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="pf-col-label">Approach</div>
+          <div class="pf-col-body"><p>Applied progressive disclosure — regulatory context first, product mechanics second, implementation specifics third — to reduce cognitive load across the full learning arc. Designed role-based learning paths allowing compliance and developer audiences to navigate the same content differently. Included external training slides and LMS-hosted modules.</p></div>
+          <div class="pf-col-label" style="margin-top:1rem">Outcome</div>
+          <div class="pf-col-body"><p>Course live on the WSO2 training portal. Supports global partner and enterprise customer onboarding for WSO2 Open Banking Accelerator implementations worldwide.</p></div>
+          <a href="https://wso2.com/blogs/thesource/what-you-need-to-know-about-training-available-for-wso2-open-banking/" target="_blank" class="proof-link">View WSO2 training announcement ↗</a>
+        </div>
+      </div>
+      <div class="pf-tags">
+        <span class="pf-tag">Self-paced eLearning</span><span class="pf-tag">Regulatory compliance</span><span class="pf-tag">Dual-audience design</span><span class="pf-tag">Fintech / Open Banking</span><span class="pf-tag">Thinkific</span><span class="pf-tag">Progressive disclosure</span>
+      </div>
+    </div>
+
+    <div class="proj-full" style="border-color:rgba(201,169,110,.15)">
+      <div class="pf-header">
+        <div class="pf-left">
+          <div class="pf-client">IFS · User Education Team</div>
+          <div class="pf-title">Information Architecture &amp; the Human Mind — Peer Session</div>
+        </div>
+        <span class="pf-badge">Internal KT · 2024</span>
+      </div>
+      <div class="pf-grid">
+        <div>
+          <div class="pf-col-label">Scope</div>
+          <div class="pf-col-body"><p>Designed and delivered a peer educational session for the IFS User Education team on applying cognitive load theory and human psychology to information architecture decisions. Covered mental models, memory, intuitive navigation, and predictability — all directly applicable to documentation and UX writing.</p></div>
+        </div>
+        <div>
+          <div class="pf-col-label">Outcome</div>
+          <div class="pf-col-body"><p>Session delivered to the IFS User Education team as part of knowledge transfer and continuous learning programming.</p></div>
+          <span class="sample-note">Presentation deck available upon request</span>
+        </div>
+      </div>
+      <div class="pf-tags">
+        <span class="pf-tag">Instructional design</span><span class="pf-tag">Cognitive load theory</span><span class="pf-tag">IA principles</span><span class="pf-tag">Peer KT session</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CONTENT WRITING -->
+  <div id="panel-cw" class="proj-panel">
+    <div class="proj-grid">
+
+      <div class="proj-card">
+        <div class="pc-client">Creately · SaaS</div>
+        <div class="pc-title">Market Repositioning Blog Series</div>
+        <div class="pc-badge">10+ articles · 2021–2023</div>
+        <div class="pc-desc">10+ long-form articles (950–2,500 words) repositioning Creately from "diagramming tool" to "visual collaboration platform." Each built around an original editorial thesis — researched market whitespace between collaboration and diagramming, structured for both search intent and genuine depth.</div>
+        <div class="pc-section">
+          <div class="pc-label">Approach</div>
+          <div class="pc-text">Research-driven SEO + GEO framework. Product-led storytelling without feature-doc reduction. Structured for AI-cited responses (GEO). Embedded as part of broader market repositioning strategy.</div>
+        </div>
+        <div class="pc-metrics">
+          <div class="pc-metric"><span class="pc-metric-val">50K+</span><span class="pc-metric-lbl">organic visits/mo</span></div>
+          <div class="pc-metric"><span class="pc-metric-val">6–11</span><span class="pc-metric-lbl">min avg read time</span></div>
+          <div class="pc-metric"><span class="pc-metric-val">10+</span><span class="pc-metric-lbl">articles published</span></div>
+        </div>
+        <div class="pc-tags"><span class="pc-tag">SaaS / B2B</span><span class="pc-tag">Long-form</span><span class="pc-tag">SEO + GEO</span><span class="pc-tag">Category narrative</span></div>
+        <a href="https://creately.com/guides/author/Paramee-Samarathunga/" target="_blank" class="pc-proof">View all published articles ↗</a>
+      </div>
+
+      <div class="proj-card">
+        <div class="pc-client">Catenaa · Blockchain &amp; Fintech</div>
+        <div class="pc-title">Blockchain &amp; DeFi Editorial</div>
+        <div class="pc-badge">Fintech specialist publication</div>
+        <div class="pc-desc">Research-intensive articles on blockchain infrastructure, DeFi protocols, and fintech regulation for a specialist publication targeting developers and financial professionals. Required rapid synthesis of evolving technical subject matter into credible, precisely-worded editorial.</div>
+        <div class="pc-section">
+          <div class="pc-label">Approach</div>
+          <div class="pc-text">Primary research into protocol mechanics and regulatory developments. Structured for a dual audience — technical depth for developers, strategic framing for financial professionals.</div>
+        </div>
+        <div class="pc-tags"><span class="pc-tag">Blockchain</span><span class="pc-tag">DeFi</span><span class="pc-tag">Fintech regulation</span><span class="pc-tag">Technical editorial</span></div>
+        <span class="sample-note">Published article screenshots available upon request</span>
+      </div>
+
+      <div class="proj-card">
+        <div class="pc-client">Dipuravana · Travel</div>
+        <div class="pc-title">Sri Lanka Travel Blog — 10-Month Series</div>
+        <div class="pc-badge">dipuravana.com/blog · 2023–2024</div>
+        <div class="pc-desc">Sustained a 10-month long-form editorial calendar for a Sri Lanka travel brand — developing a sustainability-focused voice that differentiated the brand from generic destination content. Covered beaches, cultural heritage, wildlife, community tourism, and culinary experiences.</div>
+        <div class="pc-section">
+          <div class="pc-label">Approach</div>
+          <div class="pc-text">Brand voice rooted in sustainable tourism and local knowledge. SEO, GEO, and AEO integrated into every editorial decision. Monthly consistency maintained without quality drop.</div>
+        </div>
+        <div class="pc-metrics">
+          <div class="pc-metric"><span class="pc-metric-val">100K+</span><span class="pc-metric-lbl">site visits</span></div>
+          <div class="pc-metric"><span class="pc-metric-val">50+</span><span class="pc-metric-lbl">monthly inquiries</span></div>
+        </div>
+        <div class="pc-tags"><span class="pc-tag">Travel</span><span class="pc-tag">Sustainability</span><span class="pc-tag">Long-form series</span><span class="pc-tag">Brand voice</span></div>
+        <a href="https://dipuravana.com/blog/" target="_blank" class="pc-proof">View travel blog ↗</a>
+      </div>
+
+      <div class="proj-card">
+        <div class="pc-client">LK Domain Registry</div>
+        <div class="pc-title">.LK Domain Registration — Editorial</div>
+        <div class="pc-badge">domains.lk · Sinhala-language</div>
+        <div class="pc-desc">Published explainer demystifying .lk domain registration for Sri Lankan businesses and individuals — written in Sinhala. AEO-structured to answer the reader's primary question in the first scroll, with a registrant type matrix, document checklist, and step-by-step flow.</div>
+        <div class="pc-section">
+          <div class="pc-label">Approach</div>
+          <div class="pc-text">AEO-structured content designed for featured snippet and answer box placement. Entity-rich markup for GEO performance. Practical utility as primary goal over SEO traffic.</div>
+        </div>
+        <div class="pc-tags"><span class="pc-tag">Sinhala</span><span class="pc-tag">AEO structured</span><span class="pc-tag">How-to editorial</span><span class="pc-tag">Government / registry</span></div>
+        <a href="https://www.domains.lk/news-events/getting-a-domain-name-is-easier-than-you-think/" target="_blank" class="pc-proof">View published article ↗</a>
+      </div>
+
+      <div class="proj-card">
+        <div class="pc-client">Personal · Medium</div>
+        <div class="pc-title">Personal Blog — Fintech &amp; L&D Thought Leadership</div>
+        <div class="pc-badge">parameesamarathunga.medium.com</div>
+        <div class="pc-desc">Personal thought leadership blog covering L&D strategy, technical writing best practices, fintech/open banking developments, and knowledge architecture — demonstrating independent research and editorial voice beyond client work.</div>
+        <div class="pc-tags"><span class="pc-tag">Thought leadership</span><span class="pc-tag">L&D</span><span class="pc-tag">Fintech</span><span class="pc-tag">Editorial voice</span></div>
+        <a href="https://parameesamarathunga.medium.com" target="_blank" class="pc-proof">View Medium blog ↗</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CONTENT STRATEGY -->
+  <div id="panel-cs" class="proj-panel">
+
+    <div class="proj-full">
+      <div class="pf-header">
+        <div class="pf-left">
+          <div class="pf-client">Creately</div>
+          <div class="pf-title">Category Repositioning Content Strategy</div>
+        </div>
+        <span class="pf-badge">SaaS · B2B · 2021–2023</span>
+      </div>
+      <div class="pf-grid">
+        <div>
+          <div class="pf-col-label">Strategic challenge</div>
+          <div class="pf-col-body"><p>Creately occupied an ambiguous product category — too sophisticated to be marketed as a "diagramming tool," not differentiated enough to claim "collaboration platform" against Miro and Figma. The task was to identify and own a defensible narrative position in the whitespace between those categories.</p></div>
+          <div class="pf-col-label" style="margin-top:1rem">Framework built</div>
+          <div class="pf-col-body">
+            <ul>
+              <li>Market signal research to identify underserved search and content intent clusters</li>
+              <li>Article-as-thesis model: each piece built around a distinct editorial argument, not a keyword</li>
+              <li>GEO-structured content designed for AI citation (structured answers, clear entity relationships)</li>
+              <li>Product-led storytelling framework that worked without reducing to feature documentation</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="pf-col-label">Execution</div>
+          <div class="pf-col-body"><p>10+ articles published across the Creately guides section. Each 950–2,500 words, original research, distinct editorial angle. Balanced keyword density requirements against long-form research depth. Sustained consistent brand voice across diverse topics.</p></div>
+          <div class="pf-col-label" style="margin-top:1rem">Outcome</div>
+          <div class="pf-col-body"><p>50K+ monthly organic visits sustained. 6–11 minute average read time demonstrates audience retention, not just traffic. Framework remains in active use for the Creately content programme.</p></div>
+        </div>
+      </div>
+      <hr class="pf-divider">
+      <div class="pf-metrics">
+        <div class="pf-metric"><span class="pf-metric-val">50K+</span><span class="pf-metric-lbl">monthly organic visits</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">6–11 min</span><span class="pf-metric-lbl">avg read time</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">10+</span><span class="pf-metric-lbl">articles in framework</span></div>
+      </div>
+    </div>
+
+    <div class="proj-full">
+      <div class="pf-header">
+        <div class="pf-left">
+          <div class="pf-client">Enliven Designers · Healthcare &amp; Travel</div>
+          <div class="pf-title">Dual-Sector Editorial Strategy</div>
+        </div>
+        <span class="pf-badge">Regulated industries · 10-month delivery</span>
+      </div>
+      <div class="pf-grid">
+        <div>
+          <div class="pf-col-label">Strategic challenge</div>
+          <div class="pf-col-body"><p>Deliver a single editorial framework serving two radically different sectors simultaneously — UK-regulated healthcare (Care Inspectorate Wales compliance) and Sri Lanka's competitive travel market — without quality drop or voice bleed between them.</p></div>
+          <div class="pf-col-label" style="margin-top:1rem">Framework built</div>
+          <div class="pf-col-body">
+            <ul>
+              <li>Primary research into CIW regulatory standards from zero industry background</li>
+              <li>Distinct brand voices: clinical warmth with regulatory precision (healthcare) vs. sustainability-led local knowledge (travel)</li>
+              <li>SEO, GEO, and AEO integrated into every editorial decision — not layered on after writing</li>
+              <li>10-month editorial calendar sustained at consistent quality without velocity drop</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="pf-col-label">Execution</div>
+          <div class="pf-col-body"><p>Headlands Nursing Home: full website content (CIW-compliant, 50+ healthcare assets). Dipuravana: 10 months of travel editorial. Symbioun: impact investment web copy. Seren Gobaith and Highbarrow: additional healthcare clients operating under the same framework.</p></div>
+          <div class="pf-col-label" style="margin-top:1rem">Outcome</div>
+          <div class="pf-col-body"><p>100K+ travel site visits. 50+ monthly customer inquiries. Measurable lead generation attributed directly to content — demonstrating content as a commercial asset, not a marketing overhead.</p></div>
+        </div>
+      </div>
+      <hr class="pf-divider">
+      <div class="pf-metrics">
+        <div class="pf-metric"><span class="pf-metric-val">100K+</span><span class="pf-metric-lbl">travel visits</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">50+</span><span class="pf-metric-lbl">monthly inquiries</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">2</span><span class="pf-metric-lbl">sectors served</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">10 mo</span><span class="pf-metric-lbl">calendar sustained</span></div>
+      </div>
+    </div>
+
+    <div class="proj-full">
+      <div class="pf-header">
+        <div class="pf-left">
+          <div class="pf-client">IFS</div>
+          <div class="pf-title">Enterprise Knowledge Architecture Strategy</div>
+        </div>
+        <span class="pf-badge">Enterprise ERP · AI-enabled · 2024–2025</span>
+      </div>
+      <div class="pf-grid">
+        <div>
+          <div class="pf-col-label">Strategic challenge</div>
+          <div class="pf-col-body"><p>IFS's documentation ecosystem needed to serve two futures simultaneously: human practitioners via Confluence and traditional search, and AI agents (Copilot) consuming structured knowledge programmatically. The strategy required content to be both human-readable and machine-retrievable.</p></div>
+          <div class="pf-col-label" style="margin-top:1rem">Framework built</div>
+          <div class="pf-col-body">
+            <ul>
+              <li>GEO-optimized content architecture for AI and traditional search surfaces simultaneously</li>
+              <li>Editorial governance standards adopted across the User Education team</li>
+              <li>Knowledge architecture for the SU-Doc Copilot agent — structuring conditional decision logic into retrievable formats</li>
+              <li>Modular LMS content units assembled into role-based learning paths</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="pf-col-label">Execution</div>
+          <div class="pf-col-body"><p>Two Confluence articles forming the backbone of the IFS Cloud documentation contribution workflow. One AI agent active in operations. LMS course materials for IFS ESM deployed globally. Peer educational materials on IA &amp; the Human Mind delivered to the User Education team.</p></div>
+          <div class="pf-col-label" style="margin-top:1rem">Outcome</div>
+          <div class="pf-col-body"><p>75% AHT reduction from documentation wiki. 50% turnaround reduction from AI agent. Editorial governance standards adopted across the team — the strategy outlived individual deliverables.</p></div>
+        </div>
+      </div>
+      <hr class="pf-divider">
+      <div class="pf-metrics">
+        <div class="pf-metric"><span class="pf-metric-val">75%</span><span class="pf-metric-lbl">AHT reduction</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">50%</span><span class="pf-metric-lbl">turnaround reduction</span></div>
+        <div class="pf-metric"><span class="pf-metric-val">Human + AI</span><span class="pf-metric-lbl">dual-optimized</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WEB & SEO -->
+  <div id="panel-web" class="proj-panel">
+    <div class="proj-full" style="margin-bottom:2rem">
+      <div class="pf-header">
+        <div class="pf-left">
+          <div class="pf-client">Multi-sector freelance</div>
+          <div class="pf-title">SEO · GEO · AEO Content Framework</div>
+        </div>
+        <span class="pf-badge">10+ websites · 2023–Present</span>
+      </div>
+      <div class="pf-grid">
+        <div>
+          <div class="pf-col-label">Framework</div>
+          <div class="pf-col-body">
+            <p>Every web engagement operates across three layers simultaneously: SEO (ranking in traditional search), GEO (appearing in AI-generated answers on Perplexity, ChatGPT, and similar), and AEO (answering specific questions directly in featured snippets). Not add-ons — embedded into architecture from the first brief.</p>
+            <ul style="margin-top:.75rem">
+              <li>Page copy written with entity relationships and semantic clarity that AI models can parse and cite</li>
+              <li>FAQ and how-to structures embedded naturally — not bolted on</li>
+              <li>CTA architecture tied to conversion goals, not traffic metrics</li>
+              <li>SEO audits, keyword research, and competitor analysis preceding all content work</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="pf-col-label">Regulated sector expertise</div>
+          <div class="pf-col-body"><p>Healthcare clients (Headlands, Highbarrow, Seren Gobaith, Clarity Hypnosis) require CIW/CQC-aware content using clinical language precisely, building trust with prospective residents and families while remaining accessible and warm. A distinct writing discipline most generalist copywriters cannot execute.</p></div>
+          <div class="pf-col-label" style="margin-top:1rem">Technical sector expertise</div>
+          <div class="pf-col-body"><p>Technology clients (Technify, VSIS) require copy that communicates complex service stacks (custom software, SaaS, API integration, cloud) to non-technical decision-makers — precision without jargon.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="web-grid">
+      <div class="web-card">
+        <div class="wc-name">Headlands Nursing Home</div>
+        <div class="wc-sector">Healthcare · Wales, UK</div>
+        <div class="wc-desc">Full website content — CIW-compliant across homepage, about, services, facilities, and testimonials. Clinical warmth with regulatory precision.</div>
+      </div>
+      <div class="web-card">
+        <div class="wc-name">Highbarrow Care</div>
+        <div class="wc-sector">Elderly healthcare · UK</div>
+        <div class="wc-desc">Web content balancing family-facing emotional trust-building with operational service information for an elderly care provider.</div>
+      </div>
+      <div class="web-card">
+        <div class="wc-name">Seren Gobaith</div>
+        <div class="wc-sector">Healthcare · Wales, UK</div>
+        <div class="wc-desc">Healthcare provider website content to CIW standards with SEO and AEO integration throughout.</div>
+      </div>
+      <div class="web-card">
+        <div class="wc-name">Clarity Hypnosis</div>
+        <div class="wc-sector">Hypnotherapy · Scotland, UK</div>
+        <div class="wc-desc">Service provider content building trust and overcoming audience scepticism in the wellness/therapy space.</div>
+      </div>
+      <div class="web-card">
+        <div class="wc-name">Technify</div>
+        <div class="wc-sector">Custom software · Sri Lanka</div>
+        <div class="wc-desc">Full website revamp covering enterprise systems, cloud, cybersecurity, and managed services for non-technical buyers.</div>
+      </div>
+      <div class="web-card">
+        <div class="wc-name">Symbioun</div>
+        <div class="wc-sector">Impact investment · Sri Lanka</div>
+        <div class="wc-desc">Website content for a grassroots impact investment firm — venture capitalism, community empowerment, and ESG consulting.</div>
+      </div>
+      <div class="web-card">
+        <div class="wc-name">Starlink Cargo</div>
+        <div class="wc-sector">Logistics · Canada</div>
+        <div class="wc-desc">Web content for a cargo and logistics company — service pages and trust-building content for a competitive freight market.</div>
+      </div>
+      <div class="web-card">
+        <div class="wc-name">Hamkerr</div>
+        <div class="wc-sector">Property management · Australia</div>
+        <div class="wc-desc">Property management website copy balancing landlord and tenant audiences across service pages and FAQs.</div>
+      </div>
+      <div class="web-card">
+        <div class="wc-name">Prime Tea / Akbar Tea</div>
+        <div class="wc-sector">Tea export · Sri Lanka</div>
+        <div class="wc-desc">Export-facing web content communicating provenance, quality standards, and B2B buying to international markets.</div>
+      </div>
+      <div class="web-card">
+        <div class="wc-name">Freight</div>
+        <div class="wc-sector">Logistics · International</div>
+        <div class="wc-desc">Logistics company web content covering service capabilities, routing, and compliance for international freight buyers.</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<!-- CONTACT -->
+<section id="contact">
+  <div class="reveal">
+    <p class="section-eyebrow" style="justify-content:center;display:flex">04 — Contact</p>
+    <h2 class="contact-title">Let's build<br><em>something meaningful</em></h2>
+    <p class="contact-sub">Available for senior roles in Technical Writing, Content Strategy, Content Writing, and L&D — remote or hybrid. Based in Sri Lanka (GMT+5:30). Open to global opportunities.</p>
+    <div class="contact-links">
+      <a href="mailto:parameesamarathunga@gmail.com" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        parameesamarathunga@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/paramee-samarathunga" target="_blank" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/SSParamee" target="_blank" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub: SSParamee
+      </a>
+      <a href="https://parameesamarathunga.medium.com" target="_blank" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h6M7 16h4"/></svg>
+        Medium Blog
+      </a>
+      <a href="tel:+94771255935" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1.32h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +94 77 125 5935
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Paramee Samarathunga</div>
+  <div class="footer-tagline">Designing Knowledge. Driving Impact.</div>
+  <div style="font-family:var(--mono);font-size:10px;color:var(--ink3)">Sri Lanka · GMT+5:30 · © 2026</div>
+</footer>
+
+<script>
+// Logo letter-by-letter reveal
+(function(){
+  const el = document.getElementById('nav-logo-text')
+  if(!el) return
+  const dot = el.querySelector('.logo-dot')
+  const text = 'Paramee Samarathunga'
+  el.innerHTML = ''
+  el.style.opacity = '1'
+  text.split('').forEach((ch, i) => {
+    const s = document.createElement('span')
+    s.className = 'logo-char'
+    s.textContent = ch
+    s.style.animationDelay = (i * 0.045) + 's'
+    el.appendChild(s)
+  })
+  if(dot){
+    dot.style.animationDelay = (text.length * 0.045 + 0.08) + 's'
+    el.appendChild(dot)
+  }
+})()
+
+// Nav scroll
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40)
+  updateActiveNav()
+})
+
+// Scroll-spy
+function updateActiveNav(){
+  const sections=['about','experience','projects','contact']
+  const links=document.querySelectorAll('.nav-links a[data-section]')
+  let current=''
+  sections.forEach(id=>{
+    const el=document.getElementById(id)
+    if(el&&window.scrollY>=el.offsetTop-120)current=id
+  })
+  links.forEach(a=>{
+    a.classList.toggle('active',a.dataset.section===current)
+  })
+}
+
+// Tabs
+function switchTab(id,btn){
+  document.querySelectorAll('.proj-tab').forEach(t=>t.classList.remove('active'))
+  document.querySelectorAll('.proj-panel').forEach(p=>p.classList.remove('active'))
+  btn.classList.add('active')
+  document.getElementById('panel-'+id).classList.add('active')
+}
+
+// Mobile menu
+function toggleMenu(){
+  const h=document.getElementById('hamburger')
+  const m=document.getElementById('mobile-nav')
+  const isOpen=m.classList.toggle('open')
+  h.classList.toggle('open',isOpen)
+  document.body.style.overflow=isOpen?'hidden':''
+}
+
+function closeMobileMenu(){
+  document.getElementById('hamburger').classList.remove('open')
+  document.getElementById('mobile-nav').classList.remove('open')
+  document.body.style.overflow=''
+}
+
+// Close mobile menu on resize
+window.addEventListener('resize',()=>{
+  if(window.innerWidth>768)closeMobileMenu()
+})
+
+
+// Flip card
+function flipCard(el, dir) {
+  const wrap = el.closest('.flip-wrap');
+  const front = wrap.querySelector('.flip-front');
+  const back = wrap.querySelector('.flip-back');
+  if (dir === 'back') {
+    const bh = Math.max(back.scrollHeight, front.offsetHeight);
+    wrap.style.height = front.offsetHeight + 'px';
+    wrap.classList.add('is-flipped');
+    wrap.style.height = bh + 'px';
+    setTimeout(() => { wrap.style.height = 'auto'; }, 650);
+  } else {
+    const fh = front.offsetHeight;
+    wrap.style.height = wrap.offsetHeight + 'px';
+    wrap.classList.remove('is-flipped');
+    wrap.style.height = fh + 'px';
+    setTimeout(() => { wrap.style.height = 'auto'; }, 650);
+  }
+}
+
+// Toggle proof panel
+function toggleProof(btn) {
+  const panel = btn.nextElementSibling;
+  const open = panel.classList.toggle('open');
+  btn.style.color = open ? 'var(--teal)' : '';
+  btn.style.borderColor = open ? 'rgba(78,186,170,.3)' : '';
+}
+
+// Reveal on scroll
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
+},{threshold:0.08})
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el))
+</script>
+</body>
+</html>
