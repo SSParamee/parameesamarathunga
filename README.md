@@ -15,7 +15,7 @@
  
 A dark-mode, single-page professional portfolio built from scratch in pure HTML, CSS, and JavaScript. There are no frameworks, no dependencies. Designed to position a senior content and learning professional for global roles through clean hierarchy, measurable proof of work, and interactive case studies.
  
-Built for **Paramee Samarathunga**, with 7+ years experience turning enterprise complexity into clear documentation, strategic content, and scalable learning systems across IFS, WSO2, Creately, and Assette.
+Built for **Paramee Samarathunga**, with 7+ years experience turning enterprise complexity into clear documentation, strategic content, and scalable learning systems across IFS, WSO2, Creately, Assette, and more.
  
 ---
  
@@ -37,9 +37,9 @@ Built for **Paramee Samarathunga**, with 7+ years experience turning enterprise 
 ## Sections 📚
  
 ✔️ Hero: name, headline, value proposition, inline stats, skill pillars, profile photo  
-✔️ Four Disciplines: Technical Writing · Content Strategy · Content Writing · L&D  
+✔️ Four Disciplines: Technical Writing, Content Strategy, Content Writing, L&D  
 ✔️ About: bio, education, tools & platforms, profiles  
-✔️ Experience: career timeline with achievements (WSO2 · Creately · IFS · Assette)  
+✔️ Experience: career timeline with achievements (WSO2, Creately, IFS, Assette)  
 ✔️ Selected Work: tabbed case studies with scope, approach, outcome, and proof  
 ✔️ Contact: links, availability, location
  
@@ -51,7 +51,7 @@ To view the live portfolio: **[ssparamee.github.io](https://ssparamee.github.io)
  
 1. **Fork or clone** this repository.
 2. **Personalise** `index.html`: update name, bio, experience, and project content to match your own career.
-3. **Add your profile photo**: save as `profile.jpg` in the `assets` subfolder in directory.
+3. **Add your profile photo**: save as `profile_pic.jpg` in the `assets` subfolder in directory.
 4. **Add proof screenshots**: place project evidence images in a `assets` subfolder:
 
 For example: 
@@ -62,8 +62,8 @@ For example:
    └── [your-own-proof-images].jpg
    ```
  
-6. **Deploy via GitHub Pages** — create a repository named `<your-github-username>.github.io`, push to the `main` branch, and enable GitHub Pages in repository Settings → Pages.
-7. **Update meta tags** — in the `<head>`, update `og:url` and `og:image` with your live GitHub Pages URL.
+6. **Deploy via GitHub Pages**: create a repository named `<your-github-username>.github.io`, push to the `main` branch, and enable GitHub Pages in repository Settings → Pages.
+7. **Update meta tags**: in the `<head>`, update `og:url` and `og:image` with your live GitHub Pages URL.
 ---
  
 ## Tools Used 🛠️
