@@ -178,42 +178,43 @@ section{padding:6rem 4rem}
 /* FOUR DISCIPLINES */
 #disciplines{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:5rem 4rem}
 @media(max-width:768px){#disciplines{padding:3.5rem 1.5rem}}
-/* 1×4 ROW */
-.disc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem}
-@media(max-width:600px){.disc-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:380px){.disc-grid{grid-template-columns:1fr}}
-/* Card base — matches proj-full/proj-card site pattern */
-.disc-card{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r2);padding:2rem 2rem 1.75rem;position:relative;overflow:hidden;transition:border-color .25s,transform .25s,box-shadow .25s;display:flex;flex-direction:column}
-/* Always-on coloured gradient bar at top */
-.disc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--r2) var(--r2) 0 0}
-.disc-card.tw::before{background:linear-gradient(to right,var(--gold),rgba(212,168,67,.25))}
-.disc-card.cs::before{background:linear-gradient(to right,var(--teal),rgba(78,186,170,.25))}
-.disc-card.cw::before{background:linear-gradient(to right,#9b8bcc,rgba(155,139,204,.25))}
-.disc-card.ld::before{background:linear-gradient(to right,#cc8b8b,rgba(204,139,139,.25))}
-/* Hover: border glow + shadow in accent colour */
-.disc-card.tw:hover{border-color:rgba(212,168,67,.3);transform:translateY(-3px);box-shadow:0 10px 36px rgba(212,168,67,.1)}
-.disc-card.cs:hover{border-color:rgba(78,186,170,.25);transform:translateY(-3px);box-shadow:0 10px 36px rgba(78,186,170,.09)}
-.disc-card.cw:hover{border-color:rgba(155,139,204,.25);transform:translateY(-3px);box-shadow:0 10px 36px rgba(155,139,204,.09)}
-.disc-card.ld:hover{border-color:rgba(204,139,139,.25);transform:translateY(-3px);box-shadow:0 10px 36px rgba(204,139,139,.09)}
-/* Header row */
-.disc-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem}
-.disc-num{font-family:var(--mono);font-size:11px;color:var(--ink3);letter-spacing:.13em;border:1px solid var(--line2);padding:3px 9px;border-radius:3px}
-.disc-lbl{font-family:var(--body);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-.disc-card.tw .disc-lbl{color:var(--gold)}.disc-card.cs .disc-lbl{color:var(--teal)}.disc-card.cw .disc-lbl{color:#b0a0e0}.disc-card.ld .disc-lbl{color:#d4a0a0}
-/* Icon — large faint watermark, not a box */
-.disc-icon{position:absolute;bottom:1.5rem;right:1.75rem;font-size:52px;line-height:1;opacity:.07;pointer-events:none;user-select:none}
-/* Title */
-.disc-title{font-family:var(--display);font-size:25px;font-weight:400;margin-bottom:1rem;line-height:1.2}
-.disc-card.tw .disc-title{color:var(--gold)}.disc-card.cs .disc-title{color:var(--teal)}.disc-card.cw .disc-title{color:#b0a0e0}.disc-card.ld .disc-title{color:#d4a0a0}
-/* Description */
-.disc-desc{font-family:var(--body);font-size:15px;font-weight:400;color:var(--ink2);line-height:1.8;flex:1;padding-top:1rem;border-top:1px solid var(--line);margin-bottom:1.5rem}
-/* Tags */
-.disc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;padding-top:1rem;border-top:1px solid var(--line)}
-.disc-tag{font-family:var(--mono);font-size:11px;padding:4px 10px;border:1px solid var(--line2);color:var(--ink3);border-radius:3px;transition:border-color .2s,color .2s}
-.disc-card.tw .disc-tag:hover{border-color:var(--gold);color:var(--gold)}
-.disc-card.cs .disc-tag:hover{border-color:var(--teal);color:var(--teal)}
-.disc-card.cw .disc-tag:hover{border-color:#b0a0e0;color:#b0a0e0}
-.disc-card.ld .disc-tag:hover{border-color:#d4a0a0;color:#d4a0a0}
+/* DISC TAB ROW — 1×4 selector */
+.disc-tabs-row{display:grid;grid-template-columns:repeat(4,1fr);margin-top:3rem;border:1px solid var(--line);border-radius:var(--r2);overflow:hidden}
+.disc-tab-btn{background:var(--bg3);border:none;border-right:1px solid var(--line);padding:1.5rem 1.25rem;cursor:pointer;text-align:left;transition:background .2s;position:relative;display:flex;flex-direction:column;gap:.5rem}
+.disc-tab-btn:last-child{border-right:none}
+.disc-tab-btn::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;transform:scaleX(0);transition:transform .25s}
+.disc-tab-btn.tw::after{background:var(--gold)}
+.disc-tab-btn.cs::after{background:var(--teal)}
+.disc-tab-btn.cw::after{background:#9b8bcc}
+.disc-tab-btn.ld::after{background:#cc8b8b}
+.disc-tab-btn.active::after,.disc-tab-btn:hover::after{transform:scaleX(1)}
+.disc-tab-btn.active.tw,.disc-tab-btn.tw:hover{background:rgba(212,168,67,.05)}
+.disc-tab-btn.active.cs,.disc-tab-btn.cs:hover{background:rgba(78,186,170,.05)}
+.disc-tab-btn.active.cw,.disc-tab-btn.cw:hover{background:rgba(155,139,204,.05)}
+.disc-tab-btn.active.ld,.disc-tab-btn.ld:hover{background:rgba(204,139,139,.05)}
+.dt-num{font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:.14em}
+.dt-lbl{font-family:var(--body);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.disc-tab-btn.tw .dt-lbl{color:var(--gold)}.disc-tab-btn.cs .dt-lbl{color:var(--teal)}.disc-tab-btn.cw .dt-lbl{color:#b0a0e0}.disc-tab-btn.ld .dt-lbl{color:#d4a0a0}
+.dt-metric{font-family:var(--display);font-size:32px;line-height:1;font-weight:400;letter-spacing:-.02em;margin-top:.25rem}
+.disc-tab-btn.tw .dt-metric{color:var(--gold)}.disc-tab-btn.cs .dt-metric{color:var(--teal)}.disc-tab-btn.cw .dt-metric{color:#b0a0e0}.disc-tab-btn.ld .dt-metric{color:#d4a0a0}
+.dt-sub{font-family:var(--body);font-size:11px;color:var(--ink3)}
+/* DISC PANEL */
+.disc-panel{display:none;background:var(--bg4);border:1px solid var(--line);border-top:none;border-radius:0 0 var(--r2) var(--r2);animation:fadeIn .3s}
+.disc-panel.active{display:grid;grid-template-columns:1fr 2fr;gap:0}
+.dp-left{padding:2.5rem 2rem;border-right:1px solid var(--line)}
+.dp-title{font-family:var(--display);font-size:26px;font-weight:400;line-height:1.2;margin-bottom:1.25rem}
+.disc-panel.dp-tw .dp-title{color:var(--gold)}.disc-panel.dp-cs .dp-title{color:var(--teal)}.disc-panel.dp-cw .dp-title{color:#b0a0e0}.disc-panel.dp-ld .dp-title{color:#d4a0a0}
+.dp-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:1.25rem;border-top:1px solid var(--line)}
+.dp-tag{font-family:var(--mono);font-size:10px;padding:3px 9px;border:1px solid var(--line2);color:var(--ink3);border-radius:3px}
+.dp-right{padding:2.5rem 2.5rem}
+.dp-desc{font-family:var(--body);font-size:15px;color:var(--ink2);line-height:1.85}
+.dp-desc p{margin-bottom:1rem}.dp-desc p:last-child{margin-bottom:0}
+@media(max-width:768px){
+  .disc-tabs-row{grid-template-columns:repeat(2,1fr)}
+  .disc-panel.active{grid-template-columns:1fr}
+  .dp-left{border-right:none;border-bottom:1px solid var(--line);padding:1.75rem}
+  .dp-right{padding:1.75rem}
+}
 
 /* ABOUT */
 #about{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -513,82 +514,106 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
 <section id="disciplines">
   <div class="reveal" style="text-align:center">
     <p class="section-eyebrow" style="justify-content:center;display:flex">What I bring</p>
-    <h2 class="section-title">Four Disciplines.<br><em>One Strategic Mind At Work.</em></h2>
-    <p class="section-sub" style="margin-left:auto;margin-right:auto">I specialize in technical documentation, content operations, and learning design. My approach is consistent: conduct user‑driven research, build information architectures that support task completion, design training programs that improve performance, and report metrics that demonstrate business impact. </p>
+    <h2 class="section-title">Four disciplines.<br><em>One Strategic Mind At Work.</em></h2>
+    <p class="section-sub" style="margin-left:auto;margin-right:auto">I specialize in technical documentation, content operations, and learning design. My approach is consistent: conduct user‑driven research, build information architectures that support task completion, design training programs that improve performance, and report metrics that demonstrate business impact.</p>
   </div>
-  <div class="disc-grid reveal">
+  <!-- Tab selector row — 1×4 -->
+  <div class="disc-tabs-row reveal">
+    <button class="disc-tab-btn tw active" onclick="switchDisc('tw',this)">
+      <span class="dt-num">01</span>
+      <span class="dt-lbl">Technical Writer</span>
+    </button>
+    <button class="disc-tab-btn cs" onclick="switchDisc('cs',this)">
+      <span class="dt-num">02</span>
+      <span class="dt-lbl">Content Strategist</span>
+    </button>
+    <button class="disc-tab-btn cw" onclick="switchDisc('cw',this)">
+      <span class="dt-num">03</span>
+      <span class="dt-lbl">Content Writer</span>
+    </button>
+    <button class="disc-tab-btn ld" onclick="switchDisc('ld',this)">
+      <span class="dt-num">04</span>
+      <span class="dt-lbl">L&amp;D Specialist</span>
+    </button>
+  </div>
 
-    <div class="disc-card tw">
-      <div class="disc-hd">
-        <span class="disc-num">01</span>
-        <span class="disc-lbl">Technical Writing</span>
-      </div>
-      <div class="disc-icon">⌨</div>
-      <div class="disc-title">Documentation That Works in Practice</div>
-      <div class="disc-desc">I produce API references, technical documentation, release notes, end‑user guides, and knowledge bases. To build them, I work closely with engineering, product, and support teams to capture the right information at the right time. My documentation is designed around real user workflows so teams can complete tasks without friction. <br><br>Beyond text, I deliver user education in multiple formats: video tutorials, interactive walkthroughs, in‑product help, etc. This ensures users can learn in the way that suits them best, whether they need a quick demo, a step‑by‑step guide, or searchable reference material.</div>
-      <div class="disc-tags">
-        <span class="disc-tag">Docs-as-code</span>
-        <span class="disc-tag">API / SDK docs</span>
-        <span class="disc-tag">Confluence</span>
-        <span class="disc-tag">Markdown / XML</span>
-        <span class="disc-tag">DITA methodology</span>
+  <!-- Content panels -->
+  <div id="dp-tw" class="disc-panel dp-tw active">
+    <div class="dp-left">
+      <div class="dp-title">Documentation that works in production</div>
+      <div class="dp-tags">
+        <span class="dp-tag">Docs-as-code</span>
+        <span class="dp-tag">API / SDK docs</span>
+        <span class="dp-tag">Confluence</span>
+        <span class="dp-tag">Markdown / XML</span>
+        <span class="dp-tag">DITA Methodology</span>
         <span class="disc-tag">Video Scripting and Production</span>
         <span class="disc-tag">Interactive Training Design</span>
       </div>
     </div>
-
-    <div class="disc-card cs">
-      <div class="disc-hd">
-        <span class="disc-num">02</span>
-        <span class="disc-lbl">Content Strategy</span>
-      </div>
-      <div class="disc-icon">◎</div>
-      <div class="disc-title">Content Operations With Results</div>
-      <div class="disc-desc">I design editorial frameworks and campaign structures that stay durable because they’re built with clear governance and reusable workflows. For example, I establish ownership rules and escalation paths so publishing continues even when priorities shift. I use SEO to make content discoverable and AEO to ensure it surfaces as direct answers, while GEO is applied with intent adapting tone, examples, and references so campaigns feel native to each market rather than simply translated. <br> <br>My focus on knowledge architecture keeps teams aligned on where content lives and how it connects, and I automate repetitive tasks such as tagging, distribution, and performance reporting. That way, growth and product adoption continue without the constant intervention of manual checks or rework.</div>
-      <div class="disc-tags">
-        <span class="disc-tag">Editorial frameworks</span>
-        <span class="disc-tag">GEO / AEO</span>
-        <span class="disc-tag">Content governance</span>
-        <span class="disc-tag">Knowledge architecture</span>
-        <span class="disc-tag">AI content ops</span>
+    <div class="dp-right">
+      <div class="dp-desc">
+        <p>I produce API references, technical documentation, release notes, end‑user guides, and knowledge bases. To build them, I work closely with engineering, product, and support teams to capture the right information at the right time. My documentation is designed around real user workflows so teams can complete tasks without friction.</p>
+        <p>Beyond text, I deliver user education in multiple formats: video tutorials, interactive walkthroughs, in‑product help, etc. This ensures users can learn in the way that suits them best, whether they need a quick demo, a step‑by‑step guide, or searchable reference material.</p>
       </div>
     </div>
+  </div>
 
-    <div class="disc-card cw">
-      <div class="disc-hd">
-        <span class="disc-num">03</span>
-        <span class="disc-lbl">Content Writing</span>
-      </div>
-      <div class="disc-icon">✦</div>
-      <div class="disc-title">Complex Ideas Made Clear</div>
-      <div class="disc-desc">I create long form editorial content built on original research and sector expertise. I measure success not by clicks but by how deeply readers engage with the content. In regulated domains such as CIW and PSD2, I translate compliance requirements into clear, usable narratives that build trust and authority. I build thought leadership content through white papers, bylined articles, and research driven blogs that earn citations and shares in industry press. I adapt brand voice with precision and authority simplifying compliance language for users so content feels authentic, clear, and practical. <br><br> My approach is straightforward. I create editorial assets that last, strengthen credibility, and deliver outcomes in competitive and regulated markets.</div>
-      <div class="disc-tags">
-        <span class="disc-tag">Long-form editorial</span>
-        <span class="disc-tag">Regulated industries</span>
-        <span class="disc-tag">SEO + GEO</span>
-        <span class="disc-tag">Brand voice</span>
-        <span class="disc-tag">Thought leadership</span>
+  <div id="dp-cs" class="disc-panel dp-cs">
+    <div class="dp-left">
+      <div class="dp-title">Frameworks that outlive the brief</div>
+      <div class="dp-tags">
+        <span class="dp-tag">Editorial frameworks</span>
+        <span class="dp-tag">GEO / AEO</span>
+        <span class="dp-tag">Content governance</span>
+        <span class="dp-tag">Knowledge architecture</span>
+        <span class="dp-tag">AI content ops</span>
       </div>
     </div>
-
-    <div class="disc-card ld">
-      <div class="disc-hd">
-        <span class="disc-num">04</span>
-        <span class="disc-lbl">L&amp;D Specialist</span>
-      </div>
-      <div class="disc-icon">◈</div>
-      <div class="disc-title">Designing Learning Journeys That Last</div>
-      <div class="disc-desc">I design and deliver learning systems that keep pace with enterprise change. From WSO2 open banking self paced LMS courses to IFS Cloud ESM training, I’ve built programs that serve both technical specialists and business users without losing clarity. My work extends into AI assisted learning paths that adapt to learner progress, ensuring training remains relevant and personalized. I use completion data, performance metrics, and readiness assessments to show stakeholders how training improves capability. <br><br>I don’t just publish modules, I align training with product release cycles, so teams are ready before new features go live.</div>
-      <div class="disc-tags">
-        <span class="disc-tag">Instructional design</span>
-        <span class="disc-tag">ADDIE MODEL</span>
-        <span class="disc-tag">ClickLearn / Thinkific</span>
-        <span class="disc-tag">Bloom’s Taxonomy</span>
-        <span class="disc-tag">LX design</span>
-        <span class="disc-tag">Release readiness</span>
+    <div class="dp-right">
+      <div class="dp-desc">
+        <p>I build editorial systems — category repositioning campaigns, GEO/AEO architectures, dual-sector frameworks — that deliver measurable ROI and keep working after I hand them over. 50K+ organic visits and a 10-month sustained calendar are the evidence.</p>
+        <p>At IFS, editorial governance standards I established were adopted team-wide. At Creately, a market repositioning strategy repositioned the product from "diagramming tool" to "visual collaboration platform" — with 6–11 minute average read times proving genuine audience engagement, not just traffic.</p>
       </div>
     </div>
+  </div>
 
+  <div id="dp-cw" class="disc-panel dp-cw">
+    <div class="dp-left">
+      <div class="dp-title">Research-led writing with genuine depth</div>
+      <div class="dp-tags">
+        <span class="dp-tag">Long-form editorial</span>
+        <span class="dp-tag">Regulated industries</span>
+        <span class="dp-tag">SEO + GEO</span>
+        <span class="dp-tag">Brand voice</span>
+        <span class="dp-tag">Thought leadership</span>
+      </div>
+    </div>
+    <div class="dp-right">
+      <div class="dp-desc">
+        <p>Long-form, authority-building editorial across SaaS, fintech, healthcare, and travel — with 6–11 minute average read times as evidence of engagement, not just traffic. Regulated-sector writing (CIW, PSD2) that most generalist writers cannot execute.</p>
+        <p>Published across Creately, domains.lk (Sinhala-language), Dipuravana travel, and Headlands Nursing Home. SEO, GEO, and AEO integrated from the brief — not bolted on after writing. 100K+ travel site visits and 50+ monthly inquiries demonstrate content as a commercial asset.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="dp-ld" class="disc-panel dp-ld">
+    <div class="dp-left">
+      <div class="dp-title">Learning ecosystems that enable at scale</div>
+      <div class="dp-tags">
+        <span class="dp-tag">Instructional design</span>
+        <span class="dp-tag">ClickLearn / Thinkific</span>
+        <span class="dp-tag">LX design</span>
+        <span class="dp-tag">Release readiness</span>
+        <span class="dp-tag">AI-assisted learning</span>
+      </div>
+    </div>
+    <div class="dp-right">
+      <div class="dp-desc">
+        <p>From WSO2 open banking self-paced LMS courses to IFS Cloud ESM training to AI-assisted learning workflows — I design programmes that serve mixed audiences, survive release cycles, and produce measurable capability uplift.</p>
+        <p>Designed and deployed the SU-Doc Request Assistant — an M365 Copilot AI agent for documentation change workflows, active in IFS operations with a 50% reduction in turnaround time. IFS Cloud ESM course materials deployed globally across customer onboarding and partner enablement programmes.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1591,6 +1616,14 @@ function toggleProof(btn) {
   const open = panel.classList.toggle('open');
   btn.style.color = open ? 'var(--teal)' : '';
   btn.style.borderColor = open ? 'rgba(78,186,170,.3)' : '';
+}
+
+// Disciplines tab switcher
+function switchDisc(id, btn) {
+  document.querySelectorAll('.disc-tab-btn').forEach(b => b.classList.remove('active'))
+  document.querySelectorAll('.disc-panel').forEach(p => p.classList.remove('active'))
+  btn.classList.add('active')
+  document.getElementById('dp-' + id).classList.add('active')
 }
 
 // Reveal on scroll
