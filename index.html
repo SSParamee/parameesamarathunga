@@ -178,9 +178,10 @@ section{padding:6rem 4rem}
 /* FOUR DISCIPLINES */
 #disciplines{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:5rem 4rem}
 @media(max-width:768px){#disciplines{padding:3.5rem 1.5rem}}
-/* 2×2 GRID */
-.disc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
-@media(max-width:720px){.disc-grid{grid-template-columns:1fr}}
+/* 1×4 ROW */
+.disc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem}
+@media(max-width:900px){.disc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.disc-grid{grid-template-columns:1fr}}
 /* Card base — matches proj-full/proj-card site pattern */
 .disc-card{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r2);padding:2rem 2rem 1.75rem;position:relative;overflow:hidden;transition:border-color .25s,transform .25s,box-shadow .25s;display:flex;flex-direction:column}
 /* Always-on coloured gradient bar at top */
