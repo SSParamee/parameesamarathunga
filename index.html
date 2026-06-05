@@ -375,10 +375,10 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
 .proof-back-title{font-family:var(--display);font-size:22px;color:var(--ink);line-height:1.1}
 .proof-back-badge{font-family:var(--mono);font-size:10px;color:var(--teal);border:1px solid rgba(78,186,170,.3);padding:4px 10px;border-radius:4px;letter-spacing:.06em}
 .proof-back-sub{font-family:var(--body);font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:.25rem}
-.proof-img-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+.proof-img-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;flex:1;min-height:0}
 @media(max-width:600px){.proof-img-grid{grid-template-columns:1fr}}
 .proof-img-card{display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;border:1px solid var(--line2);background:var(--bg4)}
-.proof-img-scroll{overflow-y:auto;max-height:300px;cursor:ns-resize}
+.proof-img-scroll{overflow-y:auto;flex:1;min-height:0;cursor:ns-resize}
 .proof-img-scroll img{width:100%;display:block;transition:transform .35s}
 .proof-img-scroll:hover img{transform:scale(1.02)}
 .proof-img-cap{font-family:var(--mono);font-size:9px;color:var(--ink3);padding:6px 8px;border-top:1px solid var(--line);letter-spacing:.05em;text-transform:uppercase}
