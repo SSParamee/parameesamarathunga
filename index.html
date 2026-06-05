@@ -896,7 +896,7 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
       <div class="pf-header">
         <div class="pf-left">
           <div class="pf-client">WSO2 · Open Banking Accelerator</div>
-          <div class="pf-title">Release Notes — About This Release</div>
+          <div class="pf-title">Release Notes - About This Release</div>
         </div>
         <span class="pf-badge">Public GitHub · PR Merged · 2020</span>
       </div>
@@ -972,8 +972,8 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
     <div class="proj-full">
       <div class="pf-header">
         <div class="pf-left">
-          <div class="pf-client">WSO2 · Open Banking Accelerator</div>
-          <div class="pf-title">Technical Overviews — Consent Authorization &amp; DCR Tryout</div>
+          <div class="pf-client">WSO2 · Open Banking Accelerator 3.0</div>
+          <div class="pf-title">Technical Overviews - Consent Authorization &amp; DCR Tryout</div>
         </div>
         <span class="pf-badge">Public docs · ob-docs.wso2.com</span>
       </div>
@@ -981,25 +981,25 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
         <div>
           <div class="pf-col-label">Scope</div>
           <div class="pf-col-body">
-            <p>Authored technical overview documentation for two core open banking workflows: Consent Authorization (covering authorization endpoints, PAR, identifier-first auth) and Dynamic Client Registration Tryout (454-line step-by-step deployment guide with cURL examples, configuration tables, and environment setup).</p>
+            <p>WSO2 Open Banking Accelerator had two workflows that no single well-written article covered: Consent Authorization (authorization endpoints, PAR, identifier-first auth) and Dynamic Client Registration. I wrote both from scratch. The DCR Tryout guide ran 454 lines and walked developers through full API consumer registration using cURL examples, configuration tables, and environment setup.</p>
           </div>
           <div class="pf-col-label" style="margin-top:1rem">Challenges</div>
           <div class="pf-col-body">
             <ul>
-              <li>Documenting branching authorization flows (redirect vs PAR) without fragmenting the narrative</li>
-              <li>Ensuring step-by-step instructions were reproducible across Identity Server, API Manager, and Streaming Integrator environments</li>
-              <li>Embedded collapsible config blocks to reduce cognitive load without hiding depth</li>
+              <li>OAuth2 PAR and redirect-based authorization look similar on the surface but fork into completely different configuration sequences. Writing them in one article without making developers second-guess which path they were on required a deliberate information architecture decision.</li>
+              <li>The DCR guide had to hold up across three separate runtimes: Identity Server, API Manager, and Streaming Integrator. Every step had to reproduce correctly, not just read correctly.</li>
+              <li>Configuration blocks in open banking docs are long. Collapsing everything hides what developers actually need during a live deployment. Showing everything at once buries the narrative. I decided, block by block, what belongs inline and what goes behind a "Click to see."</li>
             </ul>
           </div>
         </div>
         <div>
           <div class="pf-col-label">Approach</div>
           <div class="pf-col-body">
-            <p>Structured each article around user task flows rather than system architecture. Applied layered disclosure — overview first, detailed configuration steps second. Used collapsible "Click to see" sections strategically for verbose configuration blocks.</p>
+            <p>I organized both articles around what a developer needs to do, not how the system is designed. The Consent Authorization article opens at the flow a developer triggers first, then moves toward PAR and identifier-first auth as complexity builds. The DCR guide applies layered disclosure throughout: each section frames the context before the configuration detail opens up. Collapsible blocks for long config kept the page readable without stripping anything a partner deployment would reference.</p>
           </div>
           <div class="pf-col-label" style="margin-top:1rem">Outcome</div>
           <div class="pf-col-body">
-            <p>Published on ob-docs.wso2.com. Referenced across partner deployments. Commit history visible under SSParamee on the public GitHub repository. DCR tryout guide: 454 lines documenting the full API consumer registration flow.</p>
+            <p>Both articles are live on ob-docs.wso2.com and picked up in partner deployment references. The DCR Tryout guide documented the full API consumer registration flow in 454 lines. Commit history is public under SSParamee on the WSO2 Open Banking GitHub repository.</p>
           </div>
           <span class="sample-note">Published page screenshots available upon request</span>
         </div>
