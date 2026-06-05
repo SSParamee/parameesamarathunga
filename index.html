@@ -1052,13 +1052,16 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
       </div>
     </div>
 
+    <div class="flip-wrap" style="height:auto">
+      <div class="flip-inner">
+        <div class="flip-front">
     <div class="proj-full">
       <div class="pf-header">
         <div class="pf-left">
           <div class="pf-client">IFS · Documentation Workflow Management</div>
           <div class="pf-title">Tutorials - IFS Cloud Documentation</div>
         </div>
-        <span class="pf-badge">IFS Knowledge Base· 2024 - 2025</span>
+        <span class="pf-badge">IFS Knowledge Base · 2024 – 2025</span>
       </div>
       <div class="pf-grid">
         <div>
@@ -1084,15 +1087,46 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
           <div class="pf-col-body">
             <p>188+ article views. 75% reduction in AHT for documentation-related support queries. Both guides now sit in the core IFS Cloud documentation onboarding path for new User Education Specialists and other contributors, making them the first stop for anyone new to the contributor workflow.</p>
           </div>
-          <span class="sample-note">Confluence page screenshots available upon request</span>
         </div>
       </div>
       <hr class="pf-divider">
       <div class="pf-tags">
         <span class="pf-tag">Enterprise ERP</span><span class="pf-tag">Confluence / Wiki</span><span class="pf-tag">Git / Sourcetree</span><span class="pf-tag">Process Improvement</span><span class="pf-tag">Workflow Management</span><span class="pf-tag">Team Management</span>
       </div>
-            <button class="proof-toggle-btn" onclick="toggleProof(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg> View Proof</button>
-      <div class="proof-toggle-panel">Proof: Confluence pages with view counts and author attribution available — samples provided upon request.</div>
+      <button class="flip-btn" onclick="flipCard(this,'back')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+        View Proof
+      </button>
+    </div>
+        </div>
+        <div class="flip-back">
+          <div class="proof-back-hdr">
+            <div>
+              <div class="proof-back-title">Proof of Delivery</div>
+              <div class="proof-back-sub">IFS · Documentation Workflow Management · Confluence · 2024–2025</div>
+            </div>
+            <span class="proof-back-badge">188+ VIEWS · INTERNAL KB</span>
+          </div>
+          <div class="proof-img-grid">
+            <div class="proof-img-card">
+              <div class="proof-img-scroll">
+                <img src="assets/ifs-adding-cloud-doc-updates.jpg" alt="IFS Confluence — Adding Cloud Documentation Updates article, 188+ views" loading="lazy">
+              </div>
+              <div class="proof-img-cap">Adding Cloud Documentation Updates · 9-step workflow · 188+ views &nbsp;·&nbsp; Scroll to explore</div>
+            </div>
+            <div class="proof-img-card">
+              <div class="proof-img-scroll">
+                <img src="assets/ifs-linking-tech-doc-pages.jpg" alt="IFS Confluence — Linking Technical Documentation Pages to IFS Cloud article" loading="lazy">
+              </div>
+              <div class="proof-img-cap">Linking Technical Documentation Pages to IFS Cloud · JS mapping guide &nbsp;·&nbsp; Scroll to explore</div>
+            </div>
+          </div>
+          <div class="proof-back-footer">
+            <span class="proof-back-link" style="opacity:.6;cursor:default">Internal Confluence · available upon request</span>
+            <button class="back-btn" onclick="flipCard(this,'front')">← Back to project</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="proj-full">
