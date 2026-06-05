@@ -969,6 +969,9 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
       </div>
     </div>
 
+    <div class="flip-wrap" style="height:auto">
+      <div class="flip-inner">
+        <div class="flip-front">
     <div class="proj-full">
       <div class="pf-header">
         <div class="pf-left">
@@ -1007,6 +1010,36 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
       </div>
       <div class="pf-tags">
         <span class="pf-tag">OAuth2 / OIDC</span><span class="pf-tag">API flows</span><span class="pf-tag">Step-by-step guides</span><span class="pf-tag">cURL / Postman</span>
+      </div>
+      <button class="flip-btn" onclick="flipCard(this,'back')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+        View Proof
+      </button>
+    </div>
+        </div>
+        <div class="flip-back">
+          <div class="proof-back-hdr">
+            <div>
+              <div class="proof-back-title">Proof of Delivery</div>
+              <div class="proof-back-sub">WSO2 Open Banking Accelerator 3.0 · Consent Authorization &amp; DCR Tryout · 2020</div>
+            </div>
+            <span class="proof-back-badge">LIVE · ob-docs.wso2.com</span>
+          </div>
+          <div class="proof-img-grid">
+            <div class="proof-img-card">
+              <img src="assets/consent-authorization-commit-content.png" alt="WSO2 Open Banking Accelerator 3.0 — Consent Authorization article live on ob-docs.wso2.com" loading="lazy">
+              <div class="proof-img-cap">Consent Authorization · GitHub · Commit by SSParamee</div>
+            </div>
+            <div class="proof-img-card">
+              <img src="assets/dcr-tryout-commit-content.png" alt="WSO2 Open Banking Accelerator 3.0 — DCR Tryout guide, 454 lines, live on ob-docs.wso2.com" loading="lazy">
+              <div class="proof-img-cap">DCR Tryout Guide · GitHub · Commit by SSParamee</div>
+            </div>
+          </div>
+          <div class="proof-back-footer">
+            <a href="https://github.com/wso2/docs-open-banking/pulls?q=is%3Apr+is%3Aclosed+author%3ASSParamee" target="_blank" class="proof-back-link">View GitHub Contributions ↗</a>
+            <button class="back-btn" onclick="flipCard(this,'front')">← Back to project</button>
+          </div>
+        </div>
       </div>
     </div>
 
