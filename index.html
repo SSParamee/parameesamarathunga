@@ -44,6 +44,12 @@
   --gold2:#EFC76A;
   --teal:#4EBAAA;
   --teal2:#72D1C2;
+  --rose:#D4607A;
+  --rose2:#E8899A;
+  --purple:#9B72CF;
+  --purple2:#B99AE0;
+  --slate:#6E8FAB;
+  --slate2:#93B3CC;
   /* Fonts */
   --display:'DM Serif Display',Georgia,serif;
   --body:'Inter',system-ui,sans-serif;
@@ -261,7 +267,16 @@ section{padding:6rem 4rem}
 .proj-tabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin-bottom:2.5rem;overflow-x:auto}
 .proj-tab{background:none;border:none;border-bottom:2px solid transparent;padding:10px 20px;font-family:var(--body);font-size:11px;font-weight:500;color:var(--ink3);cursor:pointer;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;transition:all .2s;margin-bottom:-1px}
 .proj-tab:hover{color:var(--ink2)}
-.proj-tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.proj-tab[data-color="gold"].active{color:var(--gold);border-bottom-color:var(--gold)}
+.proj-tab[data-color="rose"].active{color:var(--rose);border-bottom-color:var(--rose)}
+.proj-tab[data-color="purple"].active{color:var(--purple);border-bottom-color:var(--purple)}
+.proj-tab[data-color="slate"].active{color:var(--slate);border-bottom-color:var(--slate)}
+.proj-tab[data-color="teal"].active{color:var(--teal);border-bottom-color:var(--teal)}
+.proj-tab[data-color="gold"]:hover{color:var(--gold2)}
+.proj-tab[data-color="rose"]:hover{color:var(--rose2)}
+.proj-tab[data-color="purple"]:hover{color:var(--purple2)}
+.proj-tab[data-color="slate"]:hover{color:var(--slate2)}
+.proj-tab[data-color="teal"]:hover{color:var(--teal2)}
 .proj-panel{display:none}
 .proj-panel.active{display:block}
 .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.25rem}
@@ -880,11 +895,11 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
   </div>
 
   <div class="proj-tabs">
-    <button class="proj-tab active" onclick="switchTab('tw',this)">Technical Writing</button>
-    <button class="proj-tab" onclick="switchTab('cs',this)">Content Strategy</button>
-    <button class="proj-tab" onclick="switchTab('cw',this)">Content Writing</button>
-    <button class="proj-tab" onclick="switchTab('web',this)">Web &amp; SEO</button>
-    <button class="proj-tab" onclick="switchTab('ld',this)">L&amp;D</button>
+    <button class="proj-tab active" data-color="gold" onclick="switchTab('tw',this)">Technical Writing</button>
+    <button class="proj-tab" data-color="rose" onclick="switchTab('cs',this)">Content Strategy</button>
+    <button class="proj-tab" data-color="purple" onclick="switchTab('cw',this)">Content Writing</button>
+    <button class="proj-tab" data-color="slate" onclick="switchTab('web',this)">Web &amp; SEO</button>
+    <button class="proj-tab" data-color="teal" onclick="switchTab('ld',this)">L&amp;D</button>
   </div>
 
   <!-- TECHNICAL WRITING -->
