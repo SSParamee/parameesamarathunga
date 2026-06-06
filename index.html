@@ -282,6 +282,8 @@ section{padding:6rem 4rem}
 .proj-panel{display:none}
 .proj-panel.active{display:block}
 .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.25rem}
+#panel-cw .proj-grid{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){#panel-cw .proj-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.proj-grid{grid-template-columns:1fr}}
 .proj-card{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r2);padding:1.5rem;transition:all .25s;position:relative;overflow:hidden}
 .proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--gold),transparent);opacity:0;transition:opacity .3s}
@@ -947,7 +949,7 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
   <div class="reveal">
     <p class="section-eyebrow">Some of My Work</p>
     <h2 class="section-title">Projects &amp;<br><em>Case Studies</em></h2>
-    <p class="section-sub">Seven years of strategic decisions, structured frameworks, and measurable outcomes organised by discipline. Each case study surfaces the thinking behind the work, not just the deliverable.</p>
+    <p class="section-sub">7+ years of strategic decisions, structured frameworks, and measurable outcomes organised by discipline. Each project surfaces the thinking behind the work, not just the deliverable.</p>
   </div>
 
   <div class="proj-tabs">
@@ -1272,7 +1274,7 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
       <div class="pf-header">
         <div class="pf-left">
           <div class="pf-client">IFS · User Education</div>
-          <div class="pf-title">IFS Enterprise Service Management(ESM) Course Materials</div>
+          <div class="pf-title">IFS Enterprise Service Management (ESM) Course Materials</div>
         </div>
         <span class="pf-badge">IFS Academy · ClickLearn · 2024 - 2026</span>
       </div>
@@ -1757,7 +1759,7 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
         GitHub
       </a>
       <a href="https://parameesamarathunga.medium.com" target="_blank" class="contact-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h6M7 16h4"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
         Medium Blog
       </a>
     </div>
