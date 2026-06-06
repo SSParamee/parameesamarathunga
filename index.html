@@ -1594,13 +1594,16 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
       </div>
     </div>
 
+    <div class="flip-wrap" style="height:auto">
+      <div class="flip-inner">
+        <div class="flip-front">
     <div class="proj-full">
       <div class="pf-header">
         <div class="pf-left">
           <div class="pf-client">IFS</div>
           <div class="pf-title">Enterprise Knowledge Architecture Strategy</div>
         </div>
-        <span class="pf-badge">Enterprise ERP · AI-enabled · 2024 - 2026</span>
+        <span class="pf-badge">Enterprise ERP · AI-enabled · 2024 – 2026</span>
       </div>
       <div class="pf-grid">
         <div>
@@ -1623,6 +1626,34 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
         </div>
       </div>
       <hr class="pf-divider">
+      <button class="flip-btn" onclick="flipCard(this,'back')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+        View Proof
+      </button>
+    </div>
+        </div>
+        <div class="flip-back">
+          <div class="proof-back-hdr">
+            <div>
+              <div class="proof-back-title">Proof of Delivery</div>
+              <div class="proof-back-sub">IFS · SU-Doc Copilot Agent · Active in Operations · 2024–2026</div>
+            </div>
+            <span class="proof-back-badge">ACTIVE · M365 COPILOT</span>
+          </div>
+          <div class="proof-img-grid" style="grid-template-columns:1fr">
+            <div class="proof-img-card">
+              <div class="proof-img-scroll">
+                <img src="assets/ifs-sudoc-copilot-agent.jpg" alt="IFS SU-Doc Request Assistant — M365 Copilot AI agent active in operations" loading="lazy">
+              </div>
+              <div class="proof-img-cap">SU-Doc Request Assistant · M365 Copilot · IFS User Education Team</div>
+            </div>
+          </div>
+          <div class="proof-back-footer">
+            <span class="proof-back-link" style="opacity:.6;cursor:default">Internal · IFS M365 environment · available upon request</span>
+            <button class="back-btn" onclick="flipCard(this,'front')">← Back to project</button>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
