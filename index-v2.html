@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paramee Samarathunga — Technical Writer · Content Strategist · L&D</title>
+<meta name="description" content="Senior Technical Writer, Content Strategist, L&D Specialist and Content Writer with 7+ years across enterprise ERP, SaaS, open banking, and regulated industries.">
+<meta name="author" content="Paramee Samarathunga">
+<meta property="og:title" content="Paramee Samarathunga — Technical Writer · Content Strategist · L&D">
+<meta property="og:description" content="7+ years turning enterprise complexity into clear documentation, strategic content, and scalable learning systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F4F1EC;
+  --surface:#FFFFFF;
+  --ink:#18170F;
+  --ink2:#5A5750;
+  --ink3:#9A9690;
+  --accent:#1A5533;
+  --accent-bg:#EAF2ED;
+  --border:#DEDAD2;
+  --border2:#C8C4BB;
+  --display:'Fraunces',Georgia,serif;
+  --body:'Inter',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border);padding:0 3rem;height:52px;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.nav-name{font-family:var(--display);font-size:16px;font-weight:400;color:var(--ink);letter-spacing:-.01em;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-links a{font-family:var(--body);font-size:12px;font-weight:500;color:var(--ink3);letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-contact{font-family:var(--body);font-size:12px;font-weight:500;color:var(--accent);border:1px solid rgba(26,85,51,.35);padding:6px 16px;border-radius:2px;letter-spacing:.04em;transition:all .2s}
+.nav-contact:hover{background:var(--accent);color:#fff}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{width:20px;height:1px;background:var(--ink2);display:block;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;inset:0;top:52px;background:var(--surface);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2rem;border-top:1px solid var(--border)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:20px;color:var(--ink2);font-family:var(--display);font-weight:300;letter-spacing:-.01em}
+@media(max-width:768px){.nav-links,.nav-contact{display:none}.hamburger{display:flex}nav{padding:0 1.5rem}}
+
+/* ── WORK SECTION ── */
+#work{padding:0 3rem;max-width:1280px;margin:0 auto}
+@media(max-width:768px){#work{padding:0 1.5rem}}
+
+/* ── IDENTITY STRIP ── */
+.identity{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:end;padding:3.5rem 0 2.5rem;border-bottom:2px solid var(--ink)}
+.id-name{font-family:var(--display);font-size:clamp(36px,4vw,56px);font-weight:400;letter-spacing:-.02em;line-height:1.05;margin-bottom:.75rem}
+.id-name em{font-style:italic;color:var(--accent)}
+.id-roles{font-family:var(--mono);font-size:11px;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase;line-height:2}
+.id-pedigree{font-family:var(--body);font-size:13px;color:var(--ink2);margin-top:.5rem}
+.id-stats{display:flex;gap:2.5rem;padding-bottom:.25rem}
+.id-stat{text-align:right}
+.id-stat-n{font-family:var(--display);font-size:clamp(28px,3vw,40px);font-weight:400;color:var(--ink);display:block;line-height:1;letter-spacing:-.02em}
+.id-stat-l{font-family:var(--mono);font-size:9px;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase;margin-top:4px;display:block}
+@media(max-width:900px){.identity{grid-template-columns:1fr}.id-stats{flex-wrap:wrap;gap:1.5rem}.id-stat{text-align:left}}
+
+/* ── FILTER BAR ── */
+.filter-bar{display:flex;gap:0;padding:1.25rem 0;overflow-x:auto;border-bottom:1px solid var(--border);-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.filter-bar::-webkit-scrollbar{display:none}
+.filter-btn{font-family:var(--body);font-size:12px;font-weight:500;color:var(--ink3);background:none;border:none;padding:6px 16px;cursor:pointer;letter-spacing:.04em;white-space:nowrap;border-radius:2px;transition:all .2s;position:relative}
+.filter-btn::after{content:'';position:absolute;bottom:-1.25rem;left:0;right:0;height:1px;background:var(--ink);transform:scaleX(0);transition:transform .2s}
+.filter-btn:hover{color:var(--ink)}
+.filter-btn.active{color:var(--ink);font-weight:600}
+.filter-btn.active::after{transform:scaleX(1)}
+.filter-share{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--ink3);background:none;border:1px solid var(--border2);padding:5px 12px;border-radius:2px;cursor:pointer;letter-spacing:.06em;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.filter-share:hover{border-color:var(--accent);color:var(--accent)}
+.filter-share.copied{border-color:var(--accent);color:var(--accent);background:var(--accent-bg)}
+
+/* ── RECRUITER BANNER ── */
+.recruiter-banner{display:none;background:var(--accent-bg);border-bottom:1px solid rgba(26,85,51,.2);padding:8px 3rem;align-items:center;justify-content:space-between;gap:1rem}
+.recruiter-banner.active{display:flex}
+.rb-text{font-family:var(--body);font-size:12px;color:var(--ink2)}
+.rb-text strong{color:var(--accent);font-weight:600}
+.rb-clear{font-family:var(--mono);font-size:10px;color:var(--ink3);background:none;border:none;cursor:pointer;letter-spacing:.06em;padding:0;transition:color .2s}
+.rb-clear:hover{color:var(--ink)}
+@media(max-width:768px){.recruiter-banner{padding:8px 1.5rem}}
+
+/* ── WORK LIST ── */
+.work-list{padding-bottom:2rem}
+
+/* ── CASE STUDY ── */
+.case{border-bottom:1px solid var(--border);transition:opacity .2s}
+.case.hidden{display:none}
+.case-row{display:grid;grid-template-columns:52px 1fr auto;align-items:center;padding:1.375rem 0;cursor:pointer;gap:1rem;-webkit-tap-highlight-color:transparent}
+.case-num{font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:.12em;flex-shrink:0}
+.case-meta{min-width:0}
+.case-client{font-family:var(--mono);font-size:10px;color:var(--ink3);text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:4px}
+.case-title{font-family:var(--display);font-size:clamp(17px,2vw,22px);font-weight:400;color:var(--ink);letter-spacing:-.01em;line-height:1.2;transition:color .2s}
+.case-row:hover .case-title{color:var(--accent)}
+.case-right{display:flex;align-items:center;gap:1rem;flex-shrink:0}
+.case-tags{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+.case-toggle{font-size:18px;color:var(--ink3);line-height:1;transition:transform .35s;flex-shrink:0;width:18px;text-align:center}
+.case.open .case-toggle{transform:rotate(45deg);color:var(--ink)}
+
+/* ── CASE BODY ── */
+.case-body{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.4,0,.2,1)}
+.case.open .case-body{max-height:1400px}
+.case-content{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2.5rem;padding:1.75rem 0 2.5rem 52px;border-top:1px solid var(--border)}
+.cb-col{}
+.cb-label{font-family:var(--mono);font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:.12em;padding-bottom:.625rem;border-bottom:1px solid var(--border);margin-bottom:.875rem;display:block}
+.cb-text{font-size:13px;color:var(--ink2);line-height:1.8}
+.cb-text p{margin-bottom:.75rem}
+.cb-text p:last-child{margin-bottom:0}
+.cb-metric{font-family:var(--display);font-size:32px;font-weight:400;color:var(--accent);display:block;line-height:1;margin-bottom:4px;letter-spacing:-.02em}
+.cb-metric-label{font-family:var(--mono);font-size:10px;color:var(--ink3);display:block;margin-bottom:1.25rem;letter-spacing:.06em}
+.cb-link{display:inline-flex;align-items:center;gap:5px;margin-top:1rem;font-family:var(--body);font-size:12px;font-weight:500;color:var(--accent);border-bottom:1px solid rgba(26,85,51,.3);padding-bottom:1px;transition:border-color .2s}
+.cb-link:hover{border-color:var(--accent)}
+.cb-link + .cb-link{margin-top:.5rem;display:inline-flex}
+.case-img{margin-top:1.25rem;border-radius:3px;overflow:hidden;border:1px solid var(--border);max-height:220px;overflow-y:auto}
+.case-img img{width:100%;display:block}
+.case-foot-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:1.5rem}
+@media(max-width:900px){.case-content{grid-template-columns:1fr 1fr;gap:1.5rem;padding-left:0}}
+@media(max-width:600px){.case-content{grid-template-columns:1fr;gap:1.25rem}.case-tags{display:none}.case-right{gap:.5rem}}
+
+/* ── SKILL TAGS ── */
+.tag{font-family:var(--mono);font-size:9px;padding:3px 8px;border-radius:2px;letter-spacing:.05em;white-space:nowrap;display:inline-block}
+.tag-tw{background:#EBF2EE;color:#1A5533}
+.tag-cw{background:#EBF0F8;color:#1E3A6E}
+.tag-ld{background:#F5EEEA;color:#7A3A12}
+.tag-cs{background:#F5EBF0;color:#6B2141}
+.tag-seo{background:#EBF0F6;color:#2B4A6A}
+.tag-mkt{background:#F0EBFA;color:#4A1F6E}
+.tag-ai{background:#EEF0EB;color:#3A4A20}
+
+/* ── DIVIDER ── */
+.section-divider{height:1px;background:var(--border);margin:0 3rem}
+@media(max-width:768px){.section-divider{margin:0 1.5rem}}
+
+/* ── SECTION WRAPPER ── */
+.section-wrap{padding:4rem 3rem;max-width:1280px;margin:0 auto}
+@media(max-width:768px){.section-wrap{padding:3rem 1.5rem}}
+.section-label{font-family:var(--mono);font-size:10px;color:var(--ink3);text-transform:uppercase;letter-spacing:.14em;margin-bottom:1.25rem;display:block}
+.section-heading{font-family:var(--display);font-size:clamp(28px,3.5vw,44px);font-weight:400;letter-spacing:-.02em;line-height:1.1;margin-bottom:2.5rem}
+.section-heading em{font-style:italic;color:var(--ink2)}
+
+/* ── EXPERIENCE ── */
+.exp-list{display:flex;flex-direction:column;gap:0}
+.exp-item{display:grid;grid-template-columns:180px 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--border)}
+.exp-item:last-child{border-bottom:none}
+.exp-left{}
+.exp-period{font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:.06em;margin-bottom:.875rem;display:block}
+.exp-logo{height:26px;object-fit:contain;object-position:left;filter:grayscale(1);opacity:.6;transition:all .3s}
+.exp-item:hover .exp-logo{filter:grayscale(0);opacity:1}
+.exp-right{}
+.exp-role{font-family:var(--display);font-size:20px;font-weight:400;color:var(--ink);letter-spacing:-.01em;margin-bottom:3px}
+.exp-company{font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.875rem}
+.exp-summary{font-size:13px;color:var(--ink2);line-height:1.8;margin-bottom:.875rem}
+.exp-achievements{display:flex;flex-wrap:wrap;gap:6px}
+.exp-ach{font-family:var(--mono);font-size:10px;padding:4px 10px;background:var(--surface);border:1px solid var(--border);color:var(--ink2);border-radius:2px;letter-spacing:.03em}
+@media(max-width:768px){.exp-item{grid-template-columns:1fr}.exp-period{display:inline-block;margin-bottom:.5rem}}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:280px 1fr;gap:4rem;align-items:start}
+.about-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;border-radius:3px;filter:grayscale(15%)}
+.about-bio p{font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:1.25rem}
+.about-bio p:first-child{font-family:var(--display);font-size:20px;font-weight:300;font-style:italic;color:var(--ink);line-height:1.65;margin-bottom:1.5rem}
+.about-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.5rem}
+.about-link{font-family:var(--mono);font-size:10px;color:var(--ink2);border:1px solid var(--border2);padding:6px 14px;border-radius:2px;letter-spacing:.05em;transition:all .2s}
+.about-link:hover{border-color:var(--accent);color:var(--accent)}
+.edu-block{margin-top:2rem}
+.edu-item{margin-bottom:1.25rem;padding-left:1rem;border-left:2px solid var(--border)}
+.edu-degree{font-size:14px;font-weight:600;color:var(--ink)}
+.edu-school{font-size:13px;color:var(--accent);margin-top:2px}
+.edu-year{font-family:var(--mono);font-size:10px;color:var(--ink3);margin-top:3px}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}.about-photo{max-width:240px;aspect-ratio:1/1}}
+
+/* ── SKILLS ── */
+.skills-section{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1.5rem}
+.skill-group{}
+.skill-group-label{font-family:var(--mono);font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.75rem;display:block}
+.skill-pills{display:flex;flex-wrap:wrap;gap:6px}
+.skill-pill{font-size:12px;color:var(--ink2);background:var(--surface);border:1px solid var(--border);padding:5px 12px;border-radius:2px;transition:border-color .2s}
+.skill-pill:hover{border-color:var(--border2)}
+.tools-list{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:.75rem}
+.tool-item{font-family:var(--mono);font-size:11px;color:var(--ink3);padding:4px 0}
+@media(max-width:768px){.skills-grid{grid-template-columns:1fr}}
+
+/* ── CONTACT ── */
+#contact{border-top:2px solid var(--ink)}
+.contact-wrap{max-width:1280px;margin:0 auto;padding:5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.contact-heading{font-family:var(--display);font-size:clamp(32px,4vw,56px);font-weight:400;letter-spacing:-.02em;line-height:1.08}
+.contact-heading em{font-style:italic;color:var(--accent)}
+.contact-avail{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;color:var(--accent);margin-bottom:1.5rem;letter-spacing:.08em}
+.contact-avail::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.contact-sub{font-size:15px;color:var(--ink2);line-height:1.75;margin-bottom:2rem}
+.contact-links{display:flex;flex-direction:column;gap:10px}
+.contact-link{display:flex;align-items:center;gap:.75rem;font-size:14px;font-weight:500;color:var(--ink);padding:14px 20px;background:var(--surface);border:1px solid var(--border);border-radius:3px;transition:all .2s}
+.contact-link:hover{border-color:var(--accent);color:var(--accent)}
+.contact-link svg{width:16px;height:16px;flex-shrink:0;opacity:.6}
+.contact-link:hover svg{opacity:1}
+@media(max-width:900px){.contact-wrap{grid-template-columns:1fr;gap:2.5rem;padding:3.5rem 1.5rem}}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--border);padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;max-width:100%}
+.footer-name{font-family:var(--display);font-size:15px;font-weight:300;font-style:italic;color:var(--ink2)}
+.footer-meta{font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:.06em}
+@media(max-width:768px){footer{padding:1.5rem;flex-direction:column;text-align:center}}
+
+/* ── FADE IN ── */
+.fade-in{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.fade-in.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- RECRUITER BANNER -->
+<div class="recruiter-banner" id="recruiter-banner">
+  <span class="rb-text">Viewing as a <strong id="rb-label">Technical Writing</strong> recruiter</span>
+  <button class="rb-clear" onclick="clearFilter()">Clear ×</button>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#work" class="nav-name">Paramee Samarathunga</a>
+  <div class="nav-links">
+    <a href="#work" data-nav="work">Work</a>
+    <a href="#experience" data-nav="experience">Experience</a>
+    <a href="#about" data-nav="about">About</a>
+    <a href="#contact" data-nav="contact">Contact</a>
+    <a href="mailto:parameesamarathunga@gmail.com" class="nav-contact">Get in touch</a>
+  </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#work" onclick="closeMenu()">Work</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- WORK -->
+<div id="work">
+  <div style="max-width:1280px;margin:0 auto;padding:0 3rem">
+
+    <!-- IDENTITY STRIP -->
+    <div class="identity fade-in">
+      <div>
+        <h1 class="id-name">Designing <em>Knowledge.</em><br>Driving <em>Impact.</em></h1>
+        <p class="id-roles">Technical Writing &nbsp;·&nbsp; Content Writing &nbsp;·&nbsp; L&amp;D &nbsp;·&nbsp; Content Strategy &nbsp;·&nbsp; SEO &nbsp;·&nbsp; Marketing</p>
+        <p class="id-pedigree">Previously at IFS &nbsp;·&nbsp; WSO2 &nbsp;·&nbsp; Creately &nbsp;·&nbsp; 7+ years across enterprise ERP, SaaS, and regulated industries</p>
+      </div>
+      <div class="id-stats">
+        <div class="id-stat"><span class="id-stat-n">7+</span><span class="id-stat-l">Years</span></div>
+        <div class="id-stat"><span class="id-stat-n">150K+</span><span class="id-stat-l">Monthly visits</span></div>
+        <div class="id-stat"><span class="id-stat-n">75%</span><span class="id-stat-l">AHT reduction</span></div>
+        <div class="id-stat"><span class="id-stat-n">15+</span><span class="id-stat-l">Projects</span></div>
+      </div>
+    </div>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar fade-in">
+      <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)">All work</button>
+      <button class="filter-btn" data-filter="tw" onclick="setFilter('tw',this)">Technical Writing</button>
+      <button class="filter-btn" data-filter="cw" onclick="setFilter('cw',this)">Content Writing</button>
+      <button class="filter-btn" data-filter="ld" onclick="setFilter('ld',this)">L&amp;D</button>
+      <button class="filter-btn" data-filter="cs" onclick="setFilter('cs',this)">Content Strategy</button>
+      <button class="filter-btn" data-filter="seo" onclick="setFilter('seo',this)">SEO Content</button>
+      <button class="filter-btn" data-filter="mkt" onclick="setFilter('mkt',this)">Marketing</button>
+      <button class="filter-share" id="share-btn" onclick="shareFilter()">Copy link ↗</button>
+    </div>
+
+  </div><!-- /identity+filter wrapper -->
+
+  <!-- WORK LIST -->
+  <div class="work-list" style="max-width:1280px;margin:0 auto;padding:0 3rem" id="work-list">
+
+    <!-- 01 -->
+    <div class="case fade-in" data-roles="tw" id="case-1">
+      <div class="case-row" onclick="toggleCase('case-1')">
+        <span class="case-num">01</span>
+        <div class="case-meta">
+          <span class="case-client">WSO2 · Open Banking Accelerator</span>
+          <span class="case-title">Consent Authorization &amp; DCR Tryout Guides</span>
+        </div>
+        <div class="case-right">
+          <div class="case-tags"><span class="tag tag-tw">Technical Writing</span></div>
+          <span class="case-toggle">+</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-content">
+          <div class="cb-col">
+            <span class="cb-label">Scope</span>
+            <div class="cb-text">
+              <p>Two developer guides filling a critical gap in WSO2 Open Banking Accelerator documentation. The Consent Authorization article covered PAR, identifier-first auth, and authorization endpoints — workflows that looked similar on the surface but forked into completely different configuration sequences.</p>
+              <p>The DCR Tryout guide ran 454 lines — a full API consumer registration walkthrough using cURL examples, configuration tables, and environment setup across three separate runtimes: Identity Server, API Manager, and Streaming Integrator.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Approach</span>
+            <div class="cb-text">
+              <p>Organized both articles around what a developer needs to do, not how the system is architected. The Consent Authorization article opens at the flow a developer triggers first, then builds toward PAR and identifier-first auth as complexity increases.</p>
+              <p>Applied layered disclosure throughout the DCR guide: each section frames the context before the configuration detail opens up. Configuration blocks for long config kept pages readable without stripping content partners needed during live deployments.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Outcome</span>
+            <div class="cb-text">
+              <span class="cb-metric">454</span>
+              <span class="cb-metric-label">lines — DCR Tryout guide</span>
+              <p>Both articles live on ob-docs.wso2.com and picked up in partner deployment references. Commit history public under SSParamee on the WSO2 Open Banking GitHub repository.</p>
+            </div>
+            <a href="https://github.com/wso2/docs-open-banking/pull/326" target="_blank" class="cb-link">View commit — Consent Authorization ↗</a>
+            <br>
+            <a href="https://github.com/wso2/docs-open-banking/pull/288" target="_blank" class="cb-link">View commit — DCR Tryout ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 -->
+    <div class="case fade-in" data-roles="tw cs" id="case-2">
+      <div class="case-row" onclick="toggleCase('case-2')">
+        <span class="case-num">02</span>
+        <div class="case-meta">
+          <span class="case-client">IFS · User Education</span>
+          <span class="case-title">IFS Cloud Documentation Workflow Tutorials</span>
+        </div>
+        <div class="case-right">
+          <div class="case-tags"><span class="tag tag-tw">Technical Writing</span><span class="tag tag-cs">Content Strategy</span></div>
+          <span class="case-toggle">+</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-content">
+          <div class="cb-col">
+            <span class="cb-label">Scope</span>
+            <div class="cb-text">
+              <p>Two contributor-facing process guides for the IFS Education Confluence space: "Adding Cloud Documentation Updates" — a 9-step Git and Sourcetree workflow guide (6-minute read, 188+ views) — and "Linking Technical Documentation Pages to IFS Cloud," a JavaScript f1docnavigation.js mapping guide with embedded CCR governance warnings.</p>
+              <p>Both guides filled a gap that had no documented home before this initiative.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Approach</span>
+            <div class="cb-text">
+              <p>Built each guide around what the contributor needed to do next, not how the system worked internally. Applied GEO content architecture so both articles surface in AI-assisted search alongside traditional Confluence search.</p>
+              <p>Set editorial standards for contributor-facing governance content that the wider User Education team later adopted as a repeatable format. CCR freeze deadline warnings placed where contributors read them before acting, not after triggering a problem.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Outcome</span>
+            <div class="cb-text">
+              <span class="cb-metric">75%</span>
+              <span class="cb-metric-label">AHT reduction — documentation support</span>
+              <span class="cb-metric">188+</span>
+              <span class="cb-metric-label">article views</span>
+              <p>Both guides now sit in the core IFS Cloud documentation onboarding path for new User Education Specialists — the first stop for anyone new to the contributor workflow.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 -->
+    <div class="case fade-in" data-roles="tw" id="case-3">
+      <div class="case-row" onclick="toggleCase('case-3')">
+        <span class="case-num">03</span>
+        <div class="case-meta">
+          <span class="case-client">Creately · Product — 10M+ users</span>
+          <span class="case-title">Release Notes &amp; Product Communications</span>
+        </div>
+        <div class="case-right">
+          <div class="case-tags"><span class="tag tag-tw">Technical Writing</span></div>
+          <span class="case-toggle">+</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-content">
+          <div class="cb-col">
+            <span class="cb-label">Scope</span>
+            <div class="cb-text">
+              <p>Owned release communication for Creately's SaaS platform — a visual collaboration tool used by 10 million people globally — from 2022 through 2023. Stayed embedded in sprint and product planning sessions to track what was shipping before it shipped.</p>
+              <p>Translated engineering changelogs into user-facing release notes, product page content, and visual assets published to the Creately website.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Approach</span>
+            <div class="cb-text">
+              <p>"What changed, why it matters, how to use it" — applied consistently to every release item. Creately shipped frequently without a formal release process. I built and owned a repeatable process from scratch: consistent voice, structure, and coverage across every release cycle.</p>
+              <p>Internal teams, external partners, and customers each read the same release differently. Structuring content that worked for all three without branching into separate documents required information architecture decisions before writing a single word.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Outcome</span>
+            <div class="cb-text">
+              <p>Every release reached internal teams, external partners, and customers through a single, consistent communication cycle. Leadership reviewed and signed off on final content before each publish.</p>
+            </div>
+            <a href="https://creately.com/whats-new/" target="_blank" class="cb-link">View What's New in Creately ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 -->
+    <div class="case fade-in" data-roles="tw" id="case-4">
+      <div class="case-row" onclick="toggleCase('case-4')">
+        <span class="case-num">04</span>
+        <div class="case-meta">
+          <span class="case-client">WSO2 · Open Banking Accelerator 3.0</span>
+          <span class="case-title">About This Release — Public Documentation</span>
+        </div>
+        <div class="case-right">
+          <div class="case-tags"><span class="tag tag-tw">Technical Writing</span></div>
+          <span class="case-toggle">+</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-content">
+          <div class="cb-col">
+            <span class="cb-label">Scope</span>
+            <div class="cb-text">
+              <p>Public-facing 'About This Release' page for WSO2 Open Banking Accelerator 3.0, covering all three modules: Identity Server Accelerator, API Manager Accelerator, and Business Intelligence Accelerator. Submitted as a pull request to the public wso2/docs-open-banking GitHub repository under my commit handle, SSParamee.</p>
+            </div>
+            <div class="case-img">
+              <img src="assets/about-this-release-SSParamee-docs-open-banking.jpg" alt="GitHub commit by SSParamee — about-this-release.md, 74 lines" loading="lazy">
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Approach</span>
+            <div class="cb-text">
+              <p>Used a GTA (Goal, Task, Action) framework to bring order to inputs that kept changing close to the release deadline. Built a "What's New / What's Changed" structure that worked consistently across all three modules.</p>
+              <p>The structure held up when the same content was repurposed for the developer blog, summit presentations, and partner documentation — it was built to travel.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Outcome</span>
+            <div class="cb-text">
+              <span class="cb-metric">74</span>
+              <span class="cb-metric-label">lines of Markdown — PR merged</span>
+              <p>Reviewed and signed off by team lead and external partners. Content repurposed for blog posts, summit presentations, and partner documentation.</p>
+            </div>
+            <a href="https://github.com/wso2/docs-open-banking/pull/369" target="_blank" class="cb-link">View GitHub PR ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 -->
+    <div class="case fade-in" data-roles="cw cs seo" id="case-5">
+      <div class="case-row" onclick="toggleCase('case-5')">
+        <span class="case-num">05</span>
+        <div class="case-meta">
+          <span class="case-client">Creately · SaaS — 10M+ users</span>
+          <span class="case-title">Market Repositioning Blog Series</span>
+        </div>
+        <div class="case-right">
+          <div class="case-tags"><span class="tag tag-cw">Content Writing</span><span class="tag tag-seo">SEO</span><span class="tag tag-cs">Content Strategy</span></div>
+          <span class="case-toggle">+</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-content">
+          <div class="cb-col">
+            <span class="cb-label">Scope</span>
+            <div class="cb-text">
+              <p>Creately's 10 million users still saw it as a diagramming tool — a label that was accurate but limiting. I wrote 10+ long-form articles (1,000–3,500 words) to push the market toward "visual collaboration platform" instead, each one built on its own argument and backed by what the product could actually do, not a features list dressed up as a blog post.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Approach</span>
+            <div class="cb-text">
+              <p>Started by mapping where "visual collaboration" was thin in search, then built each article around its own argument, written so both search engines and AI summaries could parse and cite it accurately.</p>
+              <p>The GEO layer mattered because by 2022 a real share of B2B research ran through AI tools, and content that couldn't survive that pass went unseen.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Outcome</span>
+            <div class="cb-text">
+              <span class="cb-metric">50K+</span>
+              <span class="cb-metric-label">monthly organic visits sustained</span>
+              <span class="cb-metric">6–11 min</span>
+              <span class="cb-metric-label">average read time</span>
+              <p>The framework has outlasted its initial rollout — Creately's content team continues to use it as the editorial foundation for new content.</p>
+            </div>
+            <a href="https://creately.com/guides/author/Paramee-Samarathunga/" target="_blank" class="cb-link">View published articles ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 -->
+    <div class="case fade-in" data-roles="cw seo" id="case-6">
+      <div class="case-row" onclick="toggleCase('case-6')">
+        <span class="case-num">06</span>
+        <div class="case-meta">
+          <span class="case-client">Dipuravana · Travel</span>
+          <span class="case-title">Sri Lanka Sustainable Travel Blog Series</span>
+        </div>
+        <div class="case-right">
+          <div class="case-tags"><span class="tag tag-cw">Content Writing</span><span class="tag tag-seo">SEO</span></div>
+          <span class="case-toggle">+</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-content">
+          <div class="cb-col">
+            <span class="cb-label">Scope</span>
+            <div class="cb-text">
+              <p>10+ months of weekly long-form editorial for a Sri Lanka sustainable travel brand. Most Sri Lanka travel content reads like the same listicle copied five times. For Dipuravana, I built a different editorial voice — one that treated sustainable and community tourism as the actual story, not a footnote.</p>
+              <p>Topics ranged from wildlife corridors to family-run guesthouses, kept consistent without any single article feeling like a template filled in twice.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Approach</span>
+            <div class="cb-text">
+              <p>Every piece started with a local detail most travel writing skips, then built outward to the practical information a traveler needs. SEO, GEO, and AEO shaped the structure from the first draft, not as an afterthought layered on at the end.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Outcome</span>
+            <div class="cb-text">
+              <span class="cb-metric">100K+</span>
+              <span class="cb-metric-label">site visits — organic only</span>
+              <p>No paid campaigns. Traffic driven entirely through structured editorial content built for search and AI discovery simultaneously.</p>
+            </div>
+            <a href="https://dipuravana.com/blog/" target="_blank" class="cb-link">View travel blog ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 -->
+    <div class="case fade-in" data-roles="cw" id="case-7">
+      <div class="case-row" onclick="toggleCase('case-7')">
+        <span class="case-num">07</span>
+        <div class="case-meta">
+          <span class="case-client">Catenaa · Blockchain &amp; Fintech</span>
+          <span class="case-title">Blockchain &amp; DeFi Technical Editorial</span>
+        </div>
+        <div class="case-right">
+          <div class="case-tags"><span class="tag tag-cw">Content Writing</span></div>
+          <span class="case-toggle">+</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-content">
+          <div class="cb-col">
+            <span class="cb-label">Scope</span>
+            <div class="cb-text">
+              <p>Technical editorial covering DeFi protocols and regulatory implications for a fintech-specialized publication. Blockchain protocols and DeFi move fast, and most coverage either drowns developers in jargon or oversimplifies for everyone else.</p>
+              <p>Primary sources: protocol documentation, technical specs, regulatory filings — not secondary commentary.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Approach</span>
+            <div class="cb-text">
+              <p>Built each piece to work on two levels simultaneously: precise enough that a developer wouldn't wince, clear enough that a financial professional could act on it. No secondary commentary — went directly to primary sources to verify technical accuracy before framing the regulatory implications.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Outcome</span>
+            <div class="cb-text">
+              <p>Published articles spanning DeFi protocol architecture and fintech regulation for a dual audience of developers and financial professionals. Demonstrated technical credibility in a domain where vague language loses both audiences at once.</p>
+            </div>
+            <a href="https://catenaa.com/author/paramee-samarathunga/" target="_blank" class="cb-link">View published articles ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 -->
+    <div class="case fade-in" data-roles="ld" id="case-8">
+      <div class="case-row" onclick="toggleCase('case-8')">
+        <span class="case-num">08</span>
+        <div class="case-meta">
+          <span class="case-client">WSO2</span>
+          <span class="case-title">Open Banking Self-Paced Training Course</span>
+        </div>
+        <div class="case-right">
+          <div class="case-tags"><span class="tag tag-ld">L&amp;D</span></div>
+          <span class="case-toggle">+</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-content">
+          <div class="cb-col">
+            <span class="cb-label">Scope</span>
+            <div class="cb-text">
+              <p>WSO2's first-ever self-paced LMS course on Open Banking — one that had to run with no instructor in the room. Three regulatory frameworks: the UK Open Banking Standard, the Berlin Group's NextGenPSD2, and Australia's Consumer Data Right.</p>
+              <p>Two audiences: developers who build against the platform, and compliance practitioners who answer for the rules behind it. The course had to close the gap between them without talking down to either one.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Approach</span>
+            <div class="cb-text">
+              <p>Each module followed the same sequence: the regulation first, then how WSO2 implements it, then how to configure and use it — so learners always knew why a feature existed before they had to touch it.</p>
+              <p>The learning path then split in two. Compliance practitioners could stop after the regulatory and architecture sections. Developers continued into implementation modules already carrying that regulatory context, so technical steps read as reasons rather than rules handed down from above.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Outcome</span>
+            <div class="cb-text">
+              <p>Launched on WSO2's training portal as the company's first self-paced option for Open Banking, after years of offering the subject only through live instructor-led sessions.</p>
+              <p>Now supports onboarding for partners and enterprise customers rolling out the WSO2 Open Banking Accelerator — reaching learners in time zones no live instructor could realistically cover.</p>
+            </div>
+            <a href="https://wso2.com/blogs/thesource/what-you-need-to-know-about-training-available-for-wso2-open-banking/" target="_blank" class="cb-link">View WSO2 training announcement ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09 -->
+    <div class="case fade-in" data-roles="ld" id="case-9">
+      <div class="case-row" onclick="toggleCase('case-9')">
+        <span class="case-num">09</span>
+        <div class="case-meta">
+          <span class="case-client">IFS · User Education</span>
+          <span class="case-title">IFS Enterprise Service Management Course Materials</span>
+        </div>
+        <div class="case-right">
+          <div class="case-tags"><span class="tag tag-ld">L&amp;D</span></div>
+          <span class="case-toggle">+</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-content">
+          <div class="cb-col">
+            <span class="cb-label">Scope</span>
+            <div class="cb-text">
+              <p>LMS course materials for IFS Enterprise Service Management (ESM), covering the full service workflow inside IFS Cloud ERP — from logging a service request through to closing the work order.</p>
+              <p>Two audiences: practitioners coming to ESM for the first time, and existing IFS customers and partners upskilling as new releases landed. Delivered through ClickLearn and the IFS LMS.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Approach</span>
+            <div class="cb-text">
+              <p>Followed IFS's own user education content framework so these courses read consistently with the rest of IFS's documentation. Wrote each topic as a standalone module, then combined modules into role-based learning paths — a service manager and a field technician each got a path built for their job, without writing the same content twice.</p>
+              <p>Tied every module to a release checkpoint and IFS's change control process, and worked directly with the Service Management Leadership team to keep courses ready ahead of each release.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Outcome</span>
+            <div class="cb-text">
+              <p>These ESM courses now run in IFS's customer onboarding and partner enablement programmes. When learners turn to the IFS AI Copilot for help mid-task, these materials are part of what it draws on to answer their question — so the support and the training point to the same place.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="case fade-in" data-roles="ld" id="case-10">
+      <div class="case-row" onclick="toggleCase('case-10')">
+        <span class="case-num">10</span>
+        <div class="case-meta">
+          <span class="case-client">IFS · User Education Team</span>
+          <span class="case-title">Peer Session: Information Architecture &amp; the Human Mind</span>
+        </div>
+        <div class="case-right">
+          <div class="case-tags"><span class="tag tag-ld">L&amp;D</span></div>
+          <span class="case-toggle">+</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-content">
+          <div class="cb-col">
+            <span class="cb-label">Scope</span>
+            <div class="cb-text">
+              <p>An interactive peer session for the IFS User Education team on cognitive load theory and its direct implications for documentation decisions: menu depth, warning placement, collapsible blocks, and how many choices a reader can hold before they stop reading carefully.</p>
+              <p>The challenge was making theory land without sounding academic — stripping it down to what a documentation team could use on a Tuesday afternoon.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Approach</span>
+            <div class="cb-text">
+              <p>Built the session as an interactive deck, not a broadcast. Live polls between sections to check what the team already believed about how readers behave. Open Q&amp;A so people could test ideas against their own docs. A short video to shift the pace partway through.</p>
+              <p>The aim was to keep a remote audience engaged for the full session, not just present at them for forty minutes.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Outcome</span>
+            <div class="cb-text">
+              <p>The team now has a shared vocabulary for flagging cognitive overload in review. IFS has since folded the framework into onboarding for new documentation contributors.</p>
+            </div>
+            <a href="https://docs.google.com/presentation/d/1el3y6b_35lZrkaCh2fxU0MmjyVt8ZkCM/edit?usp=sharing&ouid=109511112195437540976&rtpof=true&sd=true" target="_blank" class="cb-link">View presentation deck ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="case fade-in" data-roles="cs cw seo" id="case-11">
+      <div class="case-row" onclick="toggleCase('case-11')">
+        <span class="case-num">11</span>
+        <div class="case-meta">
+          <span class="case-client">Creately</span>
+          <span class="case-title">Category Repositioning Content Strategy</span>
+        </div>
+        <div class="case-right">
+          <div class="case-tags"><span class="tag tag-cs">Content Strategy</span><span class="tag tag-seo">SEO</span></div>
+          <span class="case-toggle">+</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-content">
+          <div class="cb-col">
+            <span class="cb-label">Scope</span>
+            <div class="cb-text">
+              <p>Creately sat between two categories it couldn't fully claim: too complex to pitch as a diagramming tool, not yet trusted enough to compete head-on with Miro and Figma on collaboration. Sales content led with features. Marketing had no positioning that held up under scrutiny.</p>
+              <p>The brief was to find the gap and own it through content.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Approach</span>
+            <div class="cb-text">
+              <p>Competitor analysis to surface underserved search intent clusters. Four editorial pillars defined around those gaps: visual project management, remote team alignment, process documentation, and cross-functional collaboration.</p>
+              <p>Article-as-thesis model — each piece led with an original editorial argument, not a target keyword. Structured for GEO by mapping entity relationships and writing direct-answer formats that AI models actually cite.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Outcome</span>
+            <div class="cb-text">
+              <span class="cb-metric">50K+</span>
+              <span class="cb-metric-label">monthly organic visits — sustained</span>
+              <span class="cb-metric">6–11 min</span>
+              <span class="cb-metric-label">average read time</span>
+              <p>The framework has outlasted its initial rollout. Creately's content team continues to use it as the editorial foundation for new content.</p>
+            </div>
+            <a href="https://creately.com/guides/author/Paramee-Samarathunga/" target="_blank" class="cb-link">View published articles ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="case fade-in" data-roles="cs seo" id="case-12">
+      <div class="case-row" onclick="toggleCase('case-12')">
+        <span class="case-num">12</span>
+        <div class="case-meta">
+          <span class="case-client">Enliven Designers · Healthcare &amp; Travel</span>
+          <span class="case-title">Multi-Sector Editorial Strategy</span>
+        </div>
+        <div class="case-right">
+          <div class="case-tags"><span class="tag tag-cs">Content Strategy</span><span class="tag tag-seo">SEO</span></div>
+          <span class="case-toggle">+</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-content">
+          <div class="cb-col">
+            <span class="cb-label">Scope</span>
+            <div class="cb-text">
+              <p>Content strategy for two clients with almost nothing in common: UK healthcare under CIW compliance (where regulatory precision is non-negotiable) and Sri Lanka travel competing in a market full of generic itinerary writing. Serving both simultaneously without letting either voice contaminate the other required a framework built from scratch.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Approach</span>
+            <div class="cb-text">
+              <p>Read CIW regulatory guidance in full before writing the first word, then built a voice guide that holds clinical warmth within compliance constraints. Developed a separate editorial voice for Dipuravana grounded in local knowledge and sustainability thinking.</p>
+              <p>Structured every page around SEO, GEO, and AEO signals at the drafting stage, so search intent shaped the writing rather than being retrofitted after.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Outcome</span>
+            <div class="cb-text">
+              <span class="cb-metric">100K+</span>
+              <span class="cb-metric-label">visits — Dipuravana</span>
+              <span class="cb-metric">50+</span>
+              <span class="cb-metric-label">monthly inquiries — Headlands</span>
+              <p>Both results from organic search only. No paid campaigns behind either outcome — which made the commercial contribution straightforward to prove.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13 -->
+    <div class="case fade-in" data-roles="cs ai" id="case-13">
+      <div class="case-row" onclick="toggleCase('case-13')">
+        <span class="case-num">13</span>
+        <div class="case-meta">
+          <span class="case-client">IFS</span>
+          <span class="case-title">Enterprise Knowledge Architecture &amp; AI Copilot Agent</span>
+        </div>
+        <div class="case-right">
+          <div class="case-tags"><span class="tag tag-cs">Content Strategy</span><span class="tag tag-ai">AI · Content Ops</span></div>
+          <span class="case-toggle">+</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-content">
+          <div class="cb-col">
+            <span class="cb-label">Scope</span>
+            <div class="cb-text">
+              <p>Designed, built, and deployed the SU-Doc Request Assistant — an M365 Copilot AI agent for IFS Cloud documentation change workflows. Before this, contributors had to correctly identify the request type (CCR, SCR, or SU) manually. A wrong call meant rework and missed release windows.</p>
+              <p>The agent handles that determination, locates the relevant documentation track and next-most recent SU, and produces a ready-to-send Jira issue in the required template format.</p>
+            </div>
+            <div class="case-img">
+              <img src="assets/su_doc_assistant.jpeg" alt="IFS SU-Doc Request Assistant — M365 Copilot AI agent active in operations" loading="lazy">
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Approach</span>
+            <div class="cb-text">
+              <p>Applied GEO (Generative Engine Optimization) to structure Confluence content for parallel retrieval across AI and traditional search — so the same article served both audiences without duplication.</p>
+              <p>Translated the agent's conditional decision logic into retrievable knowledge formats so it returned consistent, predictable answers at scale. Defined editorial governance standards and embedded them across the User Education team.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Outcome</span>
+            <div class="cb-text">
+              <span class="cb-metric">50%</span>
+              <span class="cb-metric-label">turnaround reduction</span>
+              <p>Active in production at IFS. A process that relied on back-and-forth communication now completes in a single interaction. The agent is the first of its kind in the IFS User Education workflow.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 -->
+    <div class="case fade-in" data-roles="seo mkt" id="case-14">
+      <div class="case-row" onclick="toggleCase('case-14')">
+        <span class="case-num">14</span>
+        <div class="case-meta">
+          <span class="case-client">Headlands · Highbarrow · Seren Gobaith · Clarity Hypnosis</span>
+          <span class="case-title">CIW-Compliant Healthcare Website Content</span>
+        </div>
+        <div class="case-right">
+          <div class="case-tags"><span class="tag tag-seo">SEO</span><span class="tag tag-mkt">Marketing</span></div>
+          <span class="case-toggle">+</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-content">
+          <div class="cb-col">
+            <span class="cb-label">Scope</span>
+            <div class="cb-text">
+              <p>Website content for four healthcare clients operating under CIW (Care Inspectorate Wales) and CQC oversight. 50+ assets across homepages, about pages, services, facilities, and testimonials.</p>
+              <p>In regulated sectors, a poorly chosen word isn't just a writing problem — it's a liability. The work was producing copy that satisfied compliance requirements and spoke plainly to people making difficult care decisions, without those two things working against each other.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Approach</span>
+            <div class="cb-text">
+              <p>Read CIW regulatory guidance in full before the first draft. Built voice guides that hold clinical warmth within compliance constraints — so pages read like they were written by people who care, not people who are covering themselves legally.</p>
+              <p>Structured every page around SEO, GEO, and AEO signals from the drafting stage. Content architecture built so search intent shaped the writing, not the reverse.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Outcome</span>
+            <div class="cb-text">
+              <span class="cb-metric">50+</span>
+              <span class="cb-metric-label">monthly inquiries — Headlands</span>
+              <p>Organic search only. CIW-compliant across all assets with no regulatory exceptions. Families making an emotional decision and operators who need service detail to hold up — both audiences served from the same page.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15 -->
+    <div class="case fade-in" data-roles="mkt" id="case-15">
+      <div class="case-row" onclick="toggleCase('case-15')">
+        <span class="case-num">15</span>
+        <div class="case-meta">
+          <span class="case-client">Project Pickle NY · Pickleball Lifestyle Brand</span>
+          <span class="case-title">Brand Identity &amp; Website Build</span>
+        </div>
+        <div class="case-right">
+          <div class="case-tags"><span class="tag tag-mkt">Marketing</span></div>
+          <span class="case-toggle">+</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-content">
+          <div class="cb-col">
+            <span class="cb-label">Scope</span>
+            <div class="cb-text">
+              <p>Designed and built a coming-soon brand website for Project Pickle NY — a New York-based pickleball lifestyle brand selling limited-edition apparel on Etsy. The brief: establish an online presence ahead of the product launch with a live countdown, brand story, and CTAs to Instagram and TikTok.</p>
+              <p>Brand identity created from scratch: typography, colour palette, tone of voice. No prior web presence to build from.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Approach</span>
+            <div class="cb-text">
+              <p>Single self-contained HTML file — vanilla HTML, CSS, and JavaScript, no frameworks, no build tools, no dependencies. Interactive elements (floating particle canvas, cursor glow, countdown timer, scroll-reveal animations) create a premium lifestyle feel on a minimal codebase.</p>
+              <p>Deployed to Cloudflare Pages with a custom domain.</p>
+            </div>
+          </div>
+          <div class="cb-col">
+            <span class="cb-label">Outcome</span>
+            <div class="cb-text">
+              <p>Delivered, live, and handed over to client. Features a live countdown to launch, brand story sections, and dual social CTAs. Zero frameworks, zero ongoing hosting overhead.</p>
+            </div>
+            <a href="https://www.projectpickleny.com" target="_blank" class="cb-link">View live site ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /work-list -->
+</div><!-- /work -->
+
+<div class="section-divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-wrap">
+    <span class="section-label">Experience</span>
+    <h2 class="section-heading">Seven years.<br><em>No two roles the same.</em></h2>
+    <div class="exp-list">
+
+      <div class="exp-item fade-in">
+        <div class="exp-left">
+          <span class="exp-period">Feb 2024 – Present</span>
+          <img src="assets/logo/enliven_logo.png" alt="Enliven Designers" class="exp-logo">
+        </div>
+        <div class="exp-right">
+          <div class="exp-role">Consultant Content Strategist &amp; Content Writer</div>
+          <div class="exp-company">Enliven Designers &nbsp;·&nbsp; Remote, Freelance</div>
+          <div class="exp-summary">BPO and digital services company serving clients across the UK, AU, US, and EU. I build content strategies for SEO, GEO, and AEO — ensuring visibility across organic search, AI-generated answers, and featured snippets — for clients in healthcare, travel, logistics, property, and technology.</div>
+          <div class="exp-achievements">
+            <span class="exp-ach">100K+ site visits</span>
+            <span class="exp-ach">50+ monthly inquiries</span>
+            <span class="exp-ach">CIW compliant</span>
+            <span class="exp-ach">10+ sectors</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item fade-in">
+        <div class="exp-left">
+          <span class="exp-period">Apr 2024 – Jan 2026</span>
+          <img src="assets/logo/ifs_logo.png" alt="IFS" class="exp-logo">
+        </div>
+        <div class="exp-right">
+          <div class="exp-role">Senior User Education Specialist</div>
+          <div class="exp-company">IFS &nbsp;·&nbsp; Hybrid, Sri Lanka</div>
+          <div class="exp-summary">Global ERP leader serving 10,000+ customers worldwide. Acquired in-depth knowledge of IFS Cloud, IFS Enterprise Solution Architecture, and IFS Service &amp; Asset Management to design, develop, and maintain high-quality user education for multiple target audiences. Built and deployed an M365 Copilot AI agent now active in production.</div>
+          <div class="exp-achievements">
+            <span class="exp-ach">75% AHT reduction</span>
+            <span class="exp-ach">50% turnaround reduction</span>
+            <span class="exp-ach">AI agent in production</span>
+            <span class="exp-ach">188+ wiki article views</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item fade-in">
+        <div class="exp-left">
+          <span class="exp-period">Jul 2021 – Dec 2023</span>
+          <img src="assets/logo/creately_logo.png" alt="Creately" class="exp-logo">
+        </div>
+        <div class="exp-right">
+          <div class="exp-role">Technical Writer</div>
+          <div class="exp-company">Creately &nbsp;·&nbsp; Hybrid, Sri Lanka</div>
+          <div class="exp-summary">SaaS platform for visual collaboration used by 10 million+ users globally. Developed user-centric content supporting product documentation, marketing repositioning, and release communications. Led a content strategy campaign that drove sustained organic growth through long-form editorial built for search and AI discovery.</div>
+          <div class="exp-achievements">
+            <span class="exp-ach">10M+ user platform</span>
+            <span class="exp-ach">50K+ organic visits/mo</span>
+            <span class="exp-ach">6–11 min avg read time</span>
+            <span class="exp-ach">10+ articles published</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item fade-in">
+        <div class="exp-left">
+          <span class="exp-period">May 2022 – Dec 2022</span>
+        </div>
+        <div class="exp-right">
+          <div class="exp-role">Consultant Technical Writer</div>
+          <div class="exp-company">Assette &nbsp;·&nbsp; Remote, Contract</div>
+          <div class="exp-summary">Global asset management platform. Audited existing content workflows, built a standardized review and approval process, and established a content taxonomy and template library covering onboarding guides, release notes, and internal process docs. Ran content readiness checks before major product updates.</div>
+          <div class="exp-achievements">
+            <span class="exp-ach">7+ teams enabled</span>
+            <span class="exp-ach">5 documentation workflows</span>
+            <span class="exp-ach">75% faster content review</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item fade-in">
+        <div class="exp-left">
+          <span class="exp-period">Jan 2019 – Jun 2021</span>
+          <img src="assets/logo/wso2_logo.png" alt="WSO2" class="exp-logo">
+        </div>
+        <div class="exp-right">
+          <div class="exp-role">Technical Writer</div>
+          <div class="exp-company">WSO2 &nbsp;·&nbsp; Hybrid, Sri Lanka</div>
+          <div class="exp-summary">Global open-source middleware company. Developed and maintained documentation and training for WSO2 Open Banking across multiple major releases. Documented complex regulatory standards including UK Open Banking, Berlin Group NextGenPSD2, Australian Consumer Data Standards, API Management, IAM, and Consent Management. Built WSO2's first self-paced training course.</div>
+          <div class="exp-achievements">
+            <span class="exp-ach">100+ PRs merged</span>
+            <span class="exp-ach">Partner-verified content</span>
+            <span class="exp-ach">5+ major releases</span>
+            <span class="exp-ach">First LMS course</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-wrap">
+    <span class="section-label">About</span>
+    <div class="about-grid">
+      <div>
+        <img src="assets/profile_pic.png" alt="Paramee Samarathunga" class="about-photo">
+        <div style="margin-top:1.5rem">
+          <div class="edu-block">
+            <div class="edu-item">
+              <div class="edu-degree">MBA, Business Administration</div>
+              <div class="edu-school">University of West London, UK</div>
+              <div class="edu-year">2024</div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-degree">BSc, Computer Security</div>
+              <div class="edu-school">Plymouth University, UK</div>
+              <div class="edu-year">2019</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-links">
+          <a href="https://github.com/SSParamee" target="_blank" class="about-link">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/paramee-samarathunga" target="_blank" class="about-link">LinkedIn ↗</a>
+          <a href="https://parameesamarathunga.medium.com" target="_blank" class="about-link">Medium ↗</a>
+        </div>
+      </div>
+      <div class="about-bio">
+        <p><em>A user guide. A walkthrough video. An in-app tooltip. A course module. I build all of these. Not across different careers — in the same one.</em></p>
+        <p>The question I keep coming back to is simple: why do people finish content and still not know what to do next? Recognising something is not the same as understanding it. Understanding it is not the same as applying it. The gap between knowing and doing is where I chose to work.</p>
+        <p>Technical writing gives people an accurate place to start. Content strategy makes sure they find that place, in the right format, at the right moment. Content writing earns their attention long enough to matter. Learning design closes the distance between knowing and doing.</p>
+        <p>Seven years. Four disciplines. Different companies. I don't measure content by how well it reads. I measure it by what people can do when it's read and closed.</p>
+
+        <div class="skills-section">
+          <span class="section-label">Core skills</span>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <span class="skill-group-label">Writing &amp; documentation</span>
+              <div class="skill-pills">
+                <span class="skill-pill">Technical Writing</span>
+                <span class="skill-pill">API Documentation</span>
+                <span class="skill-pill">UX Writing</span>
+                <span class="skill-pill">Release Notes</span>
+                <span class="skill-pill">Docs-as-Code</span>
+                <span class="skill-pill">Markdown / XML</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <span class="skill-group-label">Strategy &amp; content</span>
+              <div class="skill-pills">
+                <span class="skill-pill">Content Strategy</span>
+                <span class="skill-pill">Editorial Frameworks</span>
+                <span class="skill-pill">Knowledge Architecture</span>
+                <span class="skill-pill">SEO / GEO / AEO</span>
+                <span class="skill-pill">AI Content Operations</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <span class="skill-group-label">Learning &amp; enablement</span>
+              <div class="skill-pills">
+                <span class="skill-pill">Instructional Design</span>
+                <span class="skill-pill">L&amp;D Programs</span>
+                <span class="skill-pill">ADDIE Model</span>
+                <span class="skill-pill">LX Design</span>
+                <span class="skill-pill">Release Readiness</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <span class="skill-group-label">Tools &amp; platforms</span>
+              <div class="tools-list">
+                <span class="tool-item">Confluence / Jira</span>
+                <span class="tool-item">GitHub / Bitbucket</span>
+                <span class="tool-item">ClickLearn / Thinkific</span>
+                <span class="tool-item">Swagger / Postman</span>
+                <span class="tool-item">Figma / Camtasia</span>
+                <span class="tool-item">M365 Copilot</span>
+                <span class="tool-item">Canva / ChatGPT</span>
+                <span class="tool-item">HTML / CSS / JS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-wrap">
+    <div>
+      <div class="contact-avail">Available for senior roles worldwide</div>
+      <h2 class="contact-heading">Let's make work<br>that <em>matters.</em></h2>
+    </div>
+    <div>
+      <p class="contact-sub">Seven years across technical writing, content strategy, learning design, and content writing. Looking for remote and hybrid senior roles globally. Open to projects and long-term collaborations.</p>
+      <div class="contact-links">
+        <a href="mailto:parameesamarathunga@gmail.com" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          parameesamarathunga@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/paramee-samarathunga" target="_blank" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn — paramee-samarathunga
+        </a>
+        <a href="https://github.com/SSParamee" target="_blank" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub — SSParamee
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-name">Paramee Samarathunga</span>
+  <span class="footer-meta">Sri Lanka &nbsp;·&nbsp; GMT+5:30 &nbsp;·&nbsp; © 2026</span>
+</footer>
+
+<script>
+const FILTER_LABELS = {
+  all:'All work', tw:'Technical Writing', cw:'Content Writing',
+  ld:'Learning & Development', cs:'Content Strategy', seo:'SEO Content', mkt:'Marketing'
+};
+
+let activeFilter = 'all';
+
+function setFilter(key, btn) {
+  activeFilter = key;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+
+  document.querySelectorAll('.case').forEach(c => {
+    if (key === 'all') {
+      c.classList.remove('hidden');
+    } else {
+      const roles = (c.dataset.roles || '').split(' ');
+      c.classList.toggle('hidden', !roles.includes(key));
+    }
+  });
+
+  const banner = document.getElementById('recruiter-banner');
+  if (key !== 'all') {
+    document.getElementById('rb-label').textContent = FILTER_LABELS[key] || key;
+    banner.classList.add('active');
+    const url = new URL(window.location);
+    url.searchParams.set('for', key);
+    history.replaceState({}, '', url);
+  } else {
+    banner.classList.remove('active');
+    const url = new URL(window.location);
+    url.searchParams.delete('for');
+    history.replaceState({}, '', url);
+  }
+}
+
+function clearFilter() {
+  const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+  setFilter('all', allBtn);
+}
+
+function shareFilter() {
+  const url = new URL(window.location.href.split('?')[0]);
+  if (activeFilter !== 'all') url.searchParams.set('for', activeFilter);
+  navigator.clipboard.writeText(url.toString()).then(() => {
+    const btn = document.getElementById('share-btn');
+    btn.textContent = 'Copied ✓';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copy link ↗'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+function toggleCase(id) {
+  const el = document.getElementById(id);
+  const wasOpen = el.classList.contains('open');
+  document.querySelectorAll('.case.open').forEach(c => c.classList.remove('open'));
+  if (!wasOpen) el.classList.add('open');
+}
+
+function toggleMenu() {
+  const h = document.getElementById('hamburger');
+  const m = document.getElementById('mobile-menu');
+  const open = m.classList.toggle('open');
+  h.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+function closeMenu() {
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobile-menu').classList.remove('open');
+  document.body.style.overflow = '';
+}
+window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); });
+
+// Scroll-spy
+const sections = ['work','experience','about','contact'];
+function updateNav() {
+  let cur = '';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && window.scrollY >= el.offsetTop - 80) cur = id;
+  });
+  document.querySelectorAll('[data-nav]').forEach(a => {
+    a.classList.toggle('active', a.dataset.nav === cur);
+  });
+}
+window.addEventListener('scroll', updateNav, { passive: true });
+
+// Reveal on scroll
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.06 });
+document.querySelectorAll('.fade-in').forEach(el => revealObs.observe(el));
+
+// Fix mobile padding for work-list
+(function(){
+  const list = document.getElementById('work-list');
+  function mobileCheck() {
+    list.style.paddingLeft = window.innerWidth <= 768 ? '1.5rem' : '3rem';
+    list.style.paddingRight = window.innerWidth <= 768 ? '1.5rem' : '3rem';
+    const wrap = list.previousElementSibling ? list.previousElementSibling.parentElement : null;
+    if (wrap) {
+      wrap.style.paddingLeft = window.innerWidth <= 768 ? '1.5rem' : '3rem';
+      wrap.style.paddingRight = window.innerWidth <= 768 ? '1.5rem' : '3rem';
+    }
+  }
+  mobileCheck();
+  window.addEventListener('resize', mobileCheck, { passive: true });
+})();
+
+// URL param on load
+(function() {
+  const key = new URLSearchParams(window.location.search).get('for');
+  if (key && FILTER_LABELS[key]) {
+    const btn = document.querySelector(`.filter-btn[data-filter="${key}"]`);
+    setFilter(key, btn);
+    setTimeout(() => {
+      const work = document.getElementById('work');
+      if (work) work.scrollIntoView({ behavior: 'smooth' });
+    }, 200);
+  }
+})();
+</script>
+</body>
+</html>
