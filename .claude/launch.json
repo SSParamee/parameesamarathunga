@@ -4,7 +4,7 @@
     {
       "name": "portfolio",
       "runtimeExecutable": "powershell",
-      "runtimeArgs": ["-NoProfile", "-Command", "$l=[System.Net.HttpListener]::new();$l.Prefixes.Add('http://localhost:3000/');$l.Start();Write-Host 'Listening on http://localhost:3000';while($l.IsListening){$c=$l.GetContext();$p=$c.Request.Url.LocalPath;if($p -eq '/' -or $p -eq ''){$p='/index-v2.html'};$f='D:\\parameesamarathunga'+($p -replace '/',\"\\\\\" );try{$b=[System.IO.File]::ReadAllBytes($f);$mt='text/html';if($f -match '\\.css$'){$mt='text/css'}elseif($f -match '\\.js$'){$mt='application/javascript'}elseif($f -match '\\.(jpg|jpeg)$'){$mt='image/jpeg'}elseif($f -match '\\.png$'){$mt='image/png'};$c.Response.ContentType=$mt;$c.Response.ContentLength64=$b.Length;$c.Response.OutputStream.Write($b,0,$b.Length)}catch{$c.Response.StatusCode=404};$c.Response.Close()}"],
+      "runtimeArgs": ["-NoProfile", "-Command", "$l=[System.Net.HttpListener]::new();$l.Prefixes.Add('http://localhost:3000/');$l.Start();Write-Host 'Listening on http://localhost:3000';while($l.IsListening){$c=$l.GetContext();$p=$c.Request.Url.LocalPath;if($p -eq '/' -or $p -eq ''){$p='/index.html'};$f='D:\\parameesamarathunga'+($p -replace '/',\"\\\\\" );try{$b=[System.IO.File]::ReadAllBytes($f);$mt='text/html';if($f -match '\\.css$'){$mt='text/css'}elseif($f -match '\\.js$'){$mt='application/javascript'}elseif($f -match '\\.(jpg|jpeg)$'){$mt='image/jpeg'}elseif($f -match '\\.png$'){$mt='image/png'};$c.Response.ContentType=$mt;$c.Response.ContentLength64=$b.Length;$c.Response.OutputStream.Write($b,0,$b.Length)}catch{$c.Response.StatusCode=404};$c.Response.Close()}"],
       "port": 3000
     }
   ]

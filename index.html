@@ -264,7 +264,15 @@ section{padding:6rem 4rem}
 .tl-toggle:hover{border-color:var(--gold);color:var(--gold)}
 .tl-toggle .tl-toggle-icon{display:inline-block;transition:transform .3s;font-style:normal}
 .tl-collapsible{overflow:hidden;max-height:0;transition:max-height .35s ease,opacity .3s ease;opacity:0}
-.tl-collapsible.open{max-height:600px;opacity:1}
+.tl-collapsible.open{max-height:2400px;opacity:1}
+.tl-sub{margin-bottom:1.1rem}
+.tl-sub:last-child{margin-bottom:0}
+.tl-sub-header{display:flex;align-items:baseline;justify-content:space-between;gap:.75rem;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:.35rem;margin-bottom:.5rem}
+.tl-sub-name{font-family:var(--body);font-size:13px;font-weight:600;color:var(--ink)}
+.tl-sub-type{font-family:var(--mono);font-size:10px;font-weight:400;color:var(--ink3)}
+.tl-sub-period{font-family:var(--mono);font-size:10px;color:var(--ink3);white-space:nowrap}
+.tl-sub ul{padding-left:1.25rem;margin-top:0}
+.tl-sub ul li{margin-bottom:.4rem}
 .tl-achievements{display:flex;flex-wrap:wrap;gap:8px;margin-top:1rem}
 .tl-ach{font-family:var(--mono);font-size:10px;padding:4px 10px;background:rgba(201,169,110,.08);border:1px solid rgba(201,169,110,.2);color:var(--gold);border-radius:4px}
 
@@ -806,25 +814,61 @@ footer{padding:1.5rem 4rem;border-top:1px solid var(--line);display:flex;justify
     <div class="tl-item">
       <div class="tl-header">
         <div>
-          <div class="tl-role">Consultant Content Strategist &amp; Content Writer <span class="tl-type">Remote · Freelance</span></div>
-          <div class="tl-company"><img src="assets/logo/enliven_logo.png" alt="Enliven Designers" class="tl-company-logo"><span class="tl-company-name">Enliven Designers</span></div>
+          <div class="tl-role">Consultant Content &amp; Marketing Strategist <span class="tl-type">Remote · Freelance</span></div>
+          <div class="tl-company"><img src="assets/logo/freelance.png" alt="Freelance" class="tl-company-logo"><span class="tl-company-name">Enliven Designers</span></div>
         </div>
         <span class="tl-period">Feb 2024 - Present</span>
       </div>
       <div class="tl-body">
-        <p>A BPO and digital services company serving clients across the UK, AU, US, and EU. I build content strategies that work for SEO, GEO, and AEO ensuring visibility across all channels.</p>
+        <p>Manage end-to-end delivery, risk resolution, and cross-location communication for a set of concurrent client engagements, including Enliven Designers, Neo Tourism, LK Domain Registry, and Project Pickle NY, spanning the UK, the US, and Sri Lanka where I carry full ownership of the content & marketing strategies.</p>
         <button class="tl-toggle" onclick="toggleResponsibilities(this)" aria-expanded="false">
           <i class="tl-toggle-icon">▸</i> Responsibilities
         </button>
         <div class="tl-collapsible">
-          <ul>
-            <li>Develop content strategies across SEO, GEO, and AEO for clients spanning multiple industries, aligning each approach to how their target audience searches and what surfaces in AI-driven results.</li>
-            <li>Write SEO-optimised blog and editorial content calibrated to search intent, sector language, and the compliance requirements each client brings.</li>
-            <li>Develop conversion-focused UI website content aligning messaging with UX and brand voice.</li>
-            <li>Run SEO audits, keyword research, and competitor analysis before a content brief is written, not after.</li>
-            <li>Structure business proposals that translate client objectives into content strategies with measurable direction.</li>
-            <li>Create and manage editorial calendar fors clients contributing to increased site visits and monthly service inquiries.</li>
-          </ul>
+          <div class="tl-sub">
+            <div class="tl-sub-header">
+              <span class="tl-sub-name">Enliven Designers <span class="tl-sub-type">Web Design &amp; Branding Agency (UK/AU/US/EU clients)</span></span>
+              <span class="tl-sub-period">Feb 2024 – Present</span>
+            </div>
+            <ul>
+              <li>Develop SEO, GEO, and AEO content strategies for clients across multiple industries, running audits, keyword research, and competitor analysis before writing every content brief.</li>
+              <li>Wrote and structured the full Headlands Nursing Home website, more than 50 assets in total, to Care Inspectorate Wales compliance standards, and led Dipuravana's travel content strategy through a 10-month editorial cycle.</li>
+              <li>Delivered 100K+ organic site visits and 50+ monthly qualified inquiries across client sites, entirely through organic content with no paid campaigns behind it.</li>
+            </ul>
+          </div>
+          <div class="tl-sub">
+            <div class="tl-sub-header">
+              <span class="tl-sub-name">Neo Tourism <span class="tl-sub-type">Travel &amp; Hospitality</span></span>
+              <span class="tl-sub-period">Jun 2026 – Present</span>
+            </div>
+            <ul>
+              <li>Own the content calendar and publishing schedule across Facebook and Instagram, and plan and execute paid campaigns across Google, Meta, and LinkedIn, tracking performance against organic engagement.</li>
+              <li>Produce and edit short-form video and creative assets using CapCut, Canva, and Kling, and run email marketing campaigns through Mailchimp to keep brand voice consistent across every channel.</li>
+            </ul>
+          </div>
+          <div class="tl-sub">
+            <div class="tl-sub-header">
+              <span class="tl-sub-name">LK Domains Registry <span class="tl-sub-type">Sri Lankan Domain Registry</span></span>
+              <span class="tl-sub-period">May 2026 – Present</span>
+            </div>
+            <ul>
+              <li>Recognized that most applicants for a .lk domain get stuck before reaching the paperwork because they do not know which registrant category applies to them, and wrote a guide that answers that question first, in the opening lines.</li>
+              <li>Structured the content around the real search queries applicants type into Google rather than the assumptions a government site might make, so the answers could be pulled directly into featured snippets.</li>
+              <li>Applied Answer Engine Optimization (AEO) formatting so AI tools quote the page accurately, ordering the documents and timeline information the way applicants actually need it.</li>
+            </ul>
+          </div>
+          <div class="tl-sub">
+            <div class="tl-sub-header">
+              <span class="tl-sub-name">Project Pickle NY <span class="tl-sub-type">Brand &amp; Web Design</span></span>
+              <span class="tl-sub-period">Jun 2026</span>
+            </div>
+            <ul>
+              <li>Designed and built a coming-soon brand website for a New York-based pickleball lifestyle brand selling limited-edition apparel and accessories on Etsy, establishing an online presence ahead of its full product launch.</li>
+              <li>Built a complete brand identity from scratch, including typography, colour palette, and tone of voice, for a brand with no prior web presence.</li>
+              <li>Built the entire site as a single self-contained file in vanilla HTML, CSS, and JavaScript with no frameworks or dependencies, keeping it lightweight for deployment on Cloudflare Pages.</li>
+              <li>Integrated interactive elements, including a floating particle canvas, cursor glow, live countdown, and scroll-reveal animations, without compromising mobile performance.</li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="tl-achievements">
